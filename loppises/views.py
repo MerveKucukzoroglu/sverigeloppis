@@ -2,7 +2,7 @@
 from django.shortcuts import render, redirect, reverse, get_object_or_404
 from django.contrib import messages
 from django.db.models import Q
-from .models import Loppis
+from .models import Loppis, County
 
 def all_loppises(request):
     """ A view to return list of all the loppises """
@@ -16,8 +16,8 @@ def all_loppises(request):
             if not query:
                 messages.error(request, "You didn't enter any search criteria!")
                 return redirect(reverse('loppises'))
-       
-            queries = Q(title__icontains=query) | Q(description__icontains=query) | Q(county__county__icontains=query) 
+            
+            queries = Q(title__icontains=query) | Q(description__icontains=query) | Q(county__icontains=query) 
             loppises = loppises.filter(queries)
 
     context = {
