@@ -17,7 +17,7 @@ def all_loppises(request):
                 messages.error(request, "You didn't enter any search criteria!")
                 return redirect(reverse('loppises'))
             
-            queries = Q(title__icontains=query) | Q(description__icontains=query) | Q(county__icontains=query) 
+            queries = Q(title__icontains=query) | Q(description__icontains=query) | Q(county__county__icontains=query) 
             loppises = loppises.filter(queries)
 
     context = {
