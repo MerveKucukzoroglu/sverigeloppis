@@ -1,0 +1,127 @@
+[{
+    "pk": 1, 
+    "model": "loppises.county", 
+    "fields": {"county": "blekinge", 
+        "friendly_name": "Blekinge län"}
+},
+{
+    "pk": 2, 
+    "model": "loppises.county", 
+    "fields": {"county": "dalarna", 
+        "friendly_name": "Dalarnas län"}
+},
+{
+    "pk": 3, 
+    "model": "loppises.county", 
+    "fields": {"county": "gotland", 
+        "friendly_name": "Gotlands län"}
+},
+{
+    "pk": 4, 
+    "model": "loppises.county", 
+    "fields": {"county": "gävleborg", 
+        "friendly_name": "Gävleborgs län"}
+},
+{
+    "pk": 5, 
+    "model": "loppises.county", 
+    "fields": {"county": "halland", 
+        "friendly_name": "Hallands län"}
+},
+{
+    "pk": 6, 
+    "model": "loppises.county", 
+    "fields": {"county": "jämtland", 
+        "friendly_name": "Jämtlands län"}
+},
+{
+    "pk": 7, 
+    "model": "loppises.county", 
+    "fields": {"county": "jönköping", 
+        "friendly_name": "Jönköpings län"}
+},
+{
+    "pk": 8, 
+    "model": "loppises.county", 
+    "fields": {"county": "kalmar", 
+        "friendly_name": "Kalmar län"}
+},
+{
+    "pk": 9, 
+    "model": "loppises.county", 
+    "fields": {"county": "kronoberg", 
+        "friendly_name": "Kronobergs län"}
+},
+{
+    "pk": 10, 
+    "model": "loppises.county", 
+    "fields": {"county": "norrbotten", 
+        "friendly_name": "Norrbottens län"}
+},
+{
+    "pk": 11, 
+    "model": "loppises.county", 
+    "fields": {"county": "skåne", 
+        "friendly_name": "Skåne län"}
+},
+{
+    "pk": 12, 
+    "model": "loppises.county", 
+    "fields": {"county": "stockholm", 
+        "friendly_name": "Stockholms län"}
+},
+{
+    "pk": 13, 
+    "model": "loppises.county", 
+    "fields": {"county": "södermanland", 
+        "friendly_name": "Södermanlands län"}
+},
+{
+    "pk": 14, 
+    "model": "loppises.county", 
+    "fields": {"county": "uppsala", 
+        "friendly_name": "Uppsala län"}
+}, 
+{
+    "pk": 15, 
+    "model": "loppises.county", 
+    "fields": {"county": "värmland", 
+        "friendly_name": "Värmlands län"}
+},
+{
+    "pk": 16, 
+    "model": "loppises.county", 
+    "fields": {"county": "västerbotten", 
+        "friendly_name": "Västerbottens län"}
+},
+{
+    "pk": 17, 
+    "model": "loppises.county", 
+    "fields": {"county": "västernorrland", 
+        "friendly_name": "Västernorrlands län"}
+},
+{
+    "pk": 18, 
+    "model": "loppises.county", 
+    "fields": {"county": "västmanland", 
+        "friendly_name": "Västmanlands län"}
+},
+{
+    "pk": 19, 
+    "model": "loppises.county", 
+    "fields": {"county": "västra_götaland", 
+        "friendly_name": "Västra Götalands län"}
+},
+{
+    "pk": 20, 
+    "model": "loppises.county", 
+    "fields": {"county": "örebro", 
+        "friendly_name": "Örebro län"}
+},
+{
+    "pk": 21, 
+    "model": "loppises.county", 
+    "fields": {"county": "östergötland", 
+        "friendly_name": "Östergötlands län"}
+}
+]
