@@ -58,6 +58,21 @@ body {
     border: 1px solid #2C2C2C !important;
 }
 
+.go-up-button {
+    height: 40px;
+    width: 40px;
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+    border: 2px solid #74A8A5;
+    color: #74A8A5;
+    border-radius: 50%;
+}
+
+.go-up-link {
+    cursor:pointer;
+}
+
 /* Home Page */
 .loppis-now-button {
     background: #ffb300;
