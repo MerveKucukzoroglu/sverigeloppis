@@ -24,6 +24,7 @@ class Loppis(models.Model):
 
     class Meta:
         verbose_name_plural = 'Loppises'
+        ordering = ['-created_on']
 
     seller = models.ForeignKey(User, on_delete=models.CASCADE)
     title = models.CharField(max_length=254)
