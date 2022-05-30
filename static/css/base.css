@@ -91,16 +91,29 @@ body {
     color: white;
 }
 
+/*Loppis Page*/
+
 .more-details {
     background-color: #2C2C2C;
     color: white;
     padding: 5px;
+    margin: 10px 0 20px 0;
 }
 
 .more-details:hover {
     background-color: #a1c9c1;
     color:#2C2C2C;
 }
+
+.card-img-top{
+    height: 200px;
+    width: auto;
+    display: block;
+    margin-top: 20px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
 
 /*Footer*/
 
