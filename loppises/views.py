@@ -7,6 +7,7 @@ from .models import Loppis, County
 def all_loppises(request):
     """ A view to return list of all the loppises """
 
+    counties = County.objects.all()
     loppises = Loppis.objects.all()
     query = None
     sort = None
@@ -39,6 +40,7 @@ def all_loppises(request):
     current_sorting = f'{sort}_{direction}'
 
     context = {
+        'counties': counties,
         'loppises': loppises,
         'search_term': query,
         'current_sorting': current_sorting,
