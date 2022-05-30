@@ -39,6 +39,7 @@
                                 <span class="small"><a href="{% url 'loppises' %}">All Loppises</a> | </span>
                             {% endif %}
                             {{ loppises|length }} Loppises{% if search_term %} found for <strong>"{{ search_term }}"</strong>{% endif %}
+                            {% for county in current_counties %} found for <strong>"{{ county.friendly_name }}"</strong>{% endfor %}
                         </p>
                     </div>
                 </div>
