@@ -8,13 +8,19 @@ from .models import Loppis, County
 def all_loppises(request):
     """ A view to return list of all the loppises """
 
-    counties = County.objects.all()
+    county_list = County.objects.all()
     loppises = Loppis.objects.all()
     query = None
     sort = None
     direction = None
+    counties = None
 
     if request.GET:
+        if 'county' in request.GET:
+            counties = request.GET['county'].split(',')
+            loppises = loppises.filter(county__county__in=counties)
+            counties = County.objects.filter(county__in=counties)
+
         if 'q' in request.GET:
             query = request.GET['q']
             if not query:
@@ -27,9 +33,10 @@ def all_loppises(request):
     current_sorting = f'{sort}_{direction}'
 
     context = {
-        'counties': counties,
+        'county_list': county_list,
         'loppises': loppises,
         'search_term': query,
+        'current_counties': counties,
         'current_sorting': current_sorting,
     }
 
