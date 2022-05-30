@@ -11,6 +11,10 @@ body {
     font-size: 15px;
 }
 
+.text-heading {
+    color:#2C2C2C;
+    font-size: 40px;
+}
 
 /* from Bulma */
 .icon {
@@ -34,15 +38,11 @@ body {
 
 .fa-icon {
     color:#2C2C2C;
-    font-size: 30px;
+    font-size: 25px;
 }
 
 .fa-icon:hover {
     color:#74A8A5;
-}
-
-.text-dark {
-    color:#2C2C2C;
 }
 
 .btn-dark {
@@ -89,6 +89,17 @@ body {
 .btn-dark:focus {
     background: #2C2C2C;
     color: white;
+}
+
+.more-details {
+    background-color: #2C2C2C;
+    color: white;
+    padding: 5px;
+}
+
+.more-details:hover {
+    background-color: #a1c9c1;
+    color:#2C2C2C;
 }
 
 /*Footer*/

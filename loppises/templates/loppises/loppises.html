@@ -14,7 +14,7 @@
     <div class="container-fluid">
         <div class="row">
             <div class="col text-center mt-3">
-                <h2>LOPPIS</h2>
+                <h2 class="text-heading">LOPPIS</h2>
                 <hr class="w-50 mb-1">
             </div>
         </div>
@@ -62,12 +62,12 @@
                                     <a class="text-muted" href="{% url 'loppises' %}?county={{ loppis.county.county }}">{{ loppis.county.friendly_name }}</a>
                                     {% endif %}
                                 </div>
-                                <div class="card-footer bg-white pt-0 border-0 text-left">
-                                    <div class="row">
-                                        <div class="col">
-                                            <p class="lead mb-0 text-left">{{ loppis.start_date }} - {{ loppis.end_date }}</p>
-                                        </div>
-                                    </div>
+                                <div class="card-body pb-0">
+                                    <p class="mb-0">{{ loppis.start_date }} - {{ loppis.end_date }}</p>
+                                    <p class="mb-0">{{ loppis.start_time }} - {{ loppis.end_time }}</p>
+                                </div>
+                                <div class="card-body pb-0 text-center">
+                                    <p class="mb-0"><a class="more-details btn btn-sm rounded-0 w-100" href="{% url 'loppis_detail' loppis.id %}">More details</a></p>
                                 </div>
                             </div>
                         </div>
