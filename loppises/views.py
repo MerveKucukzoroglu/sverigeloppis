@@ -2,6 +2,7 @@
 from django.shortcuts import render, redirect, reverse, get_object_or_404
 from django.contrib import messages
 from django.db.models import Q
+from django.db.models.functions import Lower
 from .models import Loppis, County
 
 def all_loppises(request):
@@ -14,20 +15,6 @@ def all_loppises(request):
     direction = None
 
     if request.GET:
-        if 'sort' in request.GET:
-            sortkey = request.GET['sort']
-            sort = sortkey
-            if sortkey == 'county':
-                sortkey = 'lower_name'
-                loppises = loppises.annotate(lower_name=Lower('county'))
-            if sortkey == 'county':
-                sortkey = 'county__county'
-            if 'direction' in request.GET:
-                direction = request.GET['direction']
-                if direction == 'desc':
-                    sortkey = f'-{sortkey}'
-            loppises = loppises.order_by(sortkey)
-
         if 'q' in request.GET:
             query = request.GET['q']
             if not query:

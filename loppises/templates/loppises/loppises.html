@@ -26,7 +26,7 @@
                             <select id="sort-selector" class="custom-select custom-select-sm rounded-0 border border-{% if current_sorting != 'None_None' %}info{% else %}black{% endif %}">
                                 <option value="reset" {% if current_sorting == 'None_None' %}selected{% endif %}>Select County</option>
                                 {% for county in counties %}
-                                <option value="{{ county }}" {% if current_sorting == 'name_asc' %}selected{% endif %}> {{ county.friendly_name }}</option>
+                                <option value="{{ county }}" {% if current_sorting == 'county' %}selected{% endif %}> {{ county.friendly_name }}</option>
                                 {% endfor %}
                             </select>
                         </div>
@@ -93,4 +93,28 @@
             </div>
         </div>
     </div>
+{% endblock %}
+
+{% block postloadjs %}
+    {{ block.super }}
+    
+    <script type="text/javascript">
+        $('#sort-selector').change(function() {
+            var selector = $(this);
+            var currentUrl = new URL(window.location);
+
+            var selectedVal = selector.val();
+            if(selectedVal != "reset"){
+                var sort = selectedVal.split("_")[0];
+
+                currentUrl.searchParams.set("county", sort);
+
+                window.location.replace(currentUrl);
+            } else {
+                currentUrl.searchParams.delete("sort");
+
+                window.location.replace(currentUrl);
+            }
+        })
+    </script>
 {% endblock %}
