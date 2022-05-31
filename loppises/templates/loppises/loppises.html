@@ -56,9 +56,14 @@
                                 {% endif %}
                                 <div class="card-body pb-0">
                                     <span class="mb-0 text-left">{{ loppis.title.capitalize }}</span>
-                                    <span class="mb-0 text-right save-btn"><i class="fa fa-bookmark-o fa-lg"></i></span>
+                                    {% now "Y-m-d" as todays_date %} <!-- date logic by Grepper (More in README.md)-->
+                                    {% if todays_date > loppis.end_date|date:"Y-m-d" %}
+                                        <p class="text-uppercase late-text"><strong>Ended!</strong></p>
+                                    {% else %}
+                                        <p class="text-uppercase available-text"><strong>Available</strong></p>
+                                    {% endif %}
                                 </div>
-                                <div class="card-body pb-0">
+                                <div class="card-body pb-0 pt-0">
                                     {% if loppis.county %}
                                     <a class="text-muted" href="{% url 'loppises' %}?county={{ loppis.county.county }}">{{ loppis.county.friendly_name }}</a>
                                     {% endif %}
