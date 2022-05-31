@@ -20,7 +20,7 @@
                     </a>
                 </div>
                 <div class="image-container-de my-5">
-                    <span class="mb-0 text-right save-btn"><i class="fa fa-bookmark-o fa-lg"></i></span>
+                    <!-- <span class="mb-0 text-right save-btn"><i class="fa fa-bookmark-o fa-lg"></i></span> -->
                     {% if loppis.image %}
                         <a href="{{ loppis.image.url }}" target="_blank">
                             <img class="card-img-top img-fluid" src="{{ loppis.image.url }}" alt="{{ loppis.title }}">
@@ -32,11 +32,19 @@
                     {% endif %}
                 </div>
             </div>
+            <div>
+                <form class="form" action="{% url 'add_to_wishlist' loppis.id %}" method="POST">
+                    {% csrf_token %}
+                    <div class="form-row">
+                        <div class="col-12">
+                            <input type="submit" name="quantity" data-item_id="{{ loppis.id }}" id="id_qty_{{ loppis.id }}" class="btn wishlist-btn text-uppercase mt-5" value="Add to Wishlist">
+                        </div>
+                        <input type="hidden" name="redirect_url" value="{{ request.path }}">
+                    </div>
+                </form>
+            </div>
             <div class="col-12 col-md-6 col-lg-4">
-                <div>
-                    <p class="pb-3 pt-2 pr-3 text-right"><span>Seller: </span>{{ loppis.seller }}</p>
-                </div>
-                <div class="loppis-details-container mb-5 mt-md-5">
+                <div class="loppis-details-container mt-md-5">
                     <p class="mb-3">{{ loppis.title.capitalize }}</p>
                     {% if loppis.county %}
                         <a class="text-white" href="{% url 'loppises' %}?county={{ loppis.county.county }}">{{ loppis.county.friendly_name }}</a>
@@ -52,6 +60,9 @@
                     {% endif %}
                     <p class="mb-0"><span class="detail">Details: </span></p>
                     <p class="mb-0">{{ loppis.description.capitalize }}</p>
+                </div>
+                <div>
+                    <p class="mt-3 mb-3 text-left"><span>Seller: </span>{{ loppis.seller }}</p>
                 </div>
             </div>
         </div>

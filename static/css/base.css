@@ -114,20 +114,20 @@ body {
     margin-right: auto;
 }
 
-.save-btn {
+.wishlist-btn {
     position: absolute;
     right: 22px;
-    border: none;
-    background: transparent;
-    color: #74A8A5;
+    background:#1f1f1f;
+    color: white !important;
+    border-radius: 20px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
 
-.save-btn:hover,
-.save-btn:active,
-.save-btn:focus {
-    border: none;
-    background: transparent;
-    color:#74A8A5 !important;
+.wishlist-btn:hover,
+.wishlist-btn:active,
+.wishlist-btn:focus {
+    background: white;
+    color:#1f1f1f !important;
 }
 
 .loppis-details-container {
