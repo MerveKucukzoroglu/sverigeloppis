@@ -43,4 +43,6 @@
 * [Freepik](www.freepik.com):
     * [Home page background image](https://www.freepik.com/vectors/flea-market) Flea market vector created by [freepik](www.freepik.com)
 
+## Styles:
+* [CSS Scan](https://getcssscan.com/css-box-shadow-examples): Box shadow in loppis details page is from [CSS Scan](https://getcssscan.com/css-box-shadow-examples) example number 3.
 # Acknowledgements
