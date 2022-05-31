@@ -117,6 +117,17 @@ body {
 .save-btn {
     position: absolute;
     right: 22px;
+    border: none;
+    background: transparent;
+    color: #74A8A5;
+}
+
+.save-btn:hover,
+.save-btn:active,
+.save-btn:focus {
+    border: none;
+    background: transparent;
+    color:#74A8A5 !important;
 }
 
 .loppis-details-container {
