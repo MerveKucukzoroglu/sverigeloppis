@@ -44,6 +44,14 @@
                 </form>
             </div>
             <div class="col-12 col-md-6 col-lg-4">
+                <div>
+                    {% now "Y-m-d" as todays_date %}
+                    {% if todays_date > loppis.end_date|date:"Y-m-d" %}
+                        <span class="late-tag text-uppercase">Ended!</span>
+                    {% else %}
+                        <span class="available-tag text-uppercase">Available</span>
+                    {% endif %}
+                </div>
                 <div class="loppis-details-container mt-md-5">
                     <p class="mb-3">{{ loppis.title.capitalize }}</p>
                     {% if loppis.county %}

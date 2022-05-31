@@ -29,7 +29,7 @@
                                 <tr>
                                     <th scope="col"></th>
                                     <th scope="col">Title & Seller</th>
-                                    <th scope="col"></th>
+                                    <th scope="col">Status</th>
                                     <th scope="col">Date & Time</th>
                                     <th scope="col">Address</th>
                                 </tr>
@@ -42,9 +42,15 @@
                                 </td>
                                 <td class="py-3">
                                     <p class="my-0"><strong>{{ item.loppis.title }}</strong></p>
-                                    <p class="my-0 small text-muted">Seller: {{ item.loppis.seller }}</p>
+                                    <p class="my-0 small mt-2">Seller: {{ item.loppis.seller }}</p>
                                 </td>
                                 <td class="py-3">
+                                    {% now "Y-m-d" as todays_date %}
+                                    {% if todays_date > item.loppis.end_date|date:"Y-m-d" %}
+                                        <p class="text-uppercase late-text"><strong>Ended!</strong></p>
+                                    {% else %}
+                                        <p class="text-uppercase available-text"><strong>Available</strong></p>
+                                    {% endif %}
                                 </td>
                                 <td class="py-3 w-25">
                                     <p class="my-0">

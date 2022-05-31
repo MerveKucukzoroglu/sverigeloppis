@@ -130,6 +130,32 @@ body {
     color:#1f1f1f !important;
 }
 
+.late-tag {
+    position: absolute;
+    right: 15px;
+    background:#a14040;
+    color: white !important;
+    border-radius: 20px;
+    padding: 10px;
+}
+
+.available-tag {
+    position: absolute;
+    right: 15px;
+    background:#35771f;
+    color: white !important;
+    border-radius: 20px;
+    padding: 10px;
+}
+
+.late-text {
+    color:#a14040;
+}
+
+.available-text {
+    color:#35771f;
+}
+
 .loppis-details-container {
     background-color: #1f1f1f;
     padding: 20px;
