@@ -114,6 +114,18 @@ body {
     margin-right: auto;
 }
 
+.loppis-details-container {
+    background-color: #1f1f1f;
+    padding: 20px;
+    color:#A7C8C6;
+    border-radius: 20px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px; /*Box shadow by CSS Scan (Details in Readme.md)*/
+}
+
+
+.detail {
+    color:#ffb300;
+}
 
 /*Footer*/
 
