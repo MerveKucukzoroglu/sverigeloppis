@@ -45,7 +45,7 @@
                                     <p class="my-0 small mt-2">Seller: {{ item.loppis.seller }}</p>
                                 </td>
                                 <td class="py-3">
-                                    {% now "Y-m-d" as todays_date %}
+                                    {% now "Y-m-d" as todays_date %} <!-- date logic by Grepper (More in README.md)-->
                                     {% if todays_date > item.loppis.end_date|date:"Y-m-d" %}
                                         <p class="text-uppercase late-text"><strong>Ended!</strong></p>
                                     {% else %}
