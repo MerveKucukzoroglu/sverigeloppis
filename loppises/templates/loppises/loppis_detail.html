@@ -14,10 +14,12 @@
     <div class="container-fluid">
         <div class="row">
             <div class="col-12 col-md-6 col-lg-4 offset-lg-2">
-                <a href="{% url 'loppises' %}" class="text-dark nav-link mr-5">
-                    <i class="fas fa-angle-double-left fa-icon"></i>
-                </a>
-                <div class="image-container my-5">
+                <div>
+                    <a href="{% url 'loppises' %}" class="text-dark nav-link mr-5">
+                        <i class="fas fa-angle-double-left fa-icon"></i>
+                    </a>
+                </div>
+                <div class="image-container-de my-5">
                     {% if loppis.image %}
                         <a href="{{ loppis.image.url }}" target="_blank">
                             <img class="card-img-top img-fluid" src="{{ loppis.image.url }}" alt="{{ loppis.title }}">
@@ -28,11 +30,11 @@
                         </a>
                     {% endif %}
                 </div>
-                <div>
-                    <p class="mt-3"><span>Seller: </span>{{ loppis.seller }}</p>
-                </div>
             </div>
             <div class="col-12 col-md-6 col-lg-4">
+                <div>
+                    <p class="pb-3 pt-2 pr-3 text-right"><span>Seller: </span>{{ loppis.seller }}</p>
+                </div>
                 <div class="loppis-details-container mb-5 mt-md-5">
                     <p class="mb-3">{{ loppis.title.capitalize }}</p>
                     {% if loppis.county %}
