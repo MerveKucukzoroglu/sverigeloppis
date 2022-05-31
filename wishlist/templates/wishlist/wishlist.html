@@ -24,7 +24,44 @@
             <div class="col">
                 {% if wishlist_items %}
                     <div class="table-responsive rounded">
-                        {{ wishlist_items }}
+                        <table class="table table-sm table-borderless">
+                            <thead class="text-dark">
+                                <tr>
+                                    <th scope="col"></th>
+                                    <th scope="col">Title & Seller</th>
+                                    <th scope="col"></th>
+                                    <th scope="col">Date & Time</th>
+                                    <th scope="col">Address</th>
+                                </tr>
+                            </thead>
+
+                            {% for item in wishlist_items %}
+                            <tr>
+                                <td class="p-3 w-25">
+                                    <img class="img-fluid rounded" src="{{ item.loppis.image.url }}">
+                                </td>
+                                <td class="py-3">
+                                    <p class="my-0"><strong>{{ item.loppis.title }}</strong></p>
+                                    <p class="my-0 small text-muted">Seller: {{ item.loppis.seller }}</p>
+                                </td>
+                                <td class="py-3">
+                                </td>
+                                <td class="py-3 w-25">
+                                    <p class="my-0">
+                                        <p class="my-0">Date: {{ item.loppis.start_date }} - {{ item.loppis.end_date }}</p>
+                                        <p class="my-0">Time: {{ item.loppis.start_time }} - {{ item.loppis.end_time }}</p>
+                                    </p>
+                                </td>
+                                <td class="py-3">
+                                    <p class="my-0">Address: </p>
+                                    <p class="my-0">{{ item.loppis.street_address }}</p>
+                                    <p class="my-0">{{ item.loppis.city }}, {{ item.loppis.county }}</p>
+                                    <p class="my-0">{{ item.loppis.postcode }}, {{ item.loppis.country }}</p>
+                                </td>
+                            </tr>
+                            {% endfor %}
+
+                        </table>
                     </div>
                 {% else %}
                     <p class="lead mb-5">Your wishlist is empty.</p>
