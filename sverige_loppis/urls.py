@@ -23,4 +23,5 @@ urlpatterns = [
     path('accounts/', include('allauth.urls')),
     path('', include('home.urls')),
     path('loppises/', include('loppises.urls')),
+    path('save/', include('save.urls')),
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
