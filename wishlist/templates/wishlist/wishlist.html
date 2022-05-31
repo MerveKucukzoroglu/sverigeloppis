@@ -23,7 +23,9 @@
         <div class="row">
             <div class="col">
                 {% if wishlist_items %}
-                    <div class="table-responsive rounded"></div>
+                    <div class="table-responsive rounded">
+                        {{ wishlist_items }}
+                    </div>
                 {% else %}
                     <p class="lead mb-5">Your wishlist is empty.</p>
                     <a href="{% url 'loppises' %}" class="btn btn-outline-black rounded-0 btn-lg">

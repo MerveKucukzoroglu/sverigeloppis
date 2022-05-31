@@ -17,5 +17,4 @@ def add_to_wishlist(request, item_id):
     wishlist[item_id] = quantity
 
     request.session['wishlist'] = wishlist
-    print(request.session['wishlist'])
     return redirect(redirect_url)
