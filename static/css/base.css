@@ -114,6 +114,11 @@ body {
     margin-right: auto;
 }
 
+.save-btn {
+    position: absolute;
+    right: 22px;
+}
+
 .loppis-details-container {
     background-color: #1f1f1f;
     padding: 20px;
