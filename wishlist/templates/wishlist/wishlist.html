@@ -91,10 +91,12 @@
 <script type="text/javascript">
     //Remove item and reload on click
     $('.remove-item').click(function(e) {
+        var csrfToken = "{{ csrf_token }}";
         var itemId = $(this).attr('id').split('remove_')[1];
-        var url = `/wishlist/remove/${itemId}`;
+        var url = `/wishlist/remove/${itemId}/`;
+        var data = {'csrfmiddlewaretoken': csrfToken};
 
-        $.post(url)
+        $.post(url, data)
         .done(function(){
             location.reload();
         });
