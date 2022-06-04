@@ -69,7 +69,8 @@ body {
     border-radius: 50%;
 }
 
-.go-up-link {
+.go-up-link,
+.remove-item {
     cursor:pointer;
 }
 
