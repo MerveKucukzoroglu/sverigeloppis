@@ -6,7 +6,13 @@ class LoppisForm(forms.ModelForm):
 
     class Meta:
         model = Loppis
-        fields = '__all__'
+        fields = (
+            'title', 'start_date', 'end_date', 
+            'start_time', 'end_time', 'country', 
+            'postcode', 'county', 'city', 
+            'street_address', 'phone_number', 
+            'image', 'description',
+            )
 
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
