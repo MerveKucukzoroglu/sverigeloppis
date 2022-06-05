@@ -12,7 +12,7 @@ body {
 }
 
 .text-heading {
-    color:#2C2C2C;
+    color:#52797b;
     font-size: 40px;
 }
 
@@ -42,12 +42,12 @@ body {
 }
 
 .fa-icon:hover {
-    color:#74A8A5;
+    color:#52797b;
 }
 
 .btn-light {
-    background:#A7C8C6;
-    color:#1f1f1f;
+    background:#52797b;
+    color:#fff;
 }
 
 .text-dark {
@@ -64,8 +64,8 @@ body {
     position: fixed;
     bottom: 10px;
     right: 10px;
-    border: 2px solid #74A8A5;
-    color: #74A8A5;
+    border: 2px solid #52797b;
+    color: #52797b;
     border-radius: 50%;
 }
 
@@ -188,6 +188,57 @@ body {
     background: white;
     z-index: -1;
 } 
+
+/* Allauth form formatting */
+
+.allauth-form-inner-content p {
+    margin-top: 1.5rem; /* mt-4 */
+    color: #6c757d; /* text-secondary */
+}
+
+.allauth-form-inner-content input {
+    border-color: #000;
+    border-radius: 0;
+}
+
+.allauth-form-inner-content label:not([for='id_remember']) {
+    display: none;
+}
+
+.allauth-form-inner-content input::placeholder {
+    color: #aab7c4;
+}
+
+.allauth-form-inner-content button,
+.allauth-form-inner-content input[type='submit'] {
+	/* btn */
+	display: inline-block;
+    font-weight: 400;
+    color:#52797b;
+    text-align: center;
+    vertical-align: middle;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    background-color:#fff;
+    border: 1px solid #52797b;
+    padding: .375rem .75rem;
+    font-size: 1rem;
+    line-height: 1.5;
+    border-radius: 5px;
+
+    /* standard bootstrap btn transitions */
+    transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+}
+
+.allauth-form-inner-content button:hover,
+.allauth-form-inner-content input[type='submit']:hover {	
+	color: white;
+    background-color:#1f1f1f;
+    border-color:#1f1f1f;
+}
+
 
 /* ------------------------------- bootstrap toasts */
 
