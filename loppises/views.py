@@ -3,7 +3,9 @@ from django.shortcuts import render, redirect, reverse, get_object_or_404
 from django.contrib import messages
 from django.db.models import Q
 from django.db.models.functions import Lower
+
 from .models import Loppis, County
+from .forms import LoppisForm
 
 def all_loppises(request):
     """ A view to return list of all the loppises """
@@ -53,3 +55,14 @@ def loppis_detail(request, loppis_id):
     }
 
     return render(request, 'loppises/loppis_detail.html', context)
+
+
+def add_loppis(request):
+    """Add a loppis"""
+    form = LoppisForm()
+    template = 'loppises/add_loppis.html'
+    context = {
+        'form': form,
+    }
+
+    return render(request, template, context)
