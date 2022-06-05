@@ -45,9 +45,9 @@ body {
     color:#74A8A5;
 }
 
-.btn-dark {
-    background:#2C2C2C;
-    color: white;
+.btn-light {
+    background:#A7C8C6;
+    color:#1f1f1f;
 }
 
 .text-dark {
@@ -85,9 +85,9 @@ body {
 .loppis-now-button:hover,
 .loppis-now-button:active,
 .loppis-now-button:focus,
-.btn-dark:hover,
-.btn-dark:active,
-.btn-dark:focus {
+.btn-light:hover,
+.btn-light:active,
+.btn-light:focus {
     background: #2C2C2C;
     color: white;
 }
