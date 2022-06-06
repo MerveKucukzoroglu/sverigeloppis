@@ -1,7 +1,9 @@
 from django.shortcuts import render
 from loppises.models import Loppis
+from django.contrib.auth.decorators import login_required
 
 
+@login_required
 def profile(request):
     """ Display the user's profile. """
 
@@ -10,6 +12,7 @@ def profile(request):
 
     return render(request, template, context)
 
+@login_required
 def my_loppises(request):
     """Authenticated user views their own poems"""
     logged_in_user = request.user

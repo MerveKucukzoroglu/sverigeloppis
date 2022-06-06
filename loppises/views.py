@@ -1,6 +1,7 @@
 """ Loppis app views file """
 from django.shortcuts import render, redirect, reverse, get_object_or_404
 from django.contrib import messages
+from django.contrib.auth.decorators import login_required
 from django.db.models import Q
 from django.db.models.functions import Lower
 
@@ -56,7 +57,7 @@ def loppis_detail(request, loppis_id):
 
     return render(request, 'loppises/loppis_detail.html', context)
 
-
+@login_required
 def add_loppis(request):
     """Add a loppis"""
     form = LoppisForm()
@@ -67,9 +68,14 @@ def add_loppis(request):
 
     return render(request, template, context)
 
+@login_required
 def edit_loppis(request, loppis_id):
     """ Edit a loppis in the announcement """
     loppis = get_object_or_404(Loppis, pk=loppis_id)
+    if not request.user == loppis.seller:
+        messages.error(request, 'Sorry, only loppis owner can do that.')
+        return redirect(reverse('home'))
+      
     if request.method == 'POST':
         form = LoppisForm(request.POST, request.FILES, instance=loppis)
         if form.is_valid():
@@ -92,9 +98,14 @@ def edit_loppis(request, loppis_id):
 
     return render(request, template, context)
 
+@login_required
 def delete_loppis(request, loppis_id):
     """ Delete a loppis """
     loppis = get_object_or_404(Loppis, id=loppis_id)
+    if not request.user == loppis.seller:
+        messages.error(request, 'Sorry, only loppis owner can do that.')
+        return redirect(reverse('home'))
+
     loppis.delete()
     messages.success(request, 'Loppis Deleted!')
     return redirect(reverse('loppises'))
