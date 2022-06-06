@@ -66,3 +66,26 @@ def add_loppis(request):
     }
 
     return render(request, template, context)
+
+def edit_loppis(request, loppis_id):
+    """ Edit a product in the store """
+    loppis = get_object_or_404(Loppis, pk=loppis_id)
+    if request.method == 'POST':
+        form = LoppisForm(request.POST, request.FILES, instance=loppis)
+        if form.is_valid():
+            form.save()
+            messages.success(request, 'Successfully updated your Loppis!')
+            return redirect(reverse('loppis_detail', args=[loppis.id]))
+        else:
+            messages.error(request, 'Failed to update your Loppis. Please ensure the form is valid.')
+    else:
+        form = LoppisForm(instance=loppis)
+        messages.info(request, f'You are editing {loppis.title}')
+
+    template = 'loppises/edit_loppis.html'
+    context = {
+        'form': form,
+        'loppis': loppis,
+    }
+
+    return render(request, template, context)

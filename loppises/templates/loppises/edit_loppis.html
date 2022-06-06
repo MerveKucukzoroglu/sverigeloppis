@@ -1,0 +1,52 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block page_header %}
+    <div class="container header-container">
+        <div class="row">
+            <div class="col"></div>
+        </div>
+    </div>
+{% endblock %}
+
+{% block content %}
+    <div class="overlay"></div>
+    <div class="container">
+        <div class="row">
+            <div class="col-12 col-md-6">
+                <hr>
+                <h2 class="text-heading mb-4">Edit Loppis</h2>
+                <h5 class="text-muted">Editing as: {{ user.username.capitalize }}</h5>
+                <hr>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-12 col-md-6">
+                <form method="POST" action="{% url 'edit_loppis' loppis.id %}" class="form mb-2" enctype="multipart/form-data">
+                    {% csrf_token %}
+
+                    {{form.title|as_crispy_field}}
+
+                    {{form.start_date|as_crispy_field}}
+                    {{form.end_date|as_crispy_field}}
+                    {{form.start_time|as_crispy_field}}
+                    {{form.end_time|as_crispy_field}}
+                    <p class="mt-5 text-muted">The following address is required for your Loppis location. You can choose to enter only the required fields marked with <span class="text-danger">*</span></p>
+                    {{form.country|as_crispy_field}}
+                    {{form.postcode|as_crispy_field}}
+                    {{form.county|as_crispy_field}}
+                    {{form.city|as_crispy_field}}
+                    {{form.street_address|as_crispy_field}}
+                    {{form.phone_number|as_crispy_field}}
+                    {{form.image|as_crispy_field}}
+                    {{form.description|as_crispy_field}}
+                    <div class="text-right">
+                        <a class="btn btn-outline-dark" href="{% url 'loppises' %}">Cancel</a>
+                        <button class="btn btn-light" type="submit">Update Loppis</button>
+                    </div>
+                </form>
+            </div>            
+        </div>
+    </div>
+{% endblock %}
