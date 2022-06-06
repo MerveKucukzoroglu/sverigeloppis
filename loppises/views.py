@@ -81,6 +81,8 @@ def edit_loppis(request, loppis_id):
     else:
         form = LoppisForm(instance=loppis)
         messages.info(request, f'You are editing {loppis.title}')
+        form.fields['start_date'].widget.attrs['readonly'] = True
+        form.fields['end_date'].widget.attrs['readonly'] = True
 
     template = 'loppises/edit_loppis.html'
     context = {

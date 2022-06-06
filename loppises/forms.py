@@ -38,9 +38,6 @@ class LoppisForm(forms.ModelForm):
         self.fields['county'].choices = friendly_names
         for field_name, field in self.fields.items():
             field.widget.attrs['class'] = 'border-dark rounded-0'
-        
-        self.fields['start_date'].widget.attrs['readonly'] = True
-        self.fields['end_date'].widget.attrs['readonly'] = True
 
     # def clean(self):
     #     cleaned_data = super().clean()
