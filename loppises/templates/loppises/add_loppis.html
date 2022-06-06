@@ -40,6 +40,7 @@
 
                     {{form.start_time|as_crispy_field}}
                     {{form.end_time|as_crispy_field}}
+                    <p class="mt-5 text-muted">The following address is required for your Loppis location. You can choose to enter only the required fields marked with <span class="text-danger">*</span></p>
                     {{form.country|as_crispy_field}}
                     {{form.postcode|as_crispy_field}}
                     {{form.county|as_crispy_field}}
@@ -52,7 +53,10 @@
                     
                     <div class="text-right">
                         <a class="btn btn-outline-dark rounded-0" href="{% url 'loppises' %}">Cancel</a>
-                        <button class="btn btn-black rounded-0" type="submit">Add Product</button>
+                        <button class="btn btn-light rounded-0" type="submit">
+                            <span class="text-uppercase">Secure Checkout</span>
+                            <span class="icon"><i class="fas fa-lock"></i></span>
+                        </button>
                     </div>
                 </form>
                 {% endif %}
