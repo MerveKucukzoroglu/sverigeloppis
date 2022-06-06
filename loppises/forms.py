@@ -29,6 +29,8 @@ class LoppisForm(forms.ModelForm):
             'street_address', 'phone_number', 
             'image', 'description',
             )
+        
+    image = forms.ImageField(label='Image', required=False, widget=CustomClearableFileInput)
 
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)

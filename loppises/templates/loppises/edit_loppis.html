@@ -27,26 +27,15 @@
                 <form method="POST" action="{% url 'edit_loppis' loppis.id %}" class="form mb-2" enctype="multipart/form-data">
                     {% csrf_token %}
 
-                    {{form.title|as_crispy_field}}
+                    {% for field in form %}
+                        {% if field.name != 'image' %}
+                            {{ field | as_crispy_field}}
+                        {% else %}
+                            {{ field }}
+                        {% endif %}
+                    {% endfor %}
 
-                    {{form.start_date|as_crispy_field}}
-                    {{form.end_date|as_crispy_field}}
-                    {{form.start_time|as_crispy_field}}
-                    {{form.end_time|as_crispy_field}}
-
-                    <p class="mt-5 text-muted">
-                        The following address is required for your Loppis location. 
-                        You can choose to enter only the required fields marked with 
-                        <span class="text-danger">*</span>
-                    </p>
-                    {{form.country|as_crispy_field}}
-                    {{form.postcode|as_crispy_field}}
-                    {{form.county|as_crispy_field}}
-                    {{form.city|as_crispy_field}}
-                    {{form.street_address|as_crispy_field}}
-                    {{form.phone_number|as_crispy_field}}
-                    {{form.image|as_crispy_field}}
-                    {{form.description|as_crispy_field}}
+                    
                     <div class="text-right">
                         <a class="btn btn-outline-dark" href="{% url 'loppises' %}">Cancel</a>
                         <button class="btn btn-light" type="submit">Update Loppis</button>
@@ -67,4 +56,14 @@
         {% endif %}
 
     </div>
+{% endblock %}
+
+{% block postloadjs %}
+    {{ block.super }}
+    <script type="text/javascript">
+        $('#new-image').change(function() {
+            var file = $('#new-image')[0].files[0];
+            $('#filename').text(`Image will be set to: ${file.name}`);
+        });
+    </script>
 {% endblock %}
