@@ -12,6 +12,7 @@
 {% block content %}
     <div class="overlay"></div>
     <div class="container">
+        {% if user.username %}
         <div class="row">
             <div class="col-12 col-md-6">
                 <hr>
@@ -32,7 +33,7 @@
                     {{form.end_date|as_crispy_field}}
                     {{form.start_time|as_crispy_field}}
                     {{form.end_time|as_crispy_field}}
-                    
+
                     <p class="mt-5 text-muted">
                         The following address is required for your Loppis location. 
                         You can choose to enter only the required fields marked with 
@@ -53,5 +54,17 @@
                 </form>
             </div>            
         </div>
+        {% else %}
+        <div class="row">
+            <h5 class="text-heading">You are not authorized to do this action!</h5>
+        </div>
+        <div class="row">
+            <a class="btn btn-outline-dark rounded-0 mt-5" href="{% url 'loppises' %}">
+                <i class="fas fa-angle-double-left"></i>
+                Go back to Loppis Page
+            </a>
+        </div>
+        {% endif %}
+
     </div>
 {% endblock %}
