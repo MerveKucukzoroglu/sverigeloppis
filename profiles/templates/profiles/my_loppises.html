@@ -1,0 +1,92 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block page_header %}
+    <div class="container header-container">
+        <div class="row">
+            <div class="col"></div>
+        </div>
+    </div>
+{% endblock %}
+
+{% block content %}
+    <div class="overlay"></div>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col text-center mt-3">
+                <h2 class="text-heading">LOPPIS</h2>
+                <hr class="w-50 mb-1">
+            </div>
+        </div>
+        <div class="row">
+            <div class="loppis-container col-10 offset-1">
+                <div class="row">
+                    {% for loppis in loppises %}
+                        {% if user == loppis.seller %}
+                            <div class="col-sm-6 col-md-6 col-lg-4 col-xl-3">
+                                <div class="card h-100 border-0">
+                                    {% if loppis.image %}
+                                    <a href="{% url 'loppis_detail' loppis.id %}">
+                                        <img class="card-img-top img-fluid" src="{{ loppis.image.url }}" alt="{{ loppis.title }}">
+                                    </a>
+                                    {% else %}
+                                    <a href="{% url 'loppis_detail' loppis.id %}">
+                                        <img class="card-img-top img-fluid" src="{% static '../media/default-image.jpg' %}" alt="{{ loppis.title }}">
+                                    </a>
+                                    {% endif %}
+                                    <div class="card-body pb-0">
+                                        <span class="mb-0 text-left">{{ loppis.title.capitalize }}</span>
+                                        {% now "Y-m-d" as todays_date %} <!-- date logic by Grepper (More in README.md)-->
+                                        {% if todays_date > loppis.end_date|date:"Y-m-d" %}
+                                            <p class="text-uppercase late-text"><strong>Ended!</strong></p>
+                                        {% else %}
+                                            <p class="text-uppercase available-text"><strong>Available</strong></p>
+                                        {% endif %}
+                                    </div>
+                                    <div class="card-body pb-0 pt-0">
+                                        {% if loppis.county %}
+                                        <a class="text-muted" href="{% url 'loppises' %}?county={{ loppis.county.county }}">{{ loppis.county.friendly_name }}</a>
+                                        {% endif %}
+                                    </div>
+                                    <div class="card-body pb-0">
+                                        <p class="mb-0">{{ loppis.start_date }} - {{ loppis.end_date }}</p>
+                                        <p class="mb-0">{{ loppis.start_time }} - {{ loppis.end_time }}</p>
+                                    </div>
+                                    <div class="card-footer bg-white pt-0 border-0 pb-0 text-center">
+                                        <p class="mb-0"><a class="more-details btn btn-sm rounded-0 w-100" href="{% url 'loppis_detail' loppis.id %}">More details</a></p>
+                                    </div>
+                                </div>
+                            </div>
+                            {% if forloop.counter|divisibleby:1 %}
+                                <div class="col-12 d-sm-none mb-5">
+                                    <hr>
+                                </div>
+                            {% endif %}                        
+                            {% if forloop.counter|divisibleby:2 %}
+                                <div class="col-12 d-none d-sm-block d-md-block d-lg-none mb-5">
+                                    <hr>
+                                </div>
+                            {% endif %}
+                            {% if forloop.counter|divisibleby:3 %}
+                                <div class="col-12 d-none d-lg-block d-xl-none mb-5">
+                                    <hr>
+                                </div>
+                            {% endif %}
+                            {% if forloop.counter|divisibleby:4 %}
+                                <div class="col-12 d-none d-xl-block mb-5">
+                                    <hr>
+                                </div>
+                            {% endif %}
+
+                        {% endif %}
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="go-up-button shadow-sm">
+        <a class="go-up-link d-flex h-100">
+            <i class="fas fa-arrow-up mx-auto my-auto"></i>
+        </a>	
+    </div>
+{% endblock %}
