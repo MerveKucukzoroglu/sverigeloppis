@@ -68,7 +68,7 @@ def add_loppis(request):
     return render(request, template, context)
 
 def edit_loppis(request, loppis_id):
-    """ Edit a product in the store """
+    """ Edit a loppis in the announcement """
     loppis = get_object_or_404(Loppis, pk=loppis_id)
     if request.method == 'POST':
         form = LoppisForm(request.POST, request.FILES, instance=loppis)
@@ -91,3 +91,10 @@ def edit_loppis(request, loppis_id):
     }
 
     return render(request, template, context)
+
+def delete_loppis(request, loppis_id):
+    """ Delete a loppis """
+    loppis = get_object_or_404(Loppis, id=loppis_id)
+    loppis.delete()
+    messages.success(request, 'Loppis Deleted!')
+    return redirect(reverse('loppises'))
