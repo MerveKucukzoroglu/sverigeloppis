@@ -54,6 +54,14 @@ body {
     color:#2C2C2C !important;
 }
 
+.text-light {
+    color:#52797b !important;
+}
+
+a.text-light:hover {
+    color:#1f1f1f !important;
+}
+
 .border-dark {
     border: 1px solid #2C2C2C !important;
 }
