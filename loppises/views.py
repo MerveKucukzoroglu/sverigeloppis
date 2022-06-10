@@ -11,7 +11,7 @@ from .forms import LoppisForm
 def all_loppises(request):
     """ A view to return list of all the loppises """
 
-    county_list = County.objects.all()
+    county_list = County.objects.all().order_by("county")
     loppises = Loppis.objects.all()
     query = None
     sort = None
