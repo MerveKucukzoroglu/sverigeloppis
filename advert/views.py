@@ -1,8 +1,12 @@
 """Loppis Advertisement views"""
-from django.shortcuts import render, redirect, reverse
+from django.shortcuts import render, redirect, reverse, get_object_or_404
 from django.contrib import messages
 from django.contrib.auth.decorators import login_required
+
 from .forms import LoppisForm
+from loppises.models import Loppis
+from .models import Advert
+
 from django.contrib.auth.models import User
 from django.conf import settings
 
@@ -21,9 +25,10 @@ def advert(request):
             loppis.seller = User.objects.get(username=request.user.username)
             messages.success(request, 'Successfully published Loppis!')
             loppis.save()
-            return redirect(reverse('advert'))
+            return redirect(reverse('advert_success'))
         else:
-            messages.error(request, 'Failed to add Loppis. Please ensure the form is valid.')
+            messages.error(request, 'Failed to add Loppis. \
+                Please double check your information.')
     else:
         stripe_total = round(5 * 100)
         stripe.api_key = stripe_secret_key
@@ -47,3 +52,14 @@ def advert(request):
     }
 
     return render(request, template, context)
+
+
+def advert_success(request):
+    """ Handle successfull payment """
+    save_info = request.session.get('save_info')
+    messages.success(request, f'Loppis published successfully! \
+        A confirmation email will be send.')
+
+    template = 'advert/advert_success.html'
+
+    return render(request, template)
