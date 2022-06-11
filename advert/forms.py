@@ -38,7 +38,6 @@ class LoppisForm(forms.ModelForm):
         friendly_names = [(c.id, c.get_friendly_name()) for c in counties]
 
         self.fields['county'].choices = friendly_names
-        self.fields['country'].widget.attrs['placeholder'] = 'Sweden'
-        # self.fields['country'].widget.attrs['readonly'] = True
+        self.fields['country'].widget.attrs['value'] = 'Sweden'
         for field_name, field in self.fields.items():
             field.widget.attrs['class'] = 'border-dark rounded-0'

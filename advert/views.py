@@ -21,6 +21,7 @@ def advert(request):
             messages.error(request, 'Failed to add Loppis. Please ensure the form is valid.')
     else:
         form = LoppisForm()
+        form.fields['country'].widget.attrs['readonly'] = True
     template = 'advert/advert.html'
     context = {
         'form': form,
