@@ -40,4 +40,4 @@ class LoppisForm(forms.ModelForm):
         self.fields['county'].choices = friendly_names
         self.fields['country'].widget.attrs['value'] = 'Sweden'
         for field_name, field in self.fields.items():
-            field.widget.attrs['class'] = 'border-dark rounded-0'
+            field.widget.attrs['class'] = 'stripe-style-input'

@@ -1,6 +1,10 @@
 {% extends "base.html" %}
 {% load static %}
 
+{% block extra_css %}
+    <link rel="stylesheet" href="{% static 'advert/css/advert.css' %}">
+{% endblock %}
+
 {% block page_header %}
     <div class="container header-container">
         <div class="row">
@@ -18,7 +22,7 @@
                 <h2 class="text-heading mb-4">Create Loppis Ad</h2>
                 <h5 class="text-muted">Add a Loppis</h5>
                 <p class="mb-0">Each Loppis announcements costs 5 SEK.</p>
-                <p class="mr-3">Secure checkout in the next step <i class="fas fa-lock text-light"></i></p>
+                <p class="mr-3">Secure checkout <i class="fas fa-lock text-light"></i></p>
                 <p><a href="" class="text-light">Learn how this works!</a></p>
                 <hr>
             </div>
@@ -28,29 +32,29 @@
             <div class="col-12 col-md-6">
                 {% if user.is_authenticated %}
                 <p>Publishing as: <span class="text-muted">{{ user.username.capitalize }}</span></p>
-                <form method="POST" action="{% url 'advert' %}" class="form mb-2" enctype="multipart/form-data">
+                <form method="POST" action="{% url 'advert' %}" class="form mb-2" id="payment-form" enctype="multipart/form-data">
                     {% csrf_token %}
-                    {{form.title|as_crispy_field}}
+                    <fieldset class="rounded px-3 mb-5">
+                        {{form.title|as_crispy_field}}
 
-                    {{form.start_date|as_crispy_field}}
-                    <p class="text-muted mb-5 mt-0">Please choose your loppis start date carefully. You cannot edit your date later!</p>
+                        {{form.start_date|as_crispy_field}}
+                        <p class="text-muted mb-5 mt-0">Please choose your loppis start date carefully. You cannot edit your date later!</p>
 
-                    {{form.end_date|as_crispy_field}}
-                    <p class="text-muted mb-5 mt-0" >Please choose your loppis end date carefully. You cannot edit your date later!</p>
+                        {{form.end_date|as_crispy_field}}
+                        <p class="text-muted mb-5 mt-0" >Please choose your loppis end date carefully. You cannot edit your date later!</p>
 
-                    {{form.start_time|as_crispy_field}}
-                    {{form.end_time|as_crispy_field}}
-                    <p class="mt-5 text-muted">The following address is required for your Loppis location. You can choose to enter only the required fields marked with <span class="text-danger">*</span></p>
-                    {{form.country|as_crispy_field}}
-                    {{form.postcode|as_crispy_field}}
-                    {{form.county|as_crispy_field}}
-                    {{form.city|as_crispy_field}}
-                    {{form.street_address|as_crispy_field}}
-                    {{form.phone_number|as_crispy_field}}
-                    {{form.image|as_crispy_field}}
-                    {{form.description|as_crispy_field}}
-
-                    
+                        {{form.start_time|as_crispy_field}}
+                        {{form.end_time|as_crispy_field}}
+                        <p class="mt-5 text-muted">The following address is required for your Loppis location. You can choose to enter only the required fields marked with <span class="text-danger">*</span></p>
+                        {{form.country|as_crispy_field}}
+                        {{form.postcode|as_crispy_field}}
+                        {{form.county|as_crispy_field}}
+                        {{form.city|as_crispy_field}}
+                        {{form.street_address|as_crispy_field}}
+                        {{form.phone_number|as_crispy_field}}
+                        {{form.image|as_crispy_field}}
+                        {{form.description|as_crispy_field}}
+                    </fieldset>
                     <fieldset class="px-3">
                         <legend class="fieldset-label small text-dark px-2 w-auto">Payment</legend>
                         <!--A Stripe card element will go here-->
@@ -86,6 +90,9 @@
 
 {% block postloadjs %}
     {{ block.super }}
+    {{ stripe_public_key|json_script:"id_stripe_public_key" }}
+    {{ client_secret|json_script:"id_client_secret" }}
+    <script src="{% static 'advert/js/stripe_elements.js' %}"></script>
     <script type="text/javascript">
         $('#new-image').change(function() {
             var file = $('#new-image')[0].files[0];

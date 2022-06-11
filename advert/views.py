@@ -25,6 +25,8 @@ def advert(request):
     template = 'advert/advert.html'
     context = {
         'form': form,
+        'stripe_public_key': 'pk_test_51KrjN6A64mxey4Bo5lacxcOm1dPcgSbVhBV9VDT9Tw5UZf0ZFCcbKDfYt9z1KQNcN8ZvjFBtD0OmtTSLAaMVbIhj00kFxQnHLi',
+        'client_secret': 'test client secret',
     }
 
     return render(request, template, context)
