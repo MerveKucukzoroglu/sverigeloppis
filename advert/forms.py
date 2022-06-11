@@ -1,6 +1,6 @@
 from django import forms
-from .widgets import CustomClearableFileInput
-from .models import Loppis, County
+from loppises.widgets import CustomClearableFileInput
+from loppises.models import Loppis, County
 
 
 class DateInput(forms.DateInput):
@@ -39,6 +39,6 @@ class LoppisForm(forms.ModelForm):
 
         self.fields['county'].choices = friendly_names
         self.fields['country'].widget.attrs['placeholder'] = 'Sweden'
-        self.fields['country'].widget.attrs['readonly'] = True
+        # self.fields['country'].widget.attrs['readonly'] = True
         for field_name, field in self.fields.items():
             field.widget.attrs['class'] = 'border-dark rounded-0'

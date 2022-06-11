@@ -1,10 +1,6 @@
 {% extends "base.html" %}
 {% load static %}
 
-{% block extra_css %}
-    <link rel="stylesheet" href="{% static 'advert/css/checkout.css' %}">
-{% endblock %}
-
 {% block page_header %}
     <div class="container header-container">
         <div class="row">
@@ -17,27 +13,44 @@
     <div class="overlay"></div>
     <div class="container">
         <div class="row">
-            <div class="col">
+            <div class="col-12 col-md-6">
                 <hr>
-                <h2 class="text-heading mb-4">Loppis Ad Payment</h2>
+                <h2 class="text-heading mb-4">Create Loppis Ad</h2>
+                <h5 class="text-muted">Add a Loppis</h5>
+                <p class="mb-0">Each Loppis announcements costs 5 SEK.</p>
+                <p class="mr-3">Secure checkout in the next step <i class="fas fa-lock text-light"></i></p>
+                <p><a href="" class="text-light">Learn how this works!</a></p>
                 <hr>
             </div>
         </div>
 
         <div class="row">
-            <div class="col-12 col-lg-6 advert-lg-last mb-5">
-                <div class="row">
-                    <div class="col-7 offset-2">
-                        <p class="mb-1 mt-0 small text-muted">Loppis Ad summary</p>
-                    </div>
-                    <div class="col-3 text-right">
-                        <p class="mb-1 mt-0 small text-muted">Subtotal: SEK 5</p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-12 col-lg-6">
-                <p class="text-muted">Please fill out the form below to publish your Loppis Ad with Sverige Loppis</p>
-                <form action="{% url 'advert' %}" method="POST" id="payment-form">
+            <div class="col-12 col-md-6">
+                {% if user.is_authenticated %}
+                <p>Publishing as: <span class="text-muted">{{ user.username.capitalize }}</span></p>
+                <form method="POST" action="{% url 'advert' %}" class="form mb-2" enctype="multipart/form-data">
+                    {% csrf_token %}
+                    {{form.title|as_crispy_field}}
+
+                    {{form.start_date|as_crispy_field}}
+                    <p class="text-muted mb-5 mt-0">Please choose your loppis start date carefully. You cannot edit your date later!</p>
+
+                    {{form.end_date|as_crispy_field}}
+                    <p class="text-muted mb-5 mt-0" >Please choose your loppis end date carefully. You cannot edit your date later!</p>
+
+                    {{form.start_time|as_crispy_field}}
+                    {{form.end_time|as_crispy_field}}
+                    <p class="mt-5 text-muted">The following address is required for your Loppis location. You can choose to enter only the required fields marked with <span class="text-danger">*</span></p>
+                    {{form.country|as_crispy_field}}
+                    {{form.postcode|as_crispy_field}}
+                    {{form.county|as_crispy_field}}
+                    {{form.city|as_crispy_field}}
+                    {{form.street_address|as_crispy_field}}
+                    {{form.phone_number|as_crispy_field}}
+                    {{form.image|as_crispy_field}}
+                    {{form.description|as_crispy_field}}
+
+                    
                     <fieldset class="px-3">
                         <legend class="fieldset-label small text-dark px-2 w-auto">Payment</legend>
                         <!--A Stripe card element will go here-->
@@ -49,10 +62,7 @@
 
                     <div class="submit-button text-right mt-5 mb-2">
                         <a href="{{request.META.HTTP_REFERER}}" class="btn btn-outline-dark rounded-0">
-                            <span class="icon">
-                                <i class="fas fa-chevron-left"></i>
-                            </span>
-                            <span class="font-weight-bold">Adjust Loppis Ad</span>
+                            <span class="font-weight-bold">Cancel</span>
                         </a>
                         <button id="submit-button" class="btn btn-light rounded-0">
                             <span class="font-weight-bold">Complete Payment</span>
@@ -68,7 +78,31 @@
                         </p>
                     </div>
                 </form>
-            </div>
+                {% endif %}
+            </div>            
         </div>
     </div>
+{% endblock %}
+
+{% block postloadjs %}
+    {{ block.super }}
+    <script type="text/javascript">
+        $('#new-image').change(function() {
+            var file = $('#new-image')[0].files[0];
+            $('#filename').text(`Image will be set to: ${file.name}`);
+        });
+
+
+        // ensure start/end dates are not before "today", and end-date comes on/after start-date
+        // Credits in README.
+        let now = new Date(),
+        minDate = now.toISOString().substring(0,10);
+        $("#id_start_date").prop("min", minDate);
+        $("#id_start_date").on("change", setEndDateMin);
+        $("#id_end_date").on("change", setEndDateMin);
+        function setEndDateMin() {
+            let startDate = $("#id_start_date").val();
+            $("#id_end_date").prop("min", startDate);
+        }
+    </script>
 {% endblock %}
