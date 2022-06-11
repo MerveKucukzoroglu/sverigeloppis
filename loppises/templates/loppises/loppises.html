@@ -51,7 +51,7 @@
                                 </a>
                                 {% else %}
                                 <a href="{% url 'loppis_detail' loppis.id %}">
-                                    <img class="card-img-top img-fluid" src="{% static '../media/default-image.jpg' %}" alt="{{ loppis.title }}">
+                                    <img class="card-img-top img-fluid" src="{{ MEDIA_URL }}default-image.jpg" alt="{{ loppis.title }}">
                                 </a>
                                 {% endif %}
                                 <div class="card-body pb-0">

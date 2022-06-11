@@ -38,7 +38,11 @@
                             {% for item in wishlist_items %}
                             <tr>
                                 <td class="p-3 w-25">
-                                    <img class="img-fluid rounded" src="{{ item.loppis.image.url }}">
+                                    {% if item.loppis.image %}
+                                    <img class="img-fluid rounded" src="{{ item.loppis.image.url }}" alt="{{ item.loppis.title }}">
+                                    {% else %}
+                                    <img class="img-fluid rounded" src="{{ MEDIA_URL }}default-image.jpg" alt="{{ item.loppis.title }}">
+                                    {% endif %}
                                 </td>
                                 <td class="py-3">
                                     <p class="my-0"><strong>{{ item.loppis.title }}</strong></p>
