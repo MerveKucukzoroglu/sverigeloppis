@@ -19,9 +19,9 @@ def advert(request):
     stripe_secret_key = settings.STRIPE_SECRET_KEY
 
     if request.method == 'POST':
-        form = LoppisForm(request.POST, request.FILES)
-        if form.is_valid():
-            loppis = form.save(commit=False)
+        loppis_form = LoppisForm(request.POST, request.FILES)
+        if loppis_form.is_valid():
+            loppis = loppis_form.save(commit=False)
             loppis.seller = User.objects.get(username=request.user.username)
             messages.success(request, 'Successfully published Loppis!')
             loppis.save()
@@ -57,9 +57,13 @@ def advert(request):
 def advert_success(request):
     """ Handle successfull payment """
     save_info = request.session.get('save_info')
-    messages.success(request, f'Loppis published successfully! \
+    advertisement = Advert.objects.all()
+    messages.success(request, f'Loppis published successfully {Advert.ad_number}! \
         A confirmation email will be send.')
 
     template = 'advert/advert_success.html'
+    context = {
+        'advertisement': advertisement
+    }
 
-    return render(request, template)
+    return render(request, template, context)

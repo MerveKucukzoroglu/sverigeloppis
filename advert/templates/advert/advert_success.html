@@ -21,20 +21,16 @@
                 <hr>
                 <h2 class="text-heading mb-4">Thank You</h2>
                 <hr>
-                <p class="text-dark">Your loppis ad information is below. A confirmation email will be sent to <strong>{{ user.email }}</strong>.</p>
+                <p class="text-dark">A confirmation email will be sent to <strong>{{ user.email }}</strong>.</p>
             </div>
         </div>
-
         <div class="row">
-            <div class="col-12 col-lg-7"></div>
-        </div>
-        <div class="row">
-			<div class="col-12 col-lg-7 text-right">
-				<a href="{% url 'loppises' %}" class="btn btn-dark rounded-0 my-2">
+			<div class="text-right ml-3">
+				<a href="{% url 'my_loppises' %}" class="btn btn-light my-2">
 					<span class="icon mr-2">
-						<i class="fas fa-gifts"></i>
+						<i class="fa fa-wrench" aria-hidden="true"></i>
 					</span>
-					<span class="text-uppercase">Now check out the latest loppises!</span>
+					<span class="text-uppercase">Manage your Loppises</span>
 				</a>
 			</div>
 		</div>
