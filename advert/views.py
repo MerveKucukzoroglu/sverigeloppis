@@ -1,3 +1,7 @@
 from django.shortcuts import render
 
-# Create your views here.
+
+def advert(request):
+    """Loppis Advertisement View"""
+    template = 'advert/advert.html'
+    return render(request, template)
