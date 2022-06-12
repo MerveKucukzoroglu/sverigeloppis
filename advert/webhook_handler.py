@@ -1,4 +1,9 @@
 from django.http import HttpResponse
+from django.shortcuts import get_object_or_404
+from django.core.mail import send_mail
+from django.template.loader import render_to_string
+from django.conf import settings
+from django.contrib.auth.models import User
 from .models import Advert
 from loppises.models import Loppis
 
@@ -8,12 +13,43 @@ class StripeWH_Handler:
 
     def __init__(self, request):
         self.request = request
+    
+
+    def _send_confirmation_email(self, advert):
+        """Send user confirmation email"""
+        advert = Advert.objects.all()
+        field_name = 'email'
+        user = User.objects.first()
+        loppis = Loppis.objects.first()
+        field_value = getattr(user, field_name)
+        seller_email = field_value
+        subject = render_to_string(
+            'advert/confirmation_emails/confirmation_email_subject.txt',
+            {'advert': advert})
+        body = render_to_string(
+            'advert/confirmation_emails/confirmation_email_body.txt',
+            {
+                'advert': advert,
+                'user': user,
+                'loppis': loppis,
+                'contact_email': settings.DEFAULT_FROM_EMAIL
+            })
+        
+        send_mail(
+            subject,
+            body,
+            settings.DEFAULT_FROM_EMAIL,
+            [seller_email]
+        )
+
 
 
     def handle_event(self, event):
         """
         Handle a generic/unknown/unexpected webhook event
         """
+        advert = Advert.objects.all()
+        self._send_confirmation_email(advert)
         return HttpResponse(
             content=f'Unhandled webhook received: {event["type"]}',
             status=200)
@@ -27,6 +63,8 @@ class StripeWH_Handler:
             intent = event.data.object
             pid = intent.id
             stripe_pid=pid
+            advert = Advert.objects.all()
+            self._send_confirmation_email(advert)
             return HttpResponse(
                 content=f'Webhook received: {event["type"]}',
                 status=200)
@@ -34,6 +72,7 @@ class StripeWH_Handler:
         except Exception as e:
             if advert:
                 advert.delete()
+                self._send_confirmation_email(advert)
             return HttpResponse(content=f'Webhook recieved: {event["type"]} | ERROR: {e}',
             status=500)
 

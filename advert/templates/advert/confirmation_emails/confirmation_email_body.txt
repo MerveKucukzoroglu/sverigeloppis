@@ -1,0 +1,25 @@
+Hello {{user.username}}
+
+This is a confirmation for your loppis announcement at Sverige Loppis.
+
+Publish date: {{ loppis.created_on }}
+
+Loppis title: {{ loppis.title }}
+Your loppis event will take place between {{ loppis.start_date }} - {{ loppis.end_date }}.
+
+Timings you have chosen for your loppis: {{ loppis.start_time }} - {{ loppis.end_time }}.
+
+County: 
+Address: {{ loppis.street_address }}, {{ loppis.city }}, {{ loppis.county.friendly_name }}, {{ loppis.country }}
+
+Total amount payed: SEK 5.
+
+You can make changes in your loppis from your Profile page. 
+(Please note that you cannot change the loppis dates you have initially selected)
+
+If you have any further questions, feel free to contact us at {{ contact_email }}.
+
+Thank you for choosing Sverige Loppis
+
+Sincerely, 
+Sverige Loppis

@@ -75,9 +75,8 @@ def advert(request):
 
 def advert_success(request):
     """ Handle successfull payment """
-    save_info = request.session.get('save_info')
     advertisement = Advert.objects.all()
-    messages.success(request, f'Loppis published successfully {Advert.ad_number}! \
+    messages.success(request, f'Loppis published successfully! \
         A confirmation email will be send.')
 
     template = 'advert/advert_success.html'
