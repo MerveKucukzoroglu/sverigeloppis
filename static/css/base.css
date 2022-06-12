@@ -293,6 +293,17 @@ a.text-light:hover {
     height: 2px;
 }
 
+/* QUESTION FORM */
+
+#content {
+    width: 250px;
+}
+.question_content {
+    height: 300px;
+    border: none;
+    background: none;
+}
+
 /* -------------------------------- Media Queries */
 
 /* Slightly larger container on xl screens */

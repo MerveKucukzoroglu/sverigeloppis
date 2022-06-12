@@ -1,5 +1,6 @@
 {% extends "base.html" %}
 {% load static %}
+{% load crispy_forms_tags %}
 
 {% block page_header %}
     <div class="container header-container">
@@ -108,44 +109,51 @@
                     </div>
                     
                 </div>
+            </div>
         </div>
-        <div class="col">
-                            <div class="row">
-                    <div class="col-md-8 card mb-4  mt-3 comment-content">
+        <div class="row">
+            <div class="col">
+                <div class="col-1">
+                    {% with questions.count as total_questions %}
+                    <strong class="text-secondary"><i class="fa fa-question" aria-hidden="true"></i>
+                        {{ total_questions }}
+                    </strong>
+                    {% endwith %}
+                </div>
+                <div class="row">
+                    <div class="col-12 col-md-6 mb-4  mt-3 question-content">
                         <h3 class="title">Questions:</h3>
-                        <div class="card-body">
-                            {% for question in questions %}
-                            <div class="comments" style="padding: 10px;">
+                    <div class="card-body">
+                        {% for question in questions %}
+                            <div class="questions" style="padding: 10px;">
                                 <p class="font-weight-bold">
                                     {{ question.author }}
                                     <span class=" text-muted font-weight-normal">
                                         {{ question.created_on }}
                                     </span> wrote:
                                 </p>
-                                <!-- The body of the comment goes before the | -->
                                 {{ question.content | linebreaks }}
                             </div>
-                            <!-- Our for loop ends here -->
-                            {% endfor %}
-                        </div>
+                        {% endfor %}
                     </div>
-                    <div class="col-md-4 card mb-4  mt-3 comment-content">
-                        <div class="card-body">
-            
-                            {% if user.is_authenticated %}
-            
-                            <h3 class="title">Leave a question:</h3>
-                            <p>Posting as: {{ user.username }}</p>
-                            <form method="post" style="margin-top: 1.3em;">
+                </div>
+                <div class="col-12 col-md-6 mb-4  mt-3 question-content">
+                    <div class="card-body">
+                
+                        {% if user.is_authenticated %}
+        
+                            <h3 class="text-light">Leave a question:</h3>
+                            <p>Posting as: <span class="text-muted">{{ user.username }}</span></p>
+                            <form method="POST" class="mb-2" >
                                 {{ question_form | crispy }}
                                 {% csrf_token %}
-                                <button type="submit" class="btn btn-signup btn-lg">Submit</button>
+                                <p><button type="submit" class="btn btn-light">Submit</button></p>
                             </form>
-            
-                            {% endif %}
-            
-                        </div>
+                
+                        {% endif %}
+        
                     </div>
+                </div>
             </div>
         </div>
     </div>

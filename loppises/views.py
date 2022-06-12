@@ -38,20 +38,7 @@ def all_loppises(request):
 
     current_sorting = f'{sort}_{direction}'
 
-    loppis = Loppis.objects.all()
-    question_form = QuestionForm(data=request.POST)
-
-    if question_form.is_valid():
-            question_form.instance.author = request.user.username
-            question = question_form.save(commit=False)
-            question.post = loppis
-            question.save()
-    else:
-        question_form = QuestionForm()
-
     context = {
-        "questioned": True,
-        "question_form": QuestionForm(),
         'county_list': county_list,
         'loppises': loppises,
         'search_term': query,
@@ -66,8 +53,21 @@ def loppis_detail(request, loppis_id):
     """ A view to show individual loppis details """
 
     loppis = get_object_or_404(Loppis, pk=loppis_id)
+    questions = loppis.questions.order_by('created_on')
+    question_form = QuestionForm(data=request.POST)
+
+    if question_form.is_valid():
+        question_form.instance.email = request.user.email
+        question_form.instance.author = request.user.username
+        question = question_form.save(commit=False)
+        question.loppis = loppis
+        question.save()
+    else:
+        question_form = QuestionForm()
 
     context = {
+        'questions': questions,
+        'question_form': QuestionForm(),
         'loppis': loppis,
     }
 
