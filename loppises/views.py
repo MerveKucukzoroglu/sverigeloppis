@@ -4,7 +4,7 @@ from django.contrib import messages
 from django.contrib.auth.decorators import login_required
 from django.db.models import Q
 from django.db.models.functions import Lower
-
+from advert.forms import LoppisForm
 from questions.forms import QuestionForm
 from questions.models import Questions
 
@@ -92,6 +92,7 @@ def edit_loppis(request, loppis_id):
     else:
         form = LoppisForm(instance=loppis)
         messages.info(request, f'You are editing {loppis.title}')
+        form.fields['country'].widget.attrs['readonly'] = True
         form.fields['start_date'].widget.attrs['readonly'] = True
         form.fields['end_date'].widget.attrs['readonly'] = True
 
