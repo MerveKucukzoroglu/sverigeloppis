@@ -108,6 +108,44 @@
                     </div>
                     
                 </div>
+        </div>
+        <div class="col">
+                            <div class="row">
+                    <div class="col-md-8 card mb-4  mt-3 comment-content">
+                        <h3 class="title">Questions:</h3>
+                        <div class="card-body">
+                            {% for question in questions %}
+                            <div class="comments" style="padding: 10px;">
+                                <p class="font-weight-bold">
+                                    {{ question.author }}
+                                    <span class=" text-muted font-weight-normal">
+                                        {{ question.created_on }}
+                                    </span> wrote:
+                                </p>
+                                <!-- The body of the comment goes before the | -->
+                                {{ question.content | linebreaks }}
+                            </div>
+                            <!-- Our for loop ends here -->
+                            {% endfor %}
+                        </div>
+                    </div>
+                    <div class="col-md-4 card mb-4  mt-3 comment-content">
+                        <div class="card-body">
+            
+                            {% if user.is_authenticated %}
+            
+                            <h3 class="title">Leave a question:</h3>
+                            <p>Posting as: {{ user.username }}</p>
+                            <form method="post" style="margin-top: 1.3em;">
+                                {{ question_form | crispy }}
+                                {% csrf_token %}
+                                <button type="submit" class="btn btn-signup btn-lg">Submit</button>
+                            </form>
+            
+                            {% endif %}
+            
+                        </div>
+                    </div>
             </div>
         </div>
     </div>

@@ -5,6 +5,9 @@ from django.contrib.auth.decorators import login_required
 from django.db.models import Q
 from django.db.models.functions import Lower
 
+from questions.forms import QuestionForm
+from questions.models import Questions
+
 from .models import Loppis, County
 # from .forms import LoppisForm
 
@@ -35,7 +38,20 @@ def all_loppises(request):
 
     current_sorting = f'{sort}_{direction}'
 
+    loppis = Loppis.objects.all()
+    question_form = QuestionForm(data=request.POST)
+
+    if question_form.is_valid():
+            question_form.instance.author = request.user.username
+            question = question_form.save(commit=False)
+            question.post = loppis
+            question.save()
+    else:
+        question_form = QuestionForm()
+
     context = {
+        "questioned": True,
+        "question_form": QuestionForm(),
         'county_list': county_list,
         'loppises': loppises,
         'search_term': query,
