@@ -9,7 +9,6 @@ Your loppis event will take place between {{ loppis.start_date }} - {{ loppis.en
 
 Timings you have chosen for your loppis: {{ loppis.start_time }} - {{ loppis.end_time }}.
 
-County: 
 Address: {{ loppis.street_address }}, {{ loppis.city }}, {{ loppis.county.friendly_name }}, {{ loppis.country }}
 
 Total amount payed: SEK 5.
