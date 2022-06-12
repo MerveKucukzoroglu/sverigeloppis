@@ -1,4 +1,6 @@
 from django.http import HttpResponse
+from .models import Advert
+from loppises.models import Loppis
 
 
 class StripeWH_Handler:
@@ -23,6 +25,8 @@ class StripeWH_Handler:
         """
         try:
             intent = event.data.object
+            pid = intent.id
+            stripe_pid=pid
             return HttpResponse(
                 content=f'Webhook received: {event["type"]}',
                 status=200)

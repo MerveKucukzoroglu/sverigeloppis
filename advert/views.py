@@ -41,6 +41,8 @@ def advert(request):
             loppis = loppis_form.save(commit=False)
             loppis.seller = User.objects.get(username=request.user.username)
             messages.success(request, 'Successfully published Loppis!')
+            pid = request.POST.get('client_secret').split('_secret')[0]
+            loppis.stripe_pid = pid
             loppis.save()
             return redirect(reverse('advert_success'))
         else:
