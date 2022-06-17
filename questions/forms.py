@@ -9,3 +9,8 @@ class QuestionForm(forms.ModelForm):
     class Meta:
         model = Questions
         fields = ('content',)
+    
+
+    def __init__(self, *args, **kwargs):
+        super(QuestionForm, self).__init__(*args, **kwargs)
+        self.fields['content'].label = "Question"
