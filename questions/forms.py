@@ -1,7 +1,6 @@
 """Forms file for questions"""
 from .models import Questions
 from django import forms
-from django.contrib.auth.models import User
 
 
 class QuestionForm(forms.ModelForm):
@@ -9,7 +8,7 @@ class QuestionForm(forms.ModelForm):
     class Meta:
         model = Questions
         fields = ('content',)
-    
+
 
     def __init__(self, *args, **kwargs):
         super(QuestionForm, self).__init__(*args, **kwargs)
