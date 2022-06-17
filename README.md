@@ -54,4 +54,17 @@
             <h1>It's not too late!</h1>
         {% endif %}
     ```
+* Condition date widget: 'Ensure start/end dates are not before "today", and end-date comes on/after start-date'. This logic is by Tim Nelson, mentor in Code Institute.
+    ```javascript
+        let now = new Date(),
+        minDate = now.toISOString().substring(0,10);
+        $("#id_start_date").prop("min", minDate);
+        $("#id_start_date").on("change", setEndDateMin);
+        $("#id_end_date").on("change", setEndDateMin);
+        function setEndDateMin() {
+            let startDate = $("#id_start_date").val();
+            $("#id_end_date").prop("min", startDate);
+        }
+    ```
+
 # Acknowledgements
