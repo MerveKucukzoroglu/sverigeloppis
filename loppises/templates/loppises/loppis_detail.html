@@ -144,6 +144,8 @@
                         {% csrf_token %}
                         <p><button type="submit" class="btn btn-light">Submit</button></p>
                     </form>
+                {% else %}
+                    <p class="text-muted"><a href="{% url 'account_login' %}">Login</a> to ask a question.</p>
                 {% endif %}
             </div>
         </div>
