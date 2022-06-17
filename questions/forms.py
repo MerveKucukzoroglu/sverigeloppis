@@ -4,7 +4,7 @@ from django import forms
 
 
 class QuestionForm(forms.ModelForm):
-    """comment form"""
+    """question form"""
     class Meta:
         model = Questions
         fields = ('content',)
