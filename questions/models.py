@@ -11,6 +11,8 @@ class Questions(models.Model):
 
     class Meta:
         ordering = ['created_on']
+        verbose_name_plural = 'Questions'
+
 
     def __str__(self):
         return f"Question {self.content} by {self.author}"
