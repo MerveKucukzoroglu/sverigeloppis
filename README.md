@@ -73,10 +73,21 @@
 # Technologies Used
 
 # Testing
+*Unit Testing*, *Validator Testing*, and *Bugs* are documented [here](/TESTING.md).
 
 # Deployment
 
 # Credits
+During the process of project development, there have been various sources that gave me idea how to do a particular feature or fix a bug. The following are the sources that I got knowledge from:
+
+* [Stack Overflow](https://stackoverflow.com/)
+* [Django Allauth](https://django-allauth.readthedocs.io/en/latest/#)
+* [Django Project Documentation](https://www.djangoproject.com/)
+* [Code Instiute](https://codeinstitute.net/se/full-stack-software-development-diploma/?utm_term=code%20institute&utm_campaign=CI+-+SWE+-+Search+-+Brand&utm_source=adwords&utm_medium=ppc&hsa_acc=8983321581&hsa_cam=14660337051&hsa_grp=134087657984&hsa_ad=581817633089&hsa_src=g&hsa_tgt=kwd-319867646331&hsa_kw=code%20institute&hsa_mt=e&hsa_net=adwords&hsa_ver=3&gclid=Cj0KCQjw0PWRBhDKARIsAPKHFGgmnuTJCpzeJBqKg9fy2p-7NlU8NY95XaXmoPzBpuDdIekQWqUKxocaAso5EALw_wcB) course materials and Django Boutique Ado Walkthrough Project.
+* [Bootstrap Navbar](https://getbootstrap.com/docs/5.0/components/navbar/)
+* [Bootstrap Modal](https://getbootstrap.com/docs/5.1/components/modal/#tooltips-and-popovers)
+* [Crispy Forms](https://django-crispy-forms.readthedocs.io/en/latest/)
+* [AmIResponsive](http://ami.responsivedesign.is/) for mockup of the site.
 
 ## Color Palette:
 * [Coolors](https://coolors.co/) to generate my color palette.
@@ -109,4 +120,6 @@
         }
     ```
 * Followed Code Institute's [Boutique Ado walkthrough project](https://github.com/Code-Institute-Solutions/boutique_ado_v1/tree/250e2c2b8e43cccb56b4721cd8a8bd4de6686546) steps to add stripe and adjusted according to my sites needs.
+
 # Acknowledgements
+I would like to acknowledge and present my thanks to Tim Nelson, my mentor from Code Insitute for his guidance and constant support. It wouldn't have been possible without the amazing community in Slack, Tutors of Code insitute Tutor support, and my friends who constantly motivated and supported me. 
