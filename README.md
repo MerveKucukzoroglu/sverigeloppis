@@ -1,6 +1,37 @@
 # SVERIGE LOPPIS
 
 # Table of Contents:
+* [User Experience (UX)](#ux)
+    * [Strategy](#strategy)
+    * [User Stories](#user-stories)
+    * [Scope](#scope)
+    * [Structure](#structure)
+        * [Wireframes](#wireframes)
+        * [Databases](#databases)
+* [UI](#ui)
+    * [Color Palette](#color-palette)
+    * [Font](#fonts)
+* [Marketing](#marketing)
+    * [Plan](#plan)
+        * [Facebook](#facebook)
+        * [Newsletter](#newsletter)
+    * [SEO's](#seos)
+* [Features](#features)
+    * [Navbar](#navbar)
+    * [Footer](#footer)
+    * [Home Page](#home-page)
+    * [About Page](#about-page)
+    * [Loppis Page](#loppis-page)
+    * [Loppis Details Page](#lopppis-details-page)
+    * [Personalized Account Page](#personalised-account-page)
+    * [Wishlist Page](#loppis-wishlist-page)
+    * [Purchase/Advertise Function](#purchaseadvertise-function)
+    * [Asking a question to Loppis Owner Function](#asking-a-question-to-loppis-owner-function)
+* [Technologies Used](#technologies-used)
+* [Testing](#testing)
+* [Deployment](#deployment)
+* [Credits](#credits)
+* [Acknowledgements](#acknowledgements)
 
 # UX
 ## Strategy
@@ -17,7 +48,9 @@
 * Blue color has a psychological effect on trust, offical, calm; and yellow color psychologically gives a charming, friendly effect.
 * To maintain the color contrast I chose to use a softer tones of blue and yellow. 
 * I have used [Coolors](https://coolors.co/) to generate my color palette.
+
 ## Fonts
+* To maintain simple UI, font chosen was Montserrat from [Google Fonts](https://fonts.google.com/specimen/Montserrat?query=mont#standard-styles).
 
 # Marketing
 ## Plan:
