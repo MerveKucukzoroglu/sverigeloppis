@@ -335,6 +335,19 @@ a.text-light:hover {
     .header-container {
         padding-top: 164px;
     }
+
+    .text-heading {
+        font-size: 30px;
+    }
+
+    .loppis-now-button {
+        min-width: 160px;
+        margin: 20px;
+    }
+
+    .dropdown-tem {
+        margin-left: -25px;
+    }
 }
 
 /* pad the top a bit when navbar is collapsed on mobile */
@@ -345,5 +358,18 @@ a.text-light:hover {
 
     body {
         height: calc(100vh - 116px);
+    }
+
+    .text-heading {
+        font-size: 30px;
+    }
+
+    .loppis-now-button {
+        min-width: 160px;
+        margin: 20px;
+    }
+
+    .dropdown-item {
+        margin-left: -25px;
     }
 }
