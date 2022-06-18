@@ -225,12 +225,13 @@ a.text-light:hover {
     z-index: -1;
 } 
 
-.fa-bell {
-    color: #ffb300;
+.social-icon {
+    color: #A7C8C6;
 }
 
-.fa-bell:hover {
-    color: #A7C8C6;
+.social-icon:hover, .social-link:hover {
+    color: #ffb300;
+    text-decoration: none;
 }
 
 /* Allauth form formatting */

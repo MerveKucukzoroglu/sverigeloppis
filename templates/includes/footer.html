@@ -1,7 +1,26 @@
 <footer class="mt-auto footer">
-    <a href="{% url 'subscription' %}" class="btn mb-1 mt-2 text-white">Subscribe 
-        <i class="fa fa-bell fa-lg" aria-hidden="true"></i>
-    </a>
-    <p class="social">Follow us on <a href="" target="_blank" class="text-info"><strong>Facebook</strong></a></p>
-    <p class="copyright">Sverige Loppis © 2022</p>
+    <div class="container">
+        <div class="row row-cols-1 row-cols-sm-2 row-cols-md-4">
+            <div class="col mt-2">
+                <p>
+                    <a href="{% url 'subscription' %}" class="text-white social-link">Subscribe 
+                        <i class="fa fa-bell fa-lg ml-1 social-icon" aria-hidden="true"></i>
+                    </a>
+                </p>
+            </div>
+            <div class="col mt-2">
+                <p>
+                    <a href = "mailto: sverigeloppis@gmail.com" class="text-white social-link">Contact
+                        <i class="fa fa-envelope fa-lg ml-1 social-icon" aria-hidden="true"></i>
+                    </a>
+                </p>
+            </div>
+            <div class="col mt-2">
+                <p>Follow us on <a href="https://www.facebook.com/Sverige-Loppis-105393595519638" target="_blank" class="social-icon"><strong>Facebook</strong></a></p>          
+            </div>
+            <div class="col mt-2">
+                <p class="copyright">Sverige Loppis © 2022</p>
+            </div>
+        </div>
+      </div>
 </footer>
