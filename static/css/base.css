@@ -225,6 +225,14 @@ a.text-light:hover {
     z-index: -1;
 } 
 
+.fa-bell {
+    color: #ffb300;
+}
+
+.fa-bell:hover {
+    color: #A7C8C6;
+}
+
 /* Allauth form formatting */
 
 .allauth-form-inner-content p {

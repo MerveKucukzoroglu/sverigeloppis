@@ -1,11 +1,7 @@
 <footer class="mt-auto footer">
-    <div class="input-group w-50 text-center">
-        <input type="email" placeholder="Sigup to our Newsletter" aria-describedby="newsletter-button"
-            class="form-control border border-dark rounded-0">
-        <div class="input-group-append">
-            <button id="newsletter-button" type="submit" class="btn btn-link"><i class="fa fa-paper-plane"></i></button>
-        </div>
-    </div>
-    <div class="social">Follow us on <a href="" target="_blank">Facebook</a></div>
+    <a href="{% url 'subscription' %}" class="btn mb-1 mt-2 text-white">Subscribe 
+        <i class="fa fa-bell fa-lg" aria-hidden="true"></i>
+    </a>
+    <p class="social">Follow us on <a href="" target="_blank" class="text-info"><strong>Facebook</strong></a></p>
     <p class="copyright">Sverige Loppis © 2022</p>
 </footer>

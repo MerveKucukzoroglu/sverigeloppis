@@ -13,16 +13,21 @@
     <div class="overlay"></div>
     <div class="container mb-2">
         <div class="row">
-            <div class="col">
+            <div class="col-12 col-md-6">
                 <hr>
-                <h2 class="text-heading mb-4">Subscribe to Sverige Loppis Newsletter</h2>
+                <h2 class="text-heading mb-4">Subscribe to Newsletter</h2>
                 <hr>
             </div>
         </div>
 
         <div class="row">
-            <div class="col">
+            <div class="col-12 col-md-6">
+                <p>Don't miss out any new loppis! Be the first one to know.</p>
+                <p class="text-muted">By subscribing to our newsletter, 
+                    you will be informed about future loppises and special features of 
+                    Sverige Loppis application in the future.</p>
                 <form method="POST" class="mb-2">
+                    <p class="text-light">Email:</p>
                     {% csrf_token %}
                     {{ newsletter_form | crispy }}
                     <p><button type="submit" class="btn btn-light">Subscribe</button></p>
