@@ -1,0 +1,95 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block page_header %}
+    <div class="container header-container">
+        <div class="row">
+            <div class="col"></div>
+        </div>
+    </div>
+{% endblock %}
+
+{% block content %}
+    <div class="overlay"></div>
+    <div class="container mb-2">
+        <div class="row">
+            <div class="col">
+                <hr>
+                <h2 class="text-heading mb-4">About Sverige Loppis</h2>
+                <p class="text-muted">Sverige Loppis: The Swedish Flea Market.</p>
+                <hr>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col">
+                <div class="text-light mt-5">
+                    <span class="text-heading">OUR GOAL</span> 
+                    <p class="ml-5 mt-3">To be the biggest platform for Swedish Flea Market/Sverige Loppis.</p>
+                    <p class="ml-5">Sverige Loppis is hoping to be a platform for all the second hand sellers and buyers.</p>
+                </div>
+                <div class="mt-5">
+                    <span class="text-heading">FEATURES</span> 
+                    <p class="ml-5 mt-3"><i class="fa fa-certificate text-light mr-2" aria-hidden="true"></i>
+                        Organize your Loppis day, add date, time, image of your loppis, add your address.</p>
+                    <p class="ml-5"><i class="fa fa-certificate text-light mr-2" aria-hidden="true"></i>
+                        Find many other loppisses around you by just a click of search and filter.</p>
+                    <p class="ml-5"><i class="fa fa-certificate text-light mr-2" aria-hidden="true"></i>
+                        Look for what is new. Search by County. Save other loppis announcements for later.</p>
+                    <p class="ml-5"><i class="fa fa-certificate text-light mr-2" aria-hidden="true"></i>
+                        Easily identify the loppises that are available or ended.</p>
+                    <p class="ml-5"><i class="fa fa-certificate text-light mr-2" aria-hidden="true"></i>
+                        To get immediately notified on any Loppis notification,
+                        <a href="{% url 'subscription' %}" class="text-light">subscribe to our newsletter
+                            <i class="fa fa-bell fa-lg ml-1" aria-hidden="true"></i>
+                        </a>
+                    </p>
+                </div>
+                <div class="mt-5">
+                    <span class="text-heading">FAQ</span> 
+                    <p class="ml-5 text-light mt-3 mb-1">HOW TO ADD A LOPPIS?</p>
+                    <p class="ml-5">
+                        <i class="fa fa-long-arrow-right" aria-hidden="true"></i>
+                        Steps to <strong>securely</strong> add your loppis announcement:
+                        <ol class="ml-5">
+                            <li>
+                                <a href="{% url 'account_login' %}">Sigin</a> to your account, 
+                                <a href="{% url 'account_signup' %}">register</a> if you don't have one yet.
+                            </li>
+                            <li>Go to <a href="{% url 'advert' %}"> 'Add Loppis' </a> page </li>
+                            <li>Fill in the form the required information to add your loppis.</li>
+                            <li>Each Loppis announcement costs 5 Swedish Krona (SEK).</li>
+                            <li>Fill in your information to pay.</li>
+                            <li>Once the payment is completed, 
+                                you will receive an email about confirmation and your loppis will be added to the 
+                                <a href="{% url 'loppises' %}">All Loppis page.</a>
+                            </li>
+                            <li>You can find the list of your published loppis announcements in your 
+                                <a href="{% url 'profile' %}"> Profile </a> 
+                                 page and manage them as you wish.
+                            </li>
+                        </ol>
+                    </p>
+
+                    <p class="ml-5 text-light mt-5 mb-1">HOW MUCH DOES IT COST?</p>
+                    <p class="ml-5">
+                        <i class="fa fa-long-arrow-right" aria-hidden="true"></i>
+                        Each announcement costs <span class="text-danger">5 Swedish Krona (SEK)</span>.
+                    </p>
+
+                    <p class="ml-5 text-light mt-5 mb-1">COMMUNITY GROUP:</p>
+                    <p class="ml-5">
+                        <i class="fa fa-long-arrow-right" aria-hidden="true"></i>
+                        You can follow our 
+                        <a href="https://www.facebook.com/Sverige-Loppis-105393595519638" target="_blank" class="text-light">
+                            <strong>Facebook Page </strong>
+                        </a>
+                         and engage more with the Loppis community of Sverige Loppis.
+                    </p>
+
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}
