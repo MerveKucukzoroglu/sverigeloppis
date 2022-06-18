@@ -6,7 +6,7 @@ body {
     background: url('/media/background_main.jpg') no-repeat center center fixed; /*Credits for this image belongs to freepik. More details in README.md*/
     background-size: cover;
     height: calc(100vh - 164px);
-    color: #101A21;
+    color: #2C2C2C;
     font-family: 'Montserrat', sans-serif;
     font-size: 15px;
 }
@@ -59,7 +59,7 @@ body {
 }
 
 a.text-light:hover {
-    color:#1f1f1f !important;
+    color:#2C2C2C !important;
 }
 
 .border-dark {
@@ -85,7 +85,7 @@ a.text-light:hover {
 /* Home Page */
 .loppis-now-button {
     background: #ffb300;
-    color: black;
+    color: #2C2C2C;
     min-width: 260px;
     margin: 20px;
 }
@@ -126,7 +126,7 @@ a.text-light:hover {
 .wishlist-btn {
     position: absolute;
     right: 22px;
-    background:#1f1f1f;
+    background:#2C2C2C;
     color: white !important;
     border-radius: 20px;
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
@@ -136,7 +136,7 @@ a.text-light:hover {
 .wishlist-btn:active,
 .wishlist-btn:focus {
     background: white;
-    color:#1f1f1f !important;
+    color:#2C2C2C !important;
 }
 
 .late-tag {
@@ -166,7 +166,7 @@ a.text-light:hover {
 }
 
 .loppis-details-container {
-    background-color: #1f1f1f;
+    background-color: #2C2C2C;
     padding: 20px;
     color:#A7C8C6;
     border-radius: 20px;
@@ -280,8 +280,8 @@ a.text-light:hover {
 .allauth-form-inner-content button:hover,
 .allauth-form-inner-content input[type='submit']:hover {	
 	color: white;
-    background-color:#1f1f1f;
-    border-color:#1f1f1f;
+    background-color:#2C2C2C;
+    border-color:#2C2C2C;
 }
 
 

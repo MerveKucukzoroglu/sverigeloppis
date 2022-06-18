@@ -11,7 +11,12 @@
 ### Databases
 
 # UI
-## Color Palette
+## Color Palette:
+![Color palatte](media/loppis-color-palatte.png)
+* Color palette is chosen with keeping in mind the target audience. As Sverige Loppis' main target is Sweden, Blue and Yellow was my first choice.
+* Blue color has a psychological effect on trust, offical, calm; and yellow color psychologically gives a charming, friendly effect.
+* To maintain the color contrast I chose to use a softer tones of blue and yellow. 
+* I have used [Coolors](https://coolors.co/) to generate my color palette.
 ## Fonts
 
 # Marketing
@@ -39,6 +44,9 @@
 # Deployment
 
 # Credits
+
+## Color Palette:
+* [Coolors](https://coolors.co/) to generate my color palette.
 ## Images:
 * [Freepik](www.freepik.com):
     * [Home page background image](https://www.freepik.com/vectors/flea-market) Flea market vector created by [freepik](www.freepik.com)
