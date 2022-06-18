@@ -35,7 +35,47 @@
 
 # UX
 ## Strategy
+I designed this platform with desgin thinking approach. With only the necessary content/information. User can surf the site easily and get the information they are looking for.
+
 ## User Stories
+Please find all my defined user stories [here](https://github.com/MerveKucukzoroglu/sverigeloppis/issues?q=is%3Aclosed+label%3AUSER-STORY)
+
+### Member User:
+* As a member user I want to be able to login or logout so that I can access my personal account information.
+* As a user I want to be able to easily recover my password in case I forget it so that I can recover access to my account.
+* As a user I want to be able to receive an email confirmation after registering so that I can verify that my account registration was successful.
+* As a user I want to be able to have a personalised profile page so that I can manage my account, add/edit or delete loppises that I published.
+
+### Seller:
+* As a seller I want to be able to add my own loppis announcement so that I can get buyers to come to my loppis and purchase.
+* As a seller I want to be able to make payment with card so that I can my ad is successfully published in loppis list.
+* As a seller I want to be able to see the amount of each announcement so that I can decide to proceed with payment or not.
+* As a seller I want to be able to view my loppis information I entered just before payment so that I can make sure all the information I have entered are correct.
+* As a seller I want to be able to adjust my loppis just before payment so that I can correct any mistakes before the payment.
+* As a seller I want to be able to easily enter my payment information so that I can checkout smoothly.
+* As a seller I want to be able to feel my personal and payment information is safe and secure so that I can confidently provide the information to make the payment.
+* As a seller I want to be able to view a success page (payment and ad confirmation) so that I can verify that I haven't made any mistakes.
+* As a seller I want to be able to receive an email confirmation after checkout so that I can keep the confirmation of my payment and to keep a record of it if I want.
+* As a seller I want to be able to edit any loppis announcement I have added so that I can update/add or change any important information.
+* As a seller I want to be able to delete any loppis announcement I have added so that I can be in control of my items posted.
+
+### General Site visitor:
+* As a site user I want to be able to view all loppis announcments so that I can save and consider going to loppis.
+* As a site user I want to be able to find the menu easily so that I can know what content is available on the site.
+* As a user I want to be able to easily register an account so that I can I can create and add my own loppis announcements.
+* As a site user I want to be able to view the loppis details so that I can make an informed decision for my needs.
+* As a site user I want to be able to navigate through the site so that I can view the desired content.
+* As a user I want to be able to filter loppis by County so that I can find the ones that are closer to me.
+As a user I want to be able to see the loppis date and time so that I can go to the flea markets(loppises) that are available during open hours.
+* As a user I want to be able to save the announcements so that I can view the details later.
+* As a user I want to be able to see the availability status of loppis so that I can know if it is expired.
+* As a user I want to be able to search by title, description or county so that I can I can find easily to the one I want to go.
+* As a user I want to be able to subscribe to newsletter so that I am informed about any loppises or announcements made.
+
+### Admin
+* As an admin I want to be able to have a support email so that I can I can be in control of any kind of support needed.
+* As an admin I want to be able to in control of django admin panel so that I can I can take necessary actions for any misconduct or issue reported.
+
 ## Scope
 ## Structure
 ### Wireframes
