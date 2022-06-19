@@ -16,12 +16,12 @@ class StripeWH_Handler:
 
     def _send_confirmation_email(self, advert):
         """Send user confirmation email"""
-        advert = Advert.objects.all()
-        field_name = 'email'
-        user = User.objects.first()
-        loppis = Loppis.objects.first()
-        field_value = getattr(user, field_name)
-        seller_email = field_value
+        # advert = Advert.objects.all()
+        # field_name = 'email'
+        # user = User.objects.first()
+        # loppis = Loppis.objects.first()
+        # field_value = getattr(user, field_name)
+        seller_email = advert.email
         subject = render_to_string(
             'advert/confirmation_emails/confirmation_email_subject.txt',
             {'advert': advert})
@@ -29,8 +29,8 @@ class StripeWH_Handler:
             'advert/confirmation_emails/confirmation_email_body.txt',
             {
                 'advert': advert,
-                'user': user,
-                'loppis': loppis,
+                # 'user': user,
+                # 'loppis': loppis,
                 'contact_email': settings.DEFAULT_FROM_EMAIL
             })
 
