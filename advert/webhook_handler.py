@@ -56,10 +56,10 @@ class StripeWH_Handler:
         Handle the payment_intent.succeeded webhook from Stripe
         """
         try:
-            intent = event.data.object
-            pid = intent.id
-            stripe_pid = pid
-            advert = Advert.objects.all()
+            intent=event.data.object
+            pid=intent.id
+            stripe_pid=pid
+            advert=Advert.objects.all()
             self._send_confirmation_email(advert)
             return HttpResponse(
                 content=f'Webhook received: {event["type"]}',
