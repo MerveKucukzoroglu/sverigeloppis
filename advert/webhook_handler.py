@@ -60,7 +60,7 @@ class StripeWH_Handler:
             pid=intent.id
             stripe_pid=pid
             advert=Advert.objects.all()
-            # self._send_confirmation_email(advert)
+            self._send_confirmation_email(advert)
             return HttpResponse(
                 content=f'Webhook received: {event["type"]}',
                 status=200)
