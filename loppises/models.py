@@ -7,6 +7,7 @@ class County(models.Model):
     """ List of Counties in Sweden """
 
     class Meta:
+        """Verbose name for counties"""
         verbose_name_plural = 'Counties'
 
     county = models.CharField(max_length=254)
@@ -16,6 +17,7 @@ class County(models.Model):
         return self.county
 
     def get_friendly_name(self):
+        """get friendly name of County"""
         return self.friendly_name
 
 
@@ -23,6 +25,7 @@ class Loppis(models.Model):
     """ Loppis ad model """
 
     class Meta:
+        """Loppis Meta class"""
         verbose_name_plural = 'Loppises'
         ordering = ['-created_on']
 
@@ -35,7 +38,9 @@ class Loppis(models.Model):
     end_time = models.TimeField(null=False, blank=False)
     country = models.CharField(max_length=40, null=False, blank=False)
     postcode = models.CharField(max_length=20, null=True, blank=True)
-    county = models.ForeignKey('County', null=True, blank=False, on_delete=models.SET_NULL)
+    county = models.ForeignKey(
+        'County', null=True, blank=False, on_delete=models.SET_NULL
+        )
     city = models.CharField(max_length=40, null=False, blank=False)
     street_address = models.CharField(max_length=80, null=False, blank=False)
     phone_number = models.CharField(max_length=20, null=False, blank=True)

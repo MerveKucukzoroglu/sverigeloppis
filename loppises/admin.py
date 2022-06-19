@@ -6,6 +6,7 @@ from .models import Loppis, County
 
 
 class LoppisAdmin(admin.ModelAdmin):
+    """Loppis Admin"""
     list_display = (
         'seller',
         'county',
@@ -19,6 +20,7 @@ class LoppisAdmin(admin.ModelAdmin):
 
 
 class CountyAdmin(admin.ModelAdmin):
+    """County Admin"""
     list_display = (
         'friendly_name',
         'county',

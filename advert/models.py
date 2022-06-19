@@ -1,3 +1,4 @@
+"""Generating Loppis Ad Model"""
 import uuid
 from django.db import models
 
@@ -6,7 +7,9 @@ class Advert(models.Model):
     """Advertisement model"""
     ad_number = models.CharField(max_length=32, null=False, editable=False)
     ad_payment_date = models.DateTimeField(auto_now_add=True)
-    stripe_pid = models.CharField(max_length=254, null=False, blank=False, default='')
+    stripe_pid = models.CharField(
+        max_length=254, null=False, blank=False, default=''
+        )
 
     def _generate_ad_number(self):
         """ Generate random unique ad number using UUID """

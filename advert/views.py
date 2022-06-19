@@ -1,21 +1,20 @@
 """Loppis Advertisement views"""
-from django.shortcuts import render, redirect, reverse, get_object_or_404, HttpResponse
+from django.shortcuts import render, redirect, reverse, HttpResponse
 from django.views.decorators.http import require_POST
 from django.contrib import messages
 from django.contrib.auth.decorators import login_required
 
-from .forms import LoppisForm
-from loppises.models import Loppis
-from .models import Advert
-
 from django.contrib.auth.models import User
 from django.conf import settings
-
 import stripe
+
+from .forms import LoppisForm
+from .models import Advert
 
 
 @require_POST
 def cache_advert_data(request):
+    """Cache advert exception"""
     try:
         pid = request.POST.get('client_secret').split('_secret')[0]
         stripe.api_key = settings.STRIPE_SECRET_KEY
@@ -76,8 +75,10 @@ def advert(request):
 def advert_success(request):
     """ Handle successfull payment """
     advertisement = Advert.objects.all()
-    messages.success(request, f'Loppis published successfully! \
-        A confirmation email will be send.')
+    messages.success(
+        request,
+        "Loppis published successfully! A confirmation email will be send."
+        )
 
     template = 'advert/advert_success.html'
     context = {

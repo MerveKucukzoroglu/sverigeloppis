@@ -1,9 +1,10 @@
-from django.conf import settings
+"""Wishlist App context file"""
 from django.shortcuts import get_object_or_404
 from loppises.models import Loppis
 
-def wishlist_contents(request):
 
+def wishlist_contents(request):
+    """wishlist content function"""
     wishlist_items = []
     loppis_count = 0
     wishlist = request.session.get('wishlist', {})

@@ -1,21 +1,23 @@
+"""Newsletter Subscription Views file"""
 from django.shortcuts import render
-from .forms import NewsletterForm
 from django.contrib import messages
-from .models import Subscriptions
 from django.core.mail import send_mail
 from django.template.loader import render_to_string
 from django.conf import settings
+from .forms import NewsletterForm
 
 
 def subscribe(request):
     """ A view to show individual loppis details """
     newsletter_form = NewsletterForm(data=request.POST)
-    
+
     if request.method == 'POST':
         if newsletter_form.is_valid():
             email = newsletter_form.cleaned_data.get("email")
             if email:
-                messages.success(request, 'Successfully subscribed to our Newsletter!')
+                messages.success(
+                    request, 'Successfully subscribed to our Newsletter!'
+                    )
                 subscriber_email = email
                 subject = render_to_string(
                         'subscription/confirmation_emails/confirmation_email_subject.txt',

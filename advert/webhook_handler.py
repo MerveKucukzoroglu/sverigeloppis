@@ -1,11 +1,11 @@
+"""Webhook Handler"""
 from django.http import HttpResponse
-from django.shortcuts import get_object_or_404
 from django.core.mail import send_mail
 from django.template.loader import render_to_string
 from django.conf import settings
 from django.contrib.auth.models import User
-from .models import Advert
 from loppises.models import Loppis
+from .models import Advert
 
 
 class StripeWH_Handler:
@@ -13,7 +13,6 @@ class StripeWH_Handler:
 
     def __init__(self, request):
         self.request = request
-    
 
     def _send_confirmation_email(self, advert):
         """Send user confirmation email"""
@@ -34,15 +33,13 @@ class StripeWH_Handler:
                 'loppis': loppis,
                 'contact_email': settings.DEFAULT_FROM_EMAIL
             })
-        
+
         send_mail(
             subject,
             body,
             settings.DEFAULT_FROM_EMAIL,
             [seller_email]
         )
-
-
 
     def handle_event(self, event):
         """
@@ -53,8 +50,7 @@ class StripeWH_Handler:
         return HttpResponse(
             content=f'Unhandled webhook received: {event["type"]}',
             status=200)
-        
-    
+
     def handle_payment_intent_succeeded(self, event):
         """
         Handle the payment_intent.succeeded webhook from Stripe
@@ -62,20 +58,21 @@ class StripeWH_Handler:
         try:
             intent = event.data.object
             pid = intent.id
-            stripe_pid=pid
+            stripe_pid = pid
             advert = Advert.objects.all()
             self._send_confirmation_email(advert)
             return HttpResponse(
                 content=f'Webhook received: {event["type"]}',
                 status=200)
-        
+
         except Exception as e:
             if advert:
                 advert.delete()
                 self._send_confirmation_email(advert)
-            return HttpResponse(content=f'Webhook recieved: {event["type"]} | ERROR: {e}',
-            status=500)
-
+            return HttpResponse(
+                content=f'Webhook recieved: {event["type"]} | ERROR: {e}',
+                status=500
+            )
 
     def handle_payment_intent_payment_failed(self, event):
         """

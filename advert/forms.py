@@ -1,19 +1,24 @@
+""" Adding Loppis Advertisement Form"""
 from django import forms
 from loppises.widgets import CustomClearableFileInput
 from loppises.models import Loppis, County
 
 
 class DateInput(forms.DateInput):
+    """Form Date Input"""
     input_type = 'date'
 
 
 class TimeInput(forms.TimeInput):
+    """ Form Time Input """
     input_type = 'time'
 
 
 class LoppisForm(forms.ModelForm):
+    """Adding Loppis Form"""
 
     class Meta:
+        """Loppis form meta class"""
         model = Loppis
         widgets = {
             'start_date': DateInput(),
@@ -21,7 +26,7 @@ class LoppisForm(forms.ModelForm):
             'start_time': TimeInput(),
             'end_time': TimeInput(),
         }
-        
+
         fields = (
             'title', 'start_date', 'end_date',
             'start_time', 'end_time', 'country',
@@ -30,7 +35,10 @@ class LoppisForm(forms.ModelForm):
             'image', 'description',
             )
 
-    image = forms.ImageField(label='Image', required=False, widget=CustomClearableFileInput)
+    image = forms.ImageField(
+        label='Image', required=False,
+        widget=CustomClearableFileInput
+        )
 
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)

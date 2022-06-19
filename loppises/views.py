@@ -3,13 +3,11 @@ from django.shortcuts import render, redirect, reverse, get_object_or_404
 from django.contrib import messages
 from django.contrib.auth.decorators import login_required
 from django.db.models import Q
-from django.db.models.functions import Lower
 from advert.forms import LoppisForm
 from questions.forms import QuestionForm
-from questions.models import Questions
 
 from .models import Loppis, County
-# from .forms import LoppisForm
+
 
 def all_loppises(request):
     """ A view to return list of all the loppises """
@@ -30,10 +28,16 @@ def all_loppises(request):
         if 'q' in request.GET:
             query = request.GET['q']
             if not query:
-                messages.error(request, "You didn't enter any search criteria!")
+                messages.error(
+                    request, "You didn't enter any search criteria!"
+                    )
                 return redirect(reverse('loppises'))
-            
-            queries = Q(title__icontains=query) | Q(description__icontains=query) | Q(county__county__icontains=query) 
+
+            queries = (
+                Q(title__icontains=query) |
+                Q(description__icontains=query) |
+                Q(county__county__icontains=query)
+                )
             loppises = loppises.filter(queries)
 
     current_sorting = f'{sort}_{direction}'
@@ -73,6 +77,7 @@ def loppis_detail(request, loppis_id):
 
     return render(request, 'loppises/loppis_detail.html', context)
 
+
 @login_required
 def edit_loppis(request, loppis_id):
     """ Edit a loppis in the announcement """
@@ -80,7 +85,7 @@ def edit_loppis(request, loppis_id):
     if not request.user == loppis.seller:
         messages.error(request, 'Sorry, only loppis owner can do that.')
         return redirect(reverse('home'))
-      
+
     if request.method == 'POST':
         form = LoppisForm(request.POST, request.FILES, instance=loppis)
         if form.is_valid():
@@ -88,7 +93,10 @@ def edit_loppis(request, loppis_id):
             messages.success(request, 'Successfully updated your Loppis!')
             return redirect(reverse('loppis_detail', args=[loppis.id]))
         else:
-            messages.error(request, 'Failed to update your Loppis. Please ensure the form is valid.')
+            messages.error(
+                request,
+                'Failed to update Loppis. Please ensure the form is valid.'
+                )
     else:
         form = LoppisForm(instance=loppis)
         messages.info(request, f'You are editing {loppis.title}')
@@ -103,6 +111,7 @@ def edit_loppis(request, loppis_id):
     }
 
     return render(request, template, context)
+
 
 @login_required
 def delete_loppis(request, loppis_id):

@@ -1,6 +1,7 @@
+"""Profiles App Views File"""
 from django.shortcuts import render
-from loppises.models import Loppis
 from django.contrib.auth.decorators import login_required
+from loppises.models import Loppis
 
 
 @login_required
@@ -12,9 +13,14 @@ def profile(request):
 
     return render(request, template, context)
 
+
 @login_required
 def my_loppises(request):
     """Authenticated user views their own poems"""
     logged_in_user = request.user
     logged_in_user_loppises = Loppis.objects.filter(seller=logged_in_user)
-    return render(request, 'profiles/my_loppises.html', {'loppises': logged_in_user_loppises})
+    return render(
+        request,
+        'profiles/my_loppises.html',
+        {'loppises': logged_in_user_loppises}
+        )
