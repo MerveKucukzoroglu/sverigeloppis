@@ -347,6 +347,11 @@ a.text-light:hover {
 
     .dropdown-tem {
         margin-left: -25px;
+        padding: 0;
+    }
+
+    .nav-link {
+        padding: 5px;
     }
 }
 
@@ -371,5 +376,10 @@ a.text-light:hover {
 
     .dropdown-item {
         margin-left: -25px;
+        padding: 0;
+    }
+
+    .nav-link {
+        padding: 5px;
     }
 }
