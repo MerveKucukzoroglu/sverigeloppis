@@ -1,1 +1,1 @@
-web: gunicorn sverigeloppis.wsgi:application
+web: gunicorn sverige_loppis.wsgi:application
