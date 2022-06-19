@@ -42,7 +42,7 @@
         <div class="col-4 my-auto py-1 py-lg-0 text-center text-lg-left header-row">
           <a href="{% url 'home' %}" class="nav-link main-logo-link">
             {% load static %}
-            <img src="{% media 'media/logo.png' %}" alt="Logo" class="logo-img">
+            <img src="{{ MEDIA_URL }}media/logo.png" alt="Logo" class="logo-img">
           </a>
         </div>
         <div class="col-2 my-auto py-1 py-lg-0 header-row">
