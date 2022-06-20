@@ -18,7 +18,7 @@ class StripeWH_Handler:
         """Send user confirmation email"""
         advert = Advert.objects.all()
         field_name = 'email'
-        user = User.objects.first()
+        user = self.request.email
         loppis = Loppis.objects.first()
         field_value = getattr(user, field_name)
         seller_email = field_value
