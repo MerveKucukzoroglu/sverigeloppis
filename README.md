@@ -1,5 +1,19 @@
 # SVERIGE LOPPIS
 
+**Sverige Loppis: The Swedish Flea Market.**
+OUR GOAL is to be the biggest platform for Swedish Flea Market/Sverige Loppis.
+Sverige Loppis is hoping to be a platform for all the second hand sellers and buyers.
+
+![Am I Responsive](/documentation/ami-responsive.png)
+
+* Organize your Loppis day, add date, time, image of your loppis, add your address.
+* Find many other loppisses around you by just a click of search and filter.
+* Look for what is new. Search by County. Save other loppis announcements for later.
+* Easily identify the loppises that are available or ended.
+* To get immediately notified on any Loppis notification, subscribe to our newsletter.
+
+*The Live Site can be found [here](https://sverigeloppis.herokuapp.com/).*
+
 # Table of Contents:
 * [User Experience (UX)](#ux)
     * [Strategy](#strategy)

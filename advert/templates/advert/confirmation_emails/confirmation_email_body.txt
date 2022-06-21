@@ -11,7 +11,7 @@ Timings you have chosen for your loppis: {{ loppis.start_time }} - {{ loppis.end
 
 Address: {{ loppis.street_address }}, {{ loppis.city }}, {{ loppis.county.friendly_name }}, {{ loppis.country }}
 
-Total amount payed: SEK 5.
+Total amount paid: SEK 5.
 
 You can make changes in your loppis from your Profile page. 
 (Please note that you cannot change the loppis dates you have initially selected)
