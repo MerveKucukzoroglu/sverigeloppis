@@ -49,7 +49,9 @@ Sverige Loppis is hoping to be a platform for all the second hand sellers and bu
 
 # UX
 ## Strategy
-I designed this platform with desgin thinking approach. With only the necessary content/information. User can surf the site easily and get the information they are looking for.
+* The primary target audience for this E-commerce site is Swedish Flea Market: Loppis. Sweden has a culture for buying and selling second-hand items. 
+* This platform will give users easy access to loppises around. Users can easily and safely announce their loppises.
+* I designed this platform with desgin thinking approach. With only the necessary content/information. User can surf the site easily and get the information they are looking for.
 
 ## User Stories
 Please find all my defined user stories [here](https://github.com/MerveKucukzoroglu/sverigeloppis/issues?q=is%3Aclosed+label%3AUSER-STORY)
