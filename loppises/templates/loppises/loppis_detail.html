@@ -64,7 +64,7 @@
                     <p class="mb-0"><span class="detail">Address: </span></p>
                     <p class="mb-0">{{ loppis.street_address }}</p>
                     <p class="mb-0">{{ loppis.city }}, {{ loppis.county.friendly_name }}</p>
-                    <p class="mb-0">{{ loppis.postcode }}, {{ loppis.country }}</p>
+                    <p class="mb-0">{% if loppis.postcode %}{{ loppis.postcode }}, {% endif %} {{ loppis.country }}</p>
                     {% if loppis.phone_number %}
                         <p class="mt-3"><span class="detail">Phone number: </span>{{ loppis.phone_number }}</p>
                     {% endif %}

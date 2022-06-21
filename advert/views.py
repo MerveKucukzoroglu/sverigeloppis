@@ -61,15 +61,6 @@ def advert(request):
         form = LoppisForm()
         form.fields['country'].widget.attrs['readonly'] = True
 
-        # if request.user.is_authenticated:
-        #     logged_in_user = request.user
-        #     logged_in_user_email = Loppis.objects.filter(seller=logged_in_user)
-        #     form = LoppisForm(initial={
-        #             'email': logged_in_user_email,
-        #             })
-        # else:
-        #     form = LoppisForm()
-
     if not stripe_public_key:
         messages.warning(request, 'Stripe public key is missing. \
             Did you forget to set it in your environment?')
@@ -88,19 +79,19 @@ def send_confirmation_email(request, loppis):
     """
     Send the user a confirmation email
     """
-    advert = Advert.objects.all()
+    loppis_advert = Advert.objects.all()
     loppis = Loppis.objects.first()
     if request.user.is_authenticated:
         logged_in_user = loppis.seller
     seller_email = logged_in_user.email
-    
+
     subject = render_to_string(
         'advert/confirmation_emails/confirmation_email_subject.txt',
-        {'advert': advert})
+        {'loppis_advert': loppis_advert})
     body = render_to_string(
         'advert/confirmation_emails/confirmation_email_body.txt',
         {
-            'advert': advert,
+            'loppis_advert': loppis_advert,
             'seller_email': seller_email,
             'loppis': loppis,
             'contact_email': settings.DEFAULT_FROM_EMAIL
