@@ -115,7 +115,7 @@ This E-Commerce site is built giving the control of the user experience to the u
 *Throughout the project development, GitHub projects is used. Click [here](https://github.com/MerveKucukzoroglu/sverigeloppis/projects/1) to view the process.*
 
 ### Wireframes
-Wireframes are the initial sketches of the application, but not the last. Over the coding process, the design and features have been upgraded and developed further to enhance user experience. 
+Wireframes are the initial sketches of the application, but not the last. Over the coding process, the design and features have been upgraded and developed further to enhance user experience. Wireframes have been designed using [Balsamiq Wireframes](https://balsamiq.com/).
 
 <details>
 <summary>Each pages wireframes includes mobile(small screen), tablet(medium screen), desktop(large screens).</summary>
@@ -241,8 +241,34 @@ Wireframes are the initial sketches of the application, but not the last. Over t
 </details>
 
 </details>
+<br>
 
 ### Databases
+Database below is the overall schema of the models used in this project. I have used [Lucidchart](https://lucid.app/documents#/dashboard) to generate the diagram below.
+
+![Database Chart](/documentation/database.png)
+
+**CUSTOM MODELS**
+
+Within this application, I have used Django User Model and created my own Custom Models for this project. Below are the details of custom models:
+
+* Loppis Model:
+    * Loppis Model is the main model for this application. 
+    * Main functionalities to create, publish, manage loppis are connected to Loppis Model.
+    * This model contains 'seller' which is ForeinKey of user from django user mdoel.
+    * 'title' is the name of Loppis, created by user while adding the loppis. User can edit the title later if they want to.
+    * Loppis page is sequenced by the new posts at top and old posts later. To generate this, I used 'created_on' DateTimeField which is auto generated in the backend at the time loppis ad is created by user.
+    * 'start_date' and 'end_date' are the DateFields that holds the loppis events' dates. These fields are uneditable, therefore users are asked to carefully decide between which dates they will have loppis. The reason for not allowing user to edit these fields are for them to create new announcement for each loppis they organize. This two field have django calender widget. Start date and end date are also linked and controlled by javascript function so that end date is always on or after start date.
+    * 'start_time' and 'end_time' are the open timings of loppis. These fields can be edited later based on the sellers availability and requirements. Both these fields are generated with django timer widget.
+    * 'country' field is auto-filled and forced as "Sweden" as my initial target audience is based in Sweden. However in the future, it will be upgraded and country field will be open for any other country.
+    * 'postcode' field is optional.
+    * 'county' field is an important field for my initial audience in Sweden. County is a Foreign Key from County Model. 
+    * 'city' and 'street_address' fields are required fields for identifying location of loppises. This helps users to find available loppises close to them.
+    * 'phone_number' is an optional field. If the seller wants to provide their phone phone number to their loppis visitors/customers for easy reach, they can do so.
+    * 'image' and 'image_url' fields are for adding images of their loppis, so that loppis owners can personalise their advertisement. It is optional, there is a default image provided if this field is left empty. 
+    * 'description' is an optional field for adding details of loppis advertisements.
+
+
 
 # UI
 ## Color Palette:
