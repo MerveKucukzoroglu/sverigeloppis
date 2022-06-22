@@ -17,8 +17,7 @@ Sverige Loppis is hoping to be a platform for all the second hand sellers and bu
 # Table of Contents:
 * [User Experience (UX)](#ux)
     * [Strategy](#strategy)
-    * [User Stories](#user-stories)
-    * [Scope](#scope)
+    * [Scope & User Stories](#scope--user-stories)
     * [Structure](#structure)
         * [Wireframes](#wireframes)
         * [Databases](#databases)
@@ -51,9 +50,11 @@ Sverige Loppis is hoping to be a platform for all the second hand sellers and bu
 ## Strategy
 * The primary target audience for this E-commerce site is Swedish Flea Market: Loppis. Sweden has a culture for buying and selling second-hand items. 
 * This platform will give users easy access to loppises around. Users can easily and safely announce their loppises.
+* The target audience currently is located in Sweden. In future, other countries will be added on to Sverige Loppis.
+* There is no age gap of my audience, anyone can announce their loppis to sell their second hand items, or anyone can visit the site to find loppises they wish to go.
 * I designed this platform with desgin thinking approach. With only the necessary content/information. User can surf the site easily and get the information they are looking for.
 
-## User Stories
+## Scope & User Stories
 Please find all my defined user stories [here](https://github.com/MerveKucukzoroglu/sverigeloppis/issues?q=is%3Aclosed+label%3AUSER-STORY)
 
 ### Member User:
@@ -61,6 +62,7 @@ Please find all my defined user stories [here](https://github.com/MerveKucukzoro
 * As a user I want to be able to easily recover my password in case I forget it so that I can recover access to my account.
 * As a user I want to be able to receive an email confirmation after registering so that I can verify that my account registration was successful.
 * As a user I want to be able to have a personalised profile page so that I can manage my account, add/edit or delete loppises that I published.
+* As a member user I want to be able to ask question to the loppis owner if I want to have more information regarding their loppis.
 
 ### Seller:
 * As a seller I want to be able to add my own loppis announcement so that I can get buyers to come to my loppis and purchase.
@@ -92,8 +94,24 @@ As a user I want to be able to see the loppis date and time so that I can go to 
 * As an admin I want to be able to have a support email so that I can I can be in control of any kind of support needed.
 * As an admin I want to be able to in control of django admin panel so that I can I can take necessary actions for any misconduct or issue reported.
 
-## Scope
 ## Structure
+This E-Commerce site is built giving the control of the user experience to the users. 
+* If the user is just site visitor, they can: 
+    * Find list of loppises, 
+    * Loppis details,
+    * Add loppis to their wishlist,
+    * Subscribe to our newsletter,
+    * Join and follow our Facebook page,
+    * Surf the site and use search functionality,
+    * Find information in 'About Page' on how Sverige Loppis works,
+    * Access to register and create account
+* If the user is a registered member user, in addition to a regular site visitor features, they can:
+    * Have a personalized account,
+    * Create and make a safe payment to publish Loppis Ad,
+    * List of loppises they own within their profile page,
+    * Ability to manage (edit or delete) the loppises they own,
+    * Ask question to loppis owner,
+
 ### Wireframes
 ### Databases
 
