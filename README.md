@@ -112,7 +112,136 @@ This E-Commerce site is built giving the control of the user experience to the u
     * Ability to manage (edit or delete) the loppises they own,
     * Ask question to loppis owner,
 
+*Throughout the project development, GitHub projects is used. Click [here](https://github.com/MerveKucukzoroglu/sverigeloppis/projects/1) to view the process.*
+
 ### Wireframes
+Wireframes are the initial sketches of the application, but not the last. Over the coding process, the design and features have been upgraded and developed further to enhance user experience. 
+
+<details>
+<summary>Each pages wireframes includes mobile(small screen), tablet(medium screen), desktop(large screens).</summary>
+
+<details>
+<summary>Home page:</summary>
+
+![Wireframes](/documentation/w-mobile-home.png)
+
+![Wireframes](/documentation/w-tablet-home.png)
+
+![Wireframes](/documentation/w-desktop-home.png)
+</details>
+
+<details>
+<summary>About page:</summary>
+
+![Wireframes](/documentation/w-mobile-about.png)
+
+![Wireframes](/documentation/w-tablet-about.png)
+
+![Wireframes](/documentation/w-desktop-about.png)
+</details>
+
+<details>
+<summary>Loppis page:</summary>
+
+![Wireframes](/documentation/w-mobile-loppis.png)
+
+![Wireframes](/documentation/w-tablet-loppis.png)
+
+![Wireframes](/documentation/w-desktop-loppis.png)
+</details>
+
+<details>
+<summary>Loppis details page:</summary>
+
+![Wireframes](/documentation/w-mobile-loppis-details.png)
+
+![Wireframes](/documentation/w-tablet-loppis-details.png)
+
+![Wireframes](/documentation/w-desktop-loppis-details.png)
+</details>
+
+<details>
+<summary>Login page:</summary>
+
+![Wireframes](/documentation/w-mobile-login.png)
+
+![Wireframes](/documentation/w-tablet-login.png)
+
+![Wireframes](/documentation/w-desktop-login.png)
+</details>
+
+<details>
+<summary>Register page:</summary>
+
+![Wireframes](/documentation/w-mobile-register.png)
+
+![Wireframes](/documentation/w-tablet-register.png)
+
+![Wireframes](/documentation/w-desktop-register.png)
+</details>
+
+<details>
+<summary>Profile page:</summary>
+
+![Wireframes](/documentation/w-mobile-profile.png)
+
+![Wireframes](/documentation/w-tablet-profile.png)
+
+![Wireframes](/documentation/w-desktop-profile.png)
+</details>
+
+<details>
+<summary>Add Loppis page:</summary>
+
+![Wireframes](/documentation/w-mobile-add.png)
+
+![Wireframes](/documentation/w-tablet-add.png)
+
+![Wireframes](/documentation/w-desktop-add.png)
+</details>
+
+<details>
+<summary>Edit Loppis page:</summary>
+
+![Wireframes](/documentation/w-mobile-edit.png)
+
+![Wireframes](/documentation/w-tablet-edit.png)
+
+![Wireframes](/documentation/w-desktop-edit.png)
+</details>
+
+<details>
+<summary>Manage Loppis page:</summary>
+
+![Wireframes](/documentation/w-mobile-manage.png)
+
+![Wireframes](/documentation/w-tablet-manage.png)
+
+![Wireframes](/documentation/w-desktop-manage.png)
+</details>
+
+<details>
+<summary>Checkout page:</summary>
+
+![Wireframes](/documentation/w-mobile-checkout.png)
+
+![Wireframes](/documentation/w-tablet-checkout.png)
+
+![Wireframes](/documentation/w-desktop-checkout.png)
+</details>
+
+<details>
+<summary>Success page:</summary>
+
+![Wireframes](/documentation/w-mobile-success.png)
+
+![Wireframes](/documentation/w-tablet-success.png)
+
+![Wireframes](/documentation/w-desktop-success.png)
+</details>
+
+</details>
+
 ### Databases
 
 # UI
