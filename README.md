@@ -268,6 +268,22 @@ Within this application, I have used Django User Model and created my own Custom
     * 'image' and 'image_url' fields are for adding images of their loppis, so that loppis owners can personalise their advertisement. It is optional, there is a default image provided if this field is left empty. 
     * 'description' is an optional field for adding details of loppis advertisements.
 
+* County Model:
+    * County Model has been created for localizing Swedish Loppises. I have noticed that specifying county is one of the essential part of loppis announcements in Sweden. 
+    * In this Model I had to divide list of county in two fields.
+    * 'county' field is the name of county.
+    * County means 'län' in Sweden. While mentioning counties, it is used by word 'län'. For example, Stockholms län. 'Stockholm' is the name of county and 'län' is the word used for county. 
+    * Some of the counties change name adding the letter 's' to the end when used with 'län', e.g, Jönköpings län. However in some cases there is no additional letter to the county name, such as Örebro län. Considering this change in names, I have added another field 'friendly_name' for creating a list of counties same as how Swedish locals use.
+
+* Question Model:
+    * This models gives users the ability to ask questions about loppis to the owner directly. 
+    * For getting access to this feature, and ask a question, users are supposed to be signed in and have a registered account in the site. Even if the site visitors are not registered or signed in, they can read the questions asked within the loppis details page.
+    * This feature is available inside each loppis details page.
+    * 'loppis' field is foreign key from Loppis Model. This connects the Question asked to that particular Loppis.
+    * 'author' is the person asking the question to the seller.
+    * 'email' is collected from django user model for recording purposes. 
+    * 'content' is the field for user to fill in and to type their question. This field holds the content of question.
+    * 'created_on' is the DateTimeField for arranging the sequence of questions and help seller to identify when that particular question was asked.  
 
 
 # UI
