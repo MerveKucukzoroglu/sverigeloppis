@@ -34,6 +34,8 @@
             </div>
             <div>
                 {% if user != loppis.seller %}
+                {% now "Y-m-d" as todays_date %}
+                {% if loppis.end_date|date:"Y-m-d" > todays_date %}
                 <form class="form" action="{% url 'add_to_wishlist' loppis.id %}" method="POST">
                     {% csrf_token %}
                     <div class="form-row">
@@ -43,6 +45,7 @@
                         <input type="hidden" name="redirect_url" value="{{ request.path }}">
                     </div>
                 </form>
+                {% endif %}
                 {% endif %}
             </div>
             <div class="col-12 col-md-6 col-lg-4">

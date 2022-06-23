@@ -406,7 +406,19 @@ Loppises are generally announced a few weeks or days ahead and lasts only for a 
 
     ![County Tag Details Page](/documentation/county-tag-details.png)
 
-## Lopppis Details Page
+## Loppis Details Page
+* Each loppis announcement have a detail page. This page contains more details about that particular loppis and additional information such as name of seller, further location details, enlarged loppis-image, add to wishlist button, availability status tag, go back button and [asking question functionality](#asking-a-question-to-loppis-owner-function).
+
+    ![Loppis Details Page Visitor](/documentation/loppis-details-visitor.png)
+
+* If the loppis period ended for that particular announcement, 'add to wishlist' button will not be displayed. This button will also not be displayed for that loppis announcement owner. 
+
+* In order to ask question to the seller/loppis owner, the user must be registered and signed in.
+
+* The loppis details page will have options for owner/seller to edit or delete. This will be provided if the authenticated user is the seller of the loppis. Only the seller can view this option for their own loppises. 
+
+    ![Loppis Details Page Seller](/documentation/loppis-details-seller.png)
+
 ## Personalised Account Page
 ## Loppis Wishlist Page
 ## Purchase/Advertise Function
@@ -414,6 +426,8 @@ Loppises are generally announced a few weeks or days ahead and lasts only for a 
 ## Delete Loppis
 ## Asking a question to Loppis owner Function
 ## Notification System
+
+# Future Features
 
 # Technologies Used
 
