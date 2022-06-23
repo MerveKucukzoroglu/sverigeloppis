@@ -325,6 +325,14 @@ Navbar is styled to be responsive and collapsible for smaller screens.
 ![Mobile-menu](/documentation/mobile-menu.png)
 
 ## Footer
+Footer is also fixed to the bottom of the page. Footer has link for newsletter subscription, social media - Facebook page link, contact button for sending email to the site owner.
+
+![Footer](/documentation/footer.png)
+
+The footer is fully responsive for all screen sizes and can smoothly adjust style for screen size.
+
+![Mobile Footer](/documentation/mobile-footer.png)
+
 ## Home Page
 ## About Page
 ## Loppis Page
