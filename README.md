@@ -297,7 +297,7 @@ Within this application, I have used Django User Model and created my own Custom
 
 # UI
 ## Color Palette:
-![Color palatte](media/loppis-color-palatte.png)
+![Color palatte](/documentation/loppis-color-palatte.png)
 * Color palette is chosen with keeping in mind the target audience. As Sverige Loppis' main target is Sweden, Blue and Yellow was my first choice.
 * Blue color has a psychological effect on trust, offical, calm; and yellow color psychologically gives a charming, friendly effect.
 * To maintain the color contrast I chose to use a softer tones of blue and yellow. 
@@ -313,7 +313,17 @@ Within this application, I have used Django User Model and created my own Custom
 ## SEO's
 
 # Features:
-## Navbar
+## Navbar:
+Fixed navbar at top of the page. Users can easily navigate through the site.
+
+![Navbar](/documentation/navbar.png)
+
+Navbar is styled to be responsive and collapsible for smaller screens.
+
+![Mobile-nav](/documentation/mobile-nav.png) 
+
+![Mobile-menu](/documentation/mobile-menu.png)
+
 ## Footer
 ## Home Page
 ## About Page
