@@ -334,6 +334,10 @@ The footer is fully responsive for all screen sizes and can smoothly adjust styl
 ![Mobile Footer](/documentation/mobile-footer.png)
 
 ## Home Page
+Home page is designed to maintain simplicity. Less and direct information is provided for the site visitor when they first land on the page. There is a background image and two buttons for the primary actions of this E-commerce site. One button is to add a Loppis Advertisement, and the other one is to find all the loppises published. The background image is choosen to give an idea of Loppis/Flea Market. The credits for this background image is provided in the [credits](#credits) section.
+
+![Home Page](/documentation/home-page.png)
+
 ## About Page
 ## Loppis Page
 ## Lopppis Details Page
