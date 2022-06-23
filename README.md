@@ -339,6 +339,15 @@ Home page is designed to maintain simplicity. Less and direct information is pro
 ![Home Page](/documentation/home-page.png)
 
 ## About Page
+About Page defines the business goal, points out important main features and what differenciates this application than other other similar businesses. Steps to add loppis, and cost information can also be found in this page. Lastly, there is a section that informs about the Sverige Loppis Facebook Page and invites users to follow and join our Facebook Community Group.
+
+![About Page](/documentation/about-1.png)
+
+![About Page](/documentation/about-2.png)
+
+![About Page](/documentation/about-3.png)
+
+
 ## Loppis Page
 ## Lopppis Details Page
 ## Personalised Account Page
