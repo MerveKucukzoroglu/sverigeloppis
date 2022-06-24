@@ -539,6 +539,10 @@ Sellers recieve confirmation email each time they create a loppis add and make a
 ![Confirmation Email](/documentation/confirmation-email.png)
 
 ## Manage My Loppis Page
+Sellers can manage their loppises as they wish. This page can be found from their profile page, "My Loppises" button. They need to be the owner of the loppis to have them listed in their manage page. This page will look similar to all loppises page, but only the ones that are owned by them will be listed in the page.
+
+![My Loppises](/documentation/my-loppises.png)
+
 ## Edit Loppis
 ## Delete Loppis
 ## Asking a question to Loppis owner Function
