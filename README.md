@@ -38,7 +38,7 @@ Sverige Loppis is hoping to be a platform for all the second hand sellers and bu
     * [Loppis Details Page](#lopppis-details-page)
     * [Personalized Account Page](#personalised-account-page)
     * [Wishlist Page](#loppis-wishlist-page)
-    * [Purchase/Advertise Function](#purchaseadvertise-function)
+    * [Sell/Advertise Function](#selladvertise-function)
     * [Asking a question to Loppis Owner Function](#asking-a-question-to-loppis-owner-function)
 * [Technologies Used](#technologies-used)
 * [Testing](#testing)
@@ -419,11 +419,6 @@ Loppises are generally announced a few weeks or days ahead and lasts only for a 
 
     ![Loppis Details Page Seller](/documentation/loppis-details-seller.png)
 
-## Personalised Account Page
-Every registered users will have a profile page. In order to access your profile page, you must be registered and signed in. This page has a button for managing their loppises (if published), a button to add a loppis, and another one for their wishlist. 
-
-![Profile Page](/documentation/profile-page.png)
-
 ## Loppis Wishlist Page
 * Any site visitor can add anouncements they like to their wishlist. The add to wishlist functionality is in loppis details page. 
 * The user do not have to be registered or signed in to use this feature. 
@@ -438,7 +433,102 @@ Every registered users will have a profile page. In order to access your profile
 
     ![Empty Wishlist Page](/documentation/empty-wishlist.png)
 
-## Purchase/Advertise Function
+## Personalised Account Page
+Every registered users will have a profile page. In order to access your profile page, you must be registered and signed in. This page has a button for managing their loppises (if published), a button to add a loppis, and another one for their wishlist. 
+
+![Profile Page](/documentation/profile-page.png)
+
+## Sell/Advertise Function
+As an E-commerce application, this is the core functionality that enables business to run. Any loppis created, announced goes through a payment process and it is handled within this page.
+
+![Add Page](/documentation/add-page.png)
+
+ The breakdown of features on this page is as follows:
+
+* Introduction:
+    *  Before they add a loppis or make any payment, a set of information is provided to them. 
+    * It is noted that amount cost is '5 SEK' and there will be a secure payment system. 
+    * Additionally, there is a link provided to the 'about' page that explains the steps and what to expect from their payment and advertisement. 
+    * The seller could also see their registered user name to be the seller of the loppis that they will create. 
+
+        ![Add Page Intro](/documentation/add-intro.png)
+
+* Title:
+    * This is a required field. Title is the name of loppis. Seller can later edit this field.
+
+        ![Add Title](/documentation/add-title.png)
+
+* Start Date and End Date: 
+    * Sellers are asked to choose their start and ending dates of their loppis carefully. These fields are uneditable, therefore users are asked to carefully decide between which dates they will have loppis. The reason for not allowing user to edit these fields are for them to create new announcement for each loppis they organize. 
+
+        ![Add Dates](/documentation/add-dates.png)
+    
+    * This two field have django calender widget.
+
+        Date Desktop view:
+
+        ![Add Date desktop](/documentation/add-date-desktop.png)
+
+        Date Mobile Day view:
+
+        ![Date Mobile Day View](/documentation/date-mobile-day.jpeg)
+
+        Date Mobile Night View:
+
+        ![Date Mobile Night View](/documentation/date-mobile-night.jpeg)
+
+    * Start date and end date are also linked and controlled by javascript function so that end date is always on or after start date. Days before current day will be disabled and cannot be selected. Once the seller selects a start date, the end date widget will automatically disable the days before the chosen start date.
+
+* Start and End Time:
+    * These are the open timings of loppis. It can be edited later based on the sellers availability and requirements. Both these fields are generated with django timer widget.
+
+        Time Widget Desktop View:
+
+        ![Add Time desktop](/documentation/add-time-desktop.png)
+
+        Time Mobile Day view:
+
+        ![Time Mobile Day View](/documentation/time-mobile-day.jpeg)
+
+        Time Mobile Night View:
+
+        ![Time Mobile Night View](/documentation/time-mobile-night.jpeg)
+
+* Address:
+    * It is required for your Loppis location. You can choose to enter only the required fields. 
+    * Country field is auto-filled and forced as "Sweden" as my initial target audience is based in Sweden. However in the future, it will be upgraded and country field will be open for any other country.
+    * Postcode field is optional.
+    * County field is an important field for my initial audience in Sweden. Specifying county is one of the essential part of loppis announcements in Sweden. 
+    * City and Street address fields are required fields for identifying location of loppises. This helps users to find available loppises close to them.
+    * Phone number is an optional field. If the seller wants to provide their phone phone number to their loppis visitors/customers for easy reach, they can do so.
+        
+        ![Add Location](/documentation/add-location.png)
+
+    * Image is for adding images of their loppis, so that loppis owners can personalise their advertisement. It is optional, there is a default image provided if this field is left empty. Seller can edit or remove their image if they want to.
+    * Description is an optional field for adding details of loppis advertisements.
+
+        ![Add Image and Description](/documentation/add-image-description.png)
+
+    * **PAYMENT**:
+        * Payment field is generated using [stripe payment system](https://stripe.com/en-se) API.
+        * It is a safe and secure payment system. Stripe does validation and authenticates the card owner for completing the payment process.
+        * Users are notified how much their card will be charged when they click payment button. They can also cancel adding a loppis anytime before clicking complete payment button.
+
+            ![Stripe Payment](/documentation/payment.png)
+
+        * Currently you can make payments with test card number "4242 4242 4242 4242", MM/YY - 04/24, CVC - 242, ZIP - 42424
+
+            ![Stripe Test Payment](/documentation/stripe-test-card.png)
+
+        * While the transaction is in progress, a loader is displayed letting user to wait and know that transaction is in progress.
+
+            ![Stripe Payment Loader](/documentation/payment-loader.png)
+
+        * Stripe has its own error handling function, if a card is not valid, or incorrect for some reason, it will throw error letting user know what the issue is.
+
+            ![Stripe Error Handling](/documentation/stripe-error-handling.png)
+
+## Manage My Loppis Page
 ## Edit Loppis
 ## Delete Loppis
 ## Asking a question to Loppis owner Function
