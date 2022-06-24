@@ -286,10 +286,11 @@ Within this application, I have used Django User Model and created my own Custom
     * 'created_on' is the DateTimeField for arranging the sequence of questions and help seller to identify when that particular question was asked.  
 
 4. Subscription (Newsletter) Model:
-    * Subscription is for subscribung our site newsletter. Any site visitor can subscribe to the newsletter, they do not have to register to the site for subscribing to our newsletter.
+    * Subscription is for subscribing our site newsletter. Any site visitor can subscribe to the newsletter, they do not have to register to the site for subscribing to our newsletter.
     * Subscription model has two fields: 'email' and 'subscribed_on'.
     * Anyone can subscribe by their 'email'. Once subscribed, the subscribers will get a thank you email for subscribing to our newsletter.
     * 'subscribed_on' field is auto generated DateTimeField for recording the day and time of subscriptions.
+    * The same email cannot be used to subscribe twice. The user will be notified by alert message that email is already in listed for our newsletter
 
 5. Advert Model:
     * This model has 3 fields. While creating a loppis advertisement, advert model generates the 'ad_number', 'stripe_pid' and 'ad_payment_date'.
@@ -574,7 +575,43 @@ If the user is registered and signed in:
 ![Question](/documentation/question-2.png)
 
 ## Notification System
+Throughout the site there is a notification system installed. Bootstraps 'toast' feature is utilized and modified based on sites requirements.
+
+* There are: Error(red), Info(blue), Success(green) and Warning(yellow) messages with each separated by color codes. 
+* The notifications appear on top right corner. It must be closed by user to disappear.
+    
+    Success Notification:
+
+    ![Success Toast](/documentation/success.png)
+
+    Alert/Info Notification:
+
+    ![Info Toast](/documentation/info.png)
+
+    Error Notification:
+
+    ![Error Toast](/documentation/error.png)
+
 ## Newsletter Subscription
+Subscription is for subscribing to our site newsletter. Any site visitor can subscribe to the newsletter, they do not have to register to the site for subscribing to our newsletter.
+
+![Newsletter Subscription](/documentation/newsletter-subscription.png)
+
+Subscription page can be found from navigated from 'About' page and a subscription button at footer at all times.
+
+![Subscribe Button](/documentation/subscribe-footer.png)
+
+If the email already exists in newsletter subscription, then, an error message will be provided to the user.
+
+![Error mail exists newsletter](/documentation/email-exists-newsletter.png)
+
+Once subscribed, the subscribers will get a successfull  notification.
+
+![Successful Subscription](/documentation/subscribed-success-message.png)
+
+Successfully subscribed users will receive a thank you email for subscribing to our newsletter.
+
+![Newsletter subscription confirmation email](/documentation/newsletter-subscription-confirmation-email.png)
 
 # Future Features
 * I have bought a domain "sverigeloppis.se" for this site from [GoDaddy](https://se.godaddy.com/). In near future, I will implement this domain to my E-commerce site and use this business for real.
