@@ -340,6 +340,16 @@ Subscribers will receive an email after they signup:
 ![Newsletter subscription email](/documentation/newsletter-subscription-confirmation-email.png)
 
 ## SEO's
+* Keyword Documentation:
+    1. Loppis
+    2. Loppis near me
+    3. Find loppis
+    4. Add loppis
+    5. Second Hand
+    6. Flea Market
+    7. Loppis Online
+    8. Loppis idag
+    9. Loppis (county location) 
 
 # Features:
 ## Navbar:
