@@ -565,6 +565,14 @@ The sellers have the ability to delete their own loppis announcements. They can 
 * After confirming the deleting the selected loppis, this action cannot be undone.
 
 ## Asking a question to Loppis owner Function
+Users can ask questions about loppis to the owner directly. For getting access to this feature, and ask a question, users are supposed to be signed in and have a registered account in the site. Even if the site visitors are not registered or signed in, they can read the questions asked within the loppis details page. This feature is available inside each loppis details page.
+
+![Question](/documentation/question-1.png)
+
+If the user is registered and signed in:
+
+![Question](/documentation/question-2.png)
+
 ## Notification System
 ## Newsletter Subscription
 
