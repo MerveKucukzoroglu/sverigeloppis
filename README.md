@@ -351,6 +351,10 @@ Subscribers will receive an email after they signup:
     8. Loppis idag
     9. Loppis (county location) 
 
+* The project includes robots.txt file in the root directory
+* The project includes sitemap.xml file in the root directory generated using [XML Sitemaps](https://www.xml-sitemaps.com/)
+* Privacy Policy is attached to the footer. It is generated using [Privacy Policy Generator](https://www.privacypolicygenerator.info/).
+
 # Features:
 ## Navbar:
 Fixed navbar at top of the page. Users can easily navigate through the site.
