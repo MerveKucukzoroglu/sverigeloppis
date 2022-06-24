@@ -425,6 +425,18 @@ Every registered users will have a profile page. In order to access your profile
 ![Profile Page](/documentation/profile-page.png)
 
 ## Loppis Wishlist Page
+* Any site visitor can add anouncements they like to their wishlist. The add to wishlist functionality is in loppis details page. 
+* The user do not have to be registered or signed in to use this feature. 
+* This part of the site uses session storage to save the data and actions of user. 
+* User can remove any loppis they have added to their wishlist page if they want to.
+* Wishlist will help users to list all the loppises that they would like to go. Users can use this page to differentiate, identify and select the one that is best for their requirements.
+
+    ![Wishlist Page](/documentation/wishlist.png)
+
+* Empty wishlist:
+
+    ![Empty Wishlist Page](/documentation/empty-wishlist.png)
+
 ## Purchase/Advertise Function
 ## Edit Loppis
 ## Delete Loppis
