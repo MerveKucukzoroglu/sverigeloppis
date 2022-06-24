@@ -544,7 +544,26 @@ Sellers can manage their loppises as they wish. This page can be found from thei
 ![My Loppises](/documentation/my-loppises.png)
 
 ## Edit Loppis
+The sellers have the ability to edit their own loppis announcements. They can find the edit button within the loppis details. Only the owners can see the edit button. It can also be found from My Profile > My Loppises and choose any loppis they would like to view/manage and edit.
+
+* Start Date, End Date and country fields are displayed but locked and can not be edited. This is informed to the user at the stage of adding and payment as well.
+* All the other fields are editable and all the required fields must be filled in for updating their loppis.
+* Please note that editing loppis is not creating a new loppis, therefore it is completely free of charge. 
+* The updated loppis will immediately publish in all-loppises page and be updated accordingly.
+
+    ![Edit](/documentation/edit-1.png)
+
+    ![Edit](/documentation/edit-2.png)
+
 ## Delete Loppis
+The sellers have the ability to delete their own loppis announcements. They can find the delete button within the loppis details. Only the owners can see the delete button. It can also be found from My Profile > My Loppises and choose any loppis they would like to view/manage and delete.
+
+* Once they want to delete a loppis, a confirmation modal is displayed asking the seller for confirmation and informing that they will not be refunded their 5 SEK payment back.
+
+    ![Delete](/documentation/delete-modal.png)
+
+* After confirming the deleting the selected loppis, this action cannot be undone.
+
 ## Asking a question to Loppis owner Function
 ## Notification System
 ## Newsletter Subscription
