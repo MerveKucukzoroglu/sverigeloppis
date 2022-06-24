@@ -528,11 +528,22 @@ As an E-commerce application, this is the core functionality that enables busine
 
             ![Stripe Error Handling](/documentation/stripe-error-handling.png)
 
+## Success Page
+Once a payment is successfull, user/seller will be on success page, informing about their successfull payment with a thank you message.
+
+![Success Page](/documentation/success-page.png)
+
+## Confirmation Email
+Sellers recieve confirmation email each time they create a loppis add and make a successfull payment.
+
+![Confirmation Email](/documentation/confirmation-email.png)
+
 ## Manage My Loppis Page
 ## Edit Loppis
 ## Delete Loppis
 ## Asking a question to Loppis owner Function
 ## Notification System
+## Newsletter Subscription
 
 # Future Features
 * I have bought a domain "sverigeloppis.se" for this site from [GoDaddy](https://se.godaddy.com/). In near future, I will implement this domain to my E-commerce site and use this business for real.
