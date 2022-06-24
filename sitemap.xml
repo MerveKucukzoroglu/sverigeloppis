@@ -1,0 +1,212 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset
+      xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
+            http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+<!-- created with Free Online Sitemap Generator www.xml-sitemaps.com -->
+
+
+<url>
+  <loc>https://sverigeloppis.herokuapp.com/</loc>
+  <lastmod>2022-06-24T12:46:26+00:00</lastmod>
+  <priority>1.00</priority>
+</url>
+<url>
+  <loc>https://sverigeloppis.herokuapp.com/about/</loc>
+  <lastmod>2022-06-24T12:46:26+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://sverigeloppis.herokuapp.com/loppises/</loc>
+  <lastmod>2022-06-24T12:46:26+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://sverigeloppis.herokuapp.com/accounts/login/?next=/advert/</loc>
+  <lastmod>2022-06-24T12:46:26+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://sverigeloppis.herokuapp.com/wishlist/</loc>
+  <lastmod>2022-06-24T12:46:26+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://sverigeloppis.herokuapp.com/accounts/signup/</loc>
+  <lastmod>2022-06-24T12:46:26+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://sverigeloppis.herokuapp.com/accounts/login/</loc>
+  <lastmod>2022-06-24T12:46:26+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://sverigeloppis.herokuapp.com/subscription/</loc>
+  <lastmod>2022-06-24T12:46:26+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://sverigeloppis.herokuapp.com/accounts/login/?next=/profile/</loc>
+  <lastmod>2022-06-24T12:46:26+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://sverigeloppis.herokuapp.com/loppises/20/</loc>
+  <lastmod>2022-06-24T12:46:26+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://sverigeloppis.herokuapp.com/loppises/?county=stockholm</loc>
+  <lastmod>2022-06-24T12:46:26+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://sverigeloppis.herokuapp.com/loppises/19/</loc>
+  <lastmod>2022-06-24T12:46:26+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://sverigeloppis.herokuapp.com/loppises/17/</loc>
+  <lastmod>2022-06-24T12:46:26+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://sverigeloppis.herokuapp.com/loppises/?county=blekinge</loc>
+  <lastmod>2022-06-24T12:46:26+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://sverigeloppis.herokuapp.com/loppises/16/</loc>
+  <lastmod>2022-06-24T12:46:26+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://sverigeloppis.herokuapp.com/loppises/15/</loc>
+  <lastmod>2022-06-24T12:46:26+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://sverigeloppis.herokuapp.com/loppises/?county=kalmar</loc>
+  <lastmod>2022-06-24T12:46:26+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://sverigeloppis.herokuapp.com/loppises/14/</loc>
+  <lastmod>2022-06-24T12:46:26+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://sverigeloppis.herokuapp.com/loppises/13/</loc>
+  <lastmod>2022-06-24T12:46:26+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://sverigeloppis.herokuapp.com/loppises/?county=sk%C3%A5ne</loc>
+  <lastmod>2022-06-24T12:46:26+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://sverigeloppis.herokuapp.com/loppises/12/</loc>
+  <lastmod>2022-06-24T12:46:26+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://sverigeloppis.herokuapp.com/loppises/11/</loc>
+  <lastmod>2022-06-24T12:46:26+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://sverigeloppis.herokuapp.com/loppises/10/</loc>
+  <lastmod>2022-06-24T12:46:26+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://sverigeloppis.herokuapp.com/loppises/9/</loc>
+  <lastmod>2022-06-24T12:46:26+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://sverigeloppis.herokuapp.com/loppises/?county=dalarna</loc>
+  <lastmod>2022-06-24T12:46:26+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://sverigeloppis.herokuapp.com/loppises/8/</loc>
+  <lastmod>2022-06-24T12:46:26+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://sverigeloppis.herokuapp.com/loppises/7/</loc>
+  <lastmod>2022-06-24T12:46:26+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://sverigeloppis.herokuapp.com/loppises/?county=%C3%B6rebro</loc>
+  <lastmod>2022-06-24T12:46:26+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://sverigeloppis.herokuapp.com/loppises/6/</loc>
+  <lastmod>2022-06-24T12:46:26+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://sverigeloppis.herokuapp.com/loppises/5/</loc>
+  <lastmod>2022-06-24T12:46:26+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://sverigeloppis.herokuapp.com/loppises/4/</loc>
+  <lastmod>2022-06-24T12:46:26+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://sverigeloppis.herokuapp.com/loppises/?county=j%C3%B6nk%C3%B6ping</loc>
+  <lastmod>2022-06-24T12:46:26+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://sverigeloppis.herokuapp.com/loppises/3/</loc>
+  <lastmod>2022-06-24T12:46:26+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://sverigeloppis.herokuapp.com/loppises/2/</loc>
+  <lastmod>2022-06-24T12:46:26+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://sverigeloppis.herokuapp.com/loppises/1/</loc>
+  <lastmod>2022-06-24T12:46:26+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://sverigeloppis.herokuapp.com/accounts/signup/?next=%2Fadvert%2F</loc>
+  <lastmod>2022-06-24T12:46:26+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://sverigeloppis.herokuapp.com/accounts/password/reset/</loc>
+  <lastmod>2022-06-24T12:46:26+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://sverigeloppis.herokuapp.com/accounts/signup/?next=%2Fprofile%2F</loc>
+  <lastmod>2022-06-24T12:46:26+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://sverigeloppis.herokuapp.com/accounts/login/?next=%2Fadvert%2F</loc>
+  <lastmod>2022-06-24T12:46:26+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://sverigeloppis.herokuapp.com/accounts/login/?next=%2Fprofile%2F</loc>
+  <lastmod>2022-06-24T12:46:26+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+
+
+</urlset>
