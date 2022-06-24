@@ -420,6 +420,10 @@ Loppises are generally announced a few weeks or days ahead and lasts only for a 
     ![Loppis Details Page Seller](/documentation/loppis-details-seller.png)
 
 ## Personalised Account Page
+Every registered users will have a profile page. In order to access your profile page, you must be registered and signed in. This page has a button for managing their loppises (if published), a button to add a loppis, and another one for their wishlist. 
+
+![Profile Page](/documentation/profile-page.png)
+
 ## Loppis Wishlist Page
 ## Purchase/Advertise Function
 ## Edit Loppis
