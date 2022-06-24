@@ -20,10 +20,10 @@ def subscribe(request):
                     )
                 subscriber_email = email
                 subject = render_to_string(
-                        'subscription/confirmation_emails/confirmation_email_subject.txt',
+                        'subscription/confirmation_emails/confirmation_email_subject.txt',  # noqa
                         {'email': email})
                 body = render_to_string(
-                        'subscription/confirmation_emails/confirmation_email_body.txt',
+                        'subscription/confirmation_emails/confirmation_email_body.txt',  # noqa
                         {
                             'email': email,
                             'subscriber_email': subscriber_email,
@@ -36,10 +36,16 @@ def subscribe(request):
                     [subscriber_email]
                 )
             else:
-                messages.error(request, 'This email already exists!')
+                messages.error(
+                    request,
+                    'Unexpected error occcured, please try again!'
+                    )
             newsletter_form.save()
         else:
-            messages.error(request, 'This email already exists!')
+            messages.error(
+                request,
+                'This email already exists!'
+                )
             newsletter_form = NewsletterForm()
 
     context = {

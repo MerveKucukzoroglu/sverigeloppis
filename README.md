@@ -312,7 +312,7 @@ Within this application, I have used Django User Model and created my own Custom
 Sverige Loppis website is a business to customer (B2C) E-Commerce platform, built and designed to advertise and sell second hand events (loppises) to the users & inform site visitors about loppises announced. 
 
 Before beginning this project I designed a marketing plan which can be found here:
-[Marketing PDF](/documentation/marketing.pdf)
+[Marketing PDF](/documentation/documents/marketing.pdf)
 
 ### Facebook
 For reaching out to my initial target audience in Sweden, I have created a Facebook Business Page. The reason I chose Facebook as my marketing strategy is because my target audience currently uses Facebook Marketplace to announce their loppises. However it does not have features that a loppis seller or buyer would like to see. Capturing this feature gap, I have created Sverige Loppis platform to provide this service to the users. Therefore Facebook Business Page will help me grow my audience faster.
