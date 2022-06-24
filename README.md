@@ -444,6 +444,11 @@ Every registered users will have a profile page. In order to access your profile
 ## Notification System
 
 # Future Features
+* I have bought a domain "sverigeloppis.se" for this site from [GoDaddy](https://se.godaddy.com/). In near future, I will implement this domain to my E-commerce site and use this business for real.
+* Google Map API connection. This can open the address as pin in google map so that users can view the exact location.
+* site users/buyers can send a request for more images or videos of loppis so that they can have a better view of the products they sell at loppis.
+* The sellers can upload multiple images and can remove/add more whenever they want.
+* Google translate API for multiple languages. 
 
 # Technologies Used
 
