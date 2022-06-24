@@ -430,6 +430,7 @@ Every registered users will have a profile page. In order to access your profile
 * This part of the site uses session storage to save the data and actions of user. 
 * User can remove any loppis they have added to their wishlist page if they want to.
 * Wishlist will help users to list all the loppises that they would like to go. Users can use this page to differentiate, identify and select the one that is best for their requirements.
+* The available status will be displayed untill the last minute of the day, but considering that the time of loppis might be ended, users will not be able to add that particular loppis to their wishlist. In the future, the availability status of loppis will be automated to last days' end time entry by user. And this can be updated automatically if the seller changes the timings.
 
     ![Wishlist Page](/documentation/wishlist.png)
 
