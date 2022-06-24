@@ -309,8 +309,36 @@ Within this application, I have used Django User Model and created my own Custom
 
 # Marketing
 ## Plan:
+Sverige Loppis website is a business to customer (B2C) E-Commerce platform, built and designed to advertise and sell second hand events (loppises) to the users & inform site visitors about loppises announced. 
+
+Before beginning this project I designed a marketing plan which can be found here:
+[Marketing PDF](/documentation/marketing.pdf)
+
 ### Facebook
+For reaching out to my initial target audience in Sweden, I have created a Facebook Business Page. The reason I chose Facebook as my marketing strategy is because my target audience currently uses Facebook Marketplace to announce their loppises. However it does not have features that a loppis seller or buyer would like to see. Capturing this feature gap, I have created Sverige Loppis platform to provide this service to the users. Therefore Facebook Business Page will help me grow my audience faster.
+
+The facebook Page link can be found in the footer of the site and in the content of about page.
+You can find our Facebook page [here](https://www.facebook.com/Sverige-Loppis-105393595519638).
+
+![Facebook](/documentation/facebook-1.png)
+
+![Facebook](/documentation/facebook-2.png)
+
+![Facebook](/documentation/facebook-3.png)
+
+![Facebook](/documentation/facebook-4.png)
+
 ### Newsletter
+Any site visitor could subscribe to our newsletter. Subscribers will receive emails regarding new features, discounts and get access to many more benefits from Sverige Loppis Business.
+
+The newsletter subscription could be found at footer of site, and in 'About' page.
+
+![Newsletter Subscription](/documentation/newsletter-subscription.png)
+
+Subscribers will receive an email after they signup:
+
+![Newsletter subscription email](/documentation/newsletter-subscription-confirmation-email.png)
+
 ## SEO's
 
 # Features:
