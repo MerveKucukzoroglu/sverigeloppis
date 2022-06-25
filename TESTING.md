@@ -103,6 +103,17 @@ widgets.py    | ![Loppises app widgets file](/documentation/pep8-loppises-widget
 
 </details>
 
+<details>
+<summary>Profiles App</summary>
+
+Python files  | PEP8 result
+------------- | -------------
+apps.py       | ![Profiles app apps.py file](/documentation/pep8-profiles-apps.png)
+urls.py       | ![Profiles app urls file](/documentation/pep8-profiles-urls.png)
+views.py      | ![Profiles app views file](/documentation/pep8-profiles-views.png)
+
+</details>
+
 ## Lighthouse
 * Testing results for desktop:
 
