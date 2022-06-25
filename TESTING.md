@@ -1,4 +1,12 @@
 # Validator Testing
+Minor errors found, resolved the issues and all tests passed.
+
+## [W3C Markup Validation Service](https://validator.w3.org/)
+* Home Page:
+
+    ![Home Page](/documentation/html-home.png)
+
+
 
 ## Lighthouse
 * Testing results for desktop:
