@@ -1,10 +1,12 @@
+/* jshint esversion: 11, jquery: true */
+​
 /*
     Core logic/payment flow for this comes from here:
     https://stripe.com/docs/payments/accept-a-payment
     CSS from here: 
     https://stripe.com/docs/stripe-js
 */
-
+​
 var stripePublicKey = $('#id_stripe_public_key').text().slice(1, -1);
 var clientSecret = $('#id_client_secret').text().slice(1, -1);
 var stripe = Stripe(stripePublicKey);
@@ -26,7 +28,7 @@ var style = {
 };
 var card = elements.create('card', {style: style});
 card.mount('#card-element');
-
+​
 // Handle realtime validation errors on the card element
 card.addEventListener('change', function (event) {
     var errorDiv = document.getElementById('card-errors');
@@ -42,17 +44,17 @@ card.addEventListener('change', function (event) {
         errorDiv.textContent = '';
     }
 });
-
+​
 // Handle form submit
 var form = document.getElementById('payment-form');
-
+​
 form.addEventListener('submit', function(ev) {
     ev.preventDefault();
     card.update({ 'disabled': true});
     $('#submit-button').attr('disabled', true);
     $('#payment-form').fadeToggle(100);
     $('#loading-overlay').fadeToggle(100);
-
+​
     // From using {% csrf_token %} in the form
     var csrfToken = $('input[name="csrfmiddlewaretoken"]').val();
     var postData = {
@@ -60,7 +62,7 @@ form.addEventListener('submit', function(ev) {
         'client_secret': clientSecret,
     };
     var url = '/advert/cache_advert_data/';
-
+​
     $.post(url, postData).done(function() {
         stripe.confirmCardPayment(clientSecret, {
             payment_method: {
@@ -88,17 +90,17 @@ form.addEventListener('submit', function(ev) {
     }).fail(function() {
         // reload the page, the error will be in django messages
         location.reload();
-    })
+    });
 });
-
-
+​
+​
 //Handle image field 
 $('#new-image').change(function() {
     var file = $('#new-image')[0].files[0];
     $('#filename').text(`Image will be set to: ${file.name}`);
 });
-
-
+​
+​
 // ensure start/end dates are not before "today", and end-date comes on/after start-date
 // Credits in README.
 let now = new Date(),

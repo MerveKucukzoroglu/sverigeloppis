@@ -47,6 +47,11 @@ No errors or warnings found.
 
 ![CSS Validator](/documentation/css-validator.png)
 
+## [JSHint Validator](https://jshint.com/)
+Version wrror found. Added '/* jshint esversion: 11, jquery: true */' at the top of js file and resolved the issues.
+
+![JSHint Validator](/documentation/jshint.png)
+
 ## Lighthouse
 * Testing results for desktop:
 
