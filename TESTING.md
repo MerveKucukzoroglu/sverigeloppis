@@ -22,6 +22,14 @@ Minor errors found, resolved the issues and all tests passed.
 
     ![Wishlist Page](/documentation/html-wishlist.png)
 
+* Signup Page: 
+
+    ![Signup Page](/documentation/html-signup.png)
+
+* Login Page: 
+
+    ![Login Page](/documentation/html-login.png)
+
 ## Lighthouse
 * Testing results for desktop:
 
