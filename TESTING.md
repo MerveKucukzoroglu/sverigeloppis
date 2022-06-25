@@ -54,6 +54,7 @@ Version wrror found. Added '/* jshint esversion: 11, jquery: true */' at the top
 
 ## PEP8 Validator Testing
 Passed all PEP8 Validator testing
+
 <details>
 <summary>About App</summary>
 
@@ -61,7 +62,20 @@ Python files  | PEP8 result
 ------------- | -------------
 apps.py       | ![About app apps.py file](/documentation/pep8-about-apps.png)
 urls.py       | ![About app urls file](/documentation/pep8-about-urls.png)
-views.py       | ![About app views file](/documentation/pep8-about-views.png)
+views.py      | ![About app views file](/documentation/pep8-about-views.png)
+
+</details>
+
+<details>
+<summary>Advert App</summary>
+
+Python files  | PEP8 result
+------------- | -------------
+apps.py       | ![Advert app apps.py file](/documentation/pep8-advert-apps.png)
+forms.py      | ![Advert app urls file](/documentation/pep8-advert-forms.png)
+models.py     | ![Advert app urls file](/documentation/pep8-advert-models.png)
+urls.py       | ![Advert app urls file](/documentation/pep8-advert-urls.png)
+views.py      | ![Advert app views file](/documentation/pep8-advert-views.png)
 
 </details>
 
