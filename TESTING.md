@@ -14,6 +14,13 @@ Minor errors found, resolved the issues and all tests passed.
 
     ![Loppises Page](/documentation/html-loppises.png)
 
+* Advert(add) Page: 
+
+    ![Add Page](/documentation/html-advert.png)
+
+* Wishlist Page: 
+
+    ![Wishlist Page](/documentation/html-wishlist.png)
 
 ## Lighthouse
 * Testing results for desktop:
