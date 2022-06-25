@@ -173,6 +173,8 @@ views.py      | ![Wishlist app views file](/documentation/pep8-wishlist-views.pn
     ![Lihghthouse Desktop](/documentation/lighthouse-mobile.png)
 
 ## User Story Testing
+Please find all my defined user stories [here](https://github.com/MerveKucukzoroglu/sverigeloppis/issues?q=is%3Aclosed+label%3AUSER-STORY)
+
 ### Member User:
 * As a member user I want to be able to login or logout so that I can access my personal account information.
 
@@ -464,3 +466,18 @@ views.py      | ![Wishlist app views file](/documentation/pep8-wishlist-views.pn
     ![Admin contact mail](/documentation/admin-django.png)
     </details>
     <br>
+
+## BUGS
+* There is no unsolved bug in my site (as far as I know).
+* Throughout the development process, I faced minor issues but resolved them after several tries. 
+* I had one bug that I struggled with:
+    * Problem Statement - "Whenever the payment is completed, django sends me emails from myself rather than the address of the user."
+    * You can view my process with this bug in [Github Projects](https://github.com/MerveKucukzoroglu/sverigeloppis/issues/64) 
+    * I did a deep search in Google, [Stack Overflow](https://stackoverflow.com/) and [Django Documentations](https://www.djangoproject.com/).
+    * I first added the sending email function. At first the problem I faced was the sender email received the emails so it was never being sent to the user.
+    * Then I tried getting the value of email from Django user model.
+    * I used "User.email" for that, the email got sent successfully in the terminal however the users email was mentioned as "deferred attribute object".
+    * I have talked to Code Institute tutors and my Mentor about this issue. If the email is not successfully sent it fails the stripe payment as it is placed in stripe webhook class, it needs successful email for stripe to complete it's function.
+    * With Code Institute's Tutor Gemma and Mentor Tim suggestions I have created a separate function within advert/views, and called this inside advert_success function.
+    * By removing the webhooks and adding a email function within the views solved the bug.
+    * Now the user successfully recieves confirmation emails for their payment and loppis advertisement.
