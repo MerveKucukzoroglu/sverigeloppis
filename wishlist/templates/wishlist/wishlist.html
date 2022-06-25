@@ -24,12 +24,6 @@
             <div class="col">
                 {% if wishlist_items %}
                 <div class="d-block d-md-none">
-                    <!-- <div class="row">
-                        <div class="col"></div>
-                    </div>
-                    <div class="row">
-                        <div class="col"></div>
-                    </div> -->
                     {% for item in wishlist_items %}
                     <div class="row">
                         <div class="col-12 col-sm-6 mb-2">
@@ -112,12 +106,12 @@
 
 {% block postloadjs %}
 {{ block.super }}
-<script type="text/javascript">
+<script>
     $('.go-up-link').click(function(e) {
         window.scrollTo(0,0)
     })
 </script>
-<script type="text/javascript">
+<script>
     //Remove item and reload on click
     $('.remove-item').click(function(e) {
         var csrfToken = "{{ csrf_token }}";
