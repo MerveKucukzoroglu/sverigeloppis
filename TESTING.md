@@ -52,6 +52,19 @@ Version wrror found. Added '/* jshint esversion: 11, jquery: true */' at the top
 
 ![JSHint Validator](/documentation/jshint.png)
 
+## PEP8 Validator Testing
+Passed all PEP8 Validator testing
+<details>
+<summary>About App</summary>
+
+Python files  | PEP8 result
+------------- | -------------
+apps.py       | ![About app apps.py file](/documentation/pep8-about-apps.png)
+urls.py       | ![About app urls file](/documentation/pep8-about-urls.png)
+views.py       | ![About app views file](/documentation/pep8-about-views.png)
+
+</details>
+
 ## Lighthouse
 * Testing results for desktop:
 
