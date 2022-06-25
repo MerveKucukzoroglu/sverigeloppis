@@ -650,6 +650,7 @@ There are multiple technologies used for this E-Commerce site. Technologies used
 * [Coolors](https://coolors.co/) - To generate and create the color palette of the site.
 * [AmIResponsive](http://ami.responsivedesign.is/) - To generate the mockup image of the site with different devices.
 * Google Developer Tools - To fix issues and test the responsiveness of the site.
+* Balsamiq Wireframes - To design the wireframe of the complete project.
 * [PEP8](http://pep8online.com/) - To check pyhton code validity.
 * [W3C Markup Validation Service](https://validator.w3.org/) - For HTML Validator testing.
 * [W3C CSS Validation Service](https://jigsaw.w3.org/css-validator/#validate_by_input) - For CSS Validation testing.
