@@ -660,9 +660,383 @@ There are multiple technologies used for this E-Commerce site. Technologies used
 * [Amazon Web Services (AWS)](https://aws.amazon.com/) - To store media and static files
 
 # Testing
-*Unit Testing*, *Validator Testing*, and *Bugs* are documented [here](/TESTING.md).
+*Validator Testing*, *User Stories Testing* and *Bugs* are documented [here](/TESTING.md).
 
-# Deployment
+# Deployment:
+This project was deployed to Heroku. "Heroku is a cloud platform that lets companies build, deliver, monitor and scale apps."- [Heroku.](https://www.heroku.com/)
+
+<details>
+<summary>Steps to open account in Heroku:</summary>
+<br>
+<ul>
+    <li>
+        <a href="https://signup.heroku.com/">Signup here </a>if you do not have an account already.
+        <img src="documentation/signup-heroku.png">
+    </li>
+    <li>
+        After you fill in all the information for account and sign in, you will be on <a href="https://dashboard.heroku.com/apps">Dashbord.</a> Here is where you will create an application.
+    </li>
+    <li>
+        <p>Click on New => Create new app.</p>
+        <img src="documentation/new-app.png">
+    </li>
+    <li>Choose a name to your application and select location that you are based.</li>
+</ul>
+</details>
+
+<br>
+
+<details>
+<summary>Steps to open an account in Stripe:</summary>
+
+1. Go to [Stripe](https://stripe.com/en-gb-se) and click 'start now'.
+2. Fill in your information
+    ![Stripe](/documentation/stripe-account-steps.png)
+3. Click 'Create your Stripe Account'
+4. You will receive a confirmation email. Go to your email, click the link for confirming your email address, type your password again if asked, and signin
+
+</details>
+
+<br>
+
+<details>
+<summary>Steps to Deployment</summary>    
+I have followed Code Institute's <a href="https://github.com/Code-Institute-Solutions/boutique_ado_v1/tree/9ed36dc2c07228041b56b28174dd96ee56e6c59a">Boutique Ado Walkthrough Projects Deployment</a> steps to deploy the project on Herokuapps.
+
+* Create the Heroku app
+
+    1. Create new Heroku App
+        
+        ![Create App](/documentation/create-app.png)
+
+    2. Add Database to App Resources - Located in the Resources Tab, Add-ons, search andadd e.g. ‘Heroku Postgres’
+        
+        ![Heroku](/documentation/heroku-postgress.png)
+
+* Install Django and supporting libraries
+
+    * In the terminal
+
+        No. | Steps  | Code
+        ----|------- | -------------
+        1 | Install supporting libraries: | pip3 install dj_database_url
+        2 | Install supporting libraries: | pip3 install psycopy2-binary
+        3 | Create requirements file | pip3 freeze > requirements.txt
+
+    * In the setting.py
+
+        No. | Steps  | Code
+        ----|------- | -------------
+        4 | import  | dj_database_url
+        5 | comment the default databases. Copy and paste the Heroku Database URL from Heroku Settings > Config Vars. Paste that URL to dj_database_url : | DATABASES = {'default': dj_database_url.parse('*HEROKU DATABASE URL*')} ![Heroku config vars](/documentation/config-var.png)
+
+    * In the terminal
+
+        No. | Steps  | Code
+        ----|------- | -------------
+        6 | Migrate Changes| python3 manage.py migrate
+        7 | If you have fixtures, load the data to the connected database. Remember loaddata individually  | python3 manage.py loaddata *YOUR FIXTURE FILE NAME*
+        8 | Create a new superuser | python3 manage.py createsuperuser
+
+    * Before committing remove(comment) the Heroku database config we added in step 5 above. And uncomment the original so your database URL doesn't end up in version control.
+    * Use an if statement in settings.py So that when your app is running on Heroku where the database URL environment variable will be defined we connect to PostgreSQL and otherwise, we connect to SQLite.
+    * In the settings.py:
+
+        No. | Steps  | Code
+        ----|------- | -------------
+        9 | Condition database using if statement | ![Condition Database](/documentation/condition-database.png)
+
+     * In the terminal:
+
+        No. | Steps  | Code
+        ----|------- | -------------
+        10 | Install gunicorn | pip3 install gunicorn
+        11 | Freeze requirements | pip3 freeze --local > requirements.txt
+
+    * In the project directory, create Procfile. Inside Procfile, type:
+        web: gunicorn *main_app_name*.wsgi:application
+ 
+    * In the terminal:
+
+        No. | Steps  | Code
+        ----|------- | -------------
+        12 | Login to your Heroku account from terminal | heroku login
+        13 | set DISABLE COLLECTSTATIC | heroku config:set DISABLE COLLECTSTATIC=1 --app *your-app-name*
+
+    * In settings.py:
+
+        No. | Steps  | Code
+        ----|------- | -------------
+        14 | Add the hostname of your Heroku app to allowed hosts | ALLOWED_HOSTS = ['your-app-name.herokuapp.com', 'localhost']
+
+    * In the terminal:
+
+        No. | Steps  | Code
+        ----|------- | -------------
+        15 | add your changes | git add .
+        16 | commit | git commit -m "Deployment Commit"
+        17 | push your changes to github | git push
+        18 | connect your heroku app to the repository | heroku git:remote -a *your-app-name*
+        19 | push your changes to heroku | git push heroku main 
+
+
+* Now your app is deployed, let's connect to auto-deploy to deploy whenever changes are pushed to github automatically.
+
+    * In Heroku:
+
+        No. | Steps  | Code
+        ----|------- | -------------
+        20 | Go to your app. And on the 'Deploy tab' set it to connect to github. Search for your repository and then click connect. With that finished you can enable automatic deploys. | ![Auto Deploy](/documentation/auto-deploy-heroku.png)
+        21 | Add a new SECRET_KEY. You can generate one form [Django Secret Key Generator](https://miniwebtool.com/django-secret-key-generator/) | ![Add config var](/documentation/add-config-var.png)
+
+    * In settings.py
+
+        No. | Steps  | Code
+        ----|------- | -------------
+        21 | Change your secret key by calling it form os.environ | SECRET_KEY = os.environ.get('SECRET_KEY', '')
+        22 | Set Debug to True only if local environment is in use | DEBUG = 'DEVELOPMENT' in os.environ
+        23 | add your changes | git add .
+        24 | commit | git commit -m "Remove secret key and set debug"
+        25 | push your changes to github | git push
+    
+    * In Activity tab in Heroku, you can now find your autodeploy working and build in progress
+
+</details>
+<details>
+<summary>How to create an AWS Account</summary>
+
+1. Go to [AWS](aws.amazon.com) and click 'Create An AWS Account' Fill in the required information and click 'Continue'
+
+    ![Create AWS Account](/documentation/create-aws-account.png)
+
+2. Now, Fill in your contact information and Select Account type as 'Personal'. 'Create account and continue'.
+
+3. Fill in your credit card information.
+
+</details>
+
+<details>
+<summary>Steps to connect your AWS account to store media and static files</summary>
+
+* Now that you have created an account, go to [AWS](aws.amazon.com) and signin.
+* Under 'My Account' tab, go to 'AWS Management Console'
+* Search and find S3
+
+    ![S3](/documentation/s3.png)
+
+* Create a Bucket
+
+    ![Create AWS Bucket](/documentation/aws-create-bucket.png)
+
+* Give a name to your Bucket. It is a good practice to use your heroku app name to your Bucket name.
+* Choose a region closest to you.
+
+    ![Create AWS Bucket](/documentation/aws-create-bucket-2.png)
+
+* Object Ownership setting (below) needs to be set as shown with the ACLs enabled option checked.
+
+    ![Create AWS Bucket](/documentation/aws-create-bucket-3.png)
+
+* Block Public Access settings for this bucket
+
+    ![Create AWS Bucket](/documentation/aws-create-bucket-4.png)
+
+* Then Click 'Create Bucket'
+
+* On the properties tab, static website hosting can now be found by scrolling down to the bottom. Click Edit
+
+    ![Create AWS Bucket](/documentation/aws-create-bucket-5.png)
+
+* Turn on static website hosting. Which will give a new endpoint for using to access it from the internet. For the index and error document, just fill in some default values since they won't be used in this project case. And then click save.
+
+    ![Create AWS Bucket](/documentation/aws-create-bucket-6.png)
+
+* In Permissions Tab, Edit Cross-origin resource sharing (CORS)
+
+    ![Create AWS Bucket](/documentation/aws-create-bucket-7.png)
+
+*  Paste in the folowing code:
+    
+    `
+        [
+        {
+            "AllowedHeaders": [
+                "Authorization"
+            ],
+            "AllowedMethods": [
+                "GET"
+            ],
+            "AllowedOrigins": [
+                "*"
+            ],
+            "ExposeHeaders": []
+        }
+        ]
+    `
+
+* Go to Bucket Policy to generate a policy. 
+    
+    ![Create AWS Bucket](/documentation/aws-create-bucket-8.png)
+
+* Click Policy Generator Button. Select Type of Policy as 'S3 Bucket Policy', Effects - Allow, Principal - *, select 'GetObject' in Actions, get your Amazon Resource Name (ARN) fro previous step(page) and paste your ARN. Then click Add Statement.
+
+    ![Create AWS Bucket](/documentation/aws-create-bucket-9.png)
+
+* Generate Policy and copy the policy generated.
+
+    ![Create AWS Bucket](/documentation/aws-create-bucket-10.png)
+
+* Inside the Bucket policy editor, paste the generated policy and add '*' at end of Resource line. And save it.
+* For the Access control list (ACL) section, click edit and enable List for Everyone (public access) and accept the warning box. If the edit button is disabled you need to change the Object Ownership section above to ACLs enabled (refer to Create Bucket section above)
+
+    ![Create AWS Bucket](/documentation/aws-create-bucket-11.png)
+
+* Now your bucket is created, now create a user to access it.
+* Do this through another service called Iam which stands for Identity and Access Management.
+
+    ![AWS Access](/documentation/aws-access.png)
+
+* Go back to the services menu and open Iam. The process here is first we're going to create a group for our user to live in. Then create an access policy giving the group access to the s3 bucket we created. And finally, assign the user to the group so it can use the policy to access all our files.
+* Start by creating a group.
+* In the sidebar select User Groups. Select Create new group. Give it a name and then 'Create Group'
+
+* From the sidebar > click policies > create policy.
+* Go to Json tab > Import Managed Policy. Import  s3 full access policy.
+
+    ![AWS Access](/documentation/aws-access-2.png)
+
+* Get the bucket ARN from the bucket policy page in s3 and paste that in here.
+
+    ![AWS Access](/documentation/aws-access-3.png) 
+
+* Click Review Policy and give a name and description. And then click create policy.
+
+* This takes us back to the policies page where we can see our policy has been created. Now attach the policy to the user group created. Go to groups, click manage my *group name*. Click attach policy.
+* Search for the policy you created and click attach policy.
+
+* On the users page, click Add User.
+* Give a name to your user.
+* Give them programmatic access.
+* And then select next.
+* Select the user group that you have created and attached policy. 
+* Then click create user.
+* Download and save the CSV file. Note that once you complete this step you cannot come back to find your CSV file.
+
+    ![AWS Access](/documentation/aws-access-4.png) 
+
+* Connect your App with AWS:
+    * In the terminal:  
+
+        STEPS | CODE
+        ------|-----
+        install boto3 | `pip3 install boto3`
+        install django storages | `pip3 install django-storages`
+        freeze requirements | `pip3 freeze > requirements.txt
+    
+    * In settings.py:
+        STEPS | CODE
+        ------|-----
+        add storages in apps list | `'storages',`
+
+    * Add AWS in settings  
+        `
+        if 'USE_AWS' in os.environ: AWS_STORAGE_BUCKET_NAME = 'your-bucket-name'
+        AWS_S3_REGION_NAME = 'your-region-name'
+        AWS_ACCESS_KEY_ID = os.environ.get('AWS_ACCESS_KEY_ID')
+        AWS_SECRET_ACCESS_KEY = os.environ.get('AWS_SECRET_ACCESS_KEY')
+        AWS_S3_CUSTOM_DOMAIN = f'{AWS_STORAGE_BUCKET_NAME}.s3.amazonaws.com'
+        `
+    
+    * In Heroku go to settings and add config vars | Add the keys from the CSV file you downloaded
+        
+        STEPS | CODE
+        ------|-----
+        Enable AWS in heroku config variables |  USE_AWS = True
+        Remove Collectstatic | Delete 'DISABLE_COLLECSTATIC=1
+
+    * The next step is to tell django that in production we want to use s3 to store our static files whenever someone runs collectstatic. And that we want any uploaded product images to go there also. To do that create a file called custom storages.
+    * In the project level direcotory create a python file called "custom_storages.py"
+    * Add the following code to custom_storages.py:
+
+    ```python
+        from django.conf import settings
+        from storages.backends.s3boto3 import S3Boto3Storage
+
+
+        class StaticStorage(S3Boto3Storage):
+            location = settings.STATICFILES_LOCATION
+
+
+        class MediaStorage(S3Boto3Storage):
+            location = settings.MEDIAFILES_LOCATION
+    ```
+
+    * Go to settings.py and add the following codes:
+        ```python
+            # Static and media files
+            STATICFILES_STORAGE = 'custom_storages.StaticStorage'
+            STATICFILES_LOCATION = 'static'
+            DEFAULT_FILE_STORAGE = 'custom_storages.MediaStorage'
+            MEDIAFILES_LOCATION = 'media'
+
+            # Override static and media URLs in production
+            STATIC_URL = f'https://{AWS_S3_CUSTOM_DOMAIN}/{STATICFILES_LOCATION}/'
+            MEDIA_URL = f'https://{AWS_S3_CUSTOM_DOMAIN}/{MEDIAFILES_LOCATION}/'
+        ```
+    
+    * In the terminal:
+
+        Steps  | Code
+        ------- | -------------
+        add your changes | git add .
+        commit | git commit -m "Deployment Commit"
+        push your changes to github | git push
+    
+    * In settings.py add Cache control to improve site performance:
+        ```python
+            # Cache control
+            AWS_S3_OBJECT_PARAMETERS = {
+            'Expires': 'Thu, 31 Dec 2099 20:00:00 GMT',
+            'CacheControl': 'max-age=94608000',
+            }
+        ```
+    
+    * In the terminal:
+
+        Steps  | Code
+        ------- | -------------
+        add your changes | git add .
+        commit | git commit -m "Deployment Commit"
+        push your changes to github | git push
+     
+    * Go to AWS > your bucket > create a folder. Name your folder 'media' and save. Inside media folder upload, all the images you have for your project. Click upload 
+
+    * Go to your deployed project admin directory. Go to email addresses and verify & primary your superusers email address.
+
+    * Finally add stripe keys to the Heroku config variables.
+    * Login to your stripe account. Click developers > API keys.
+    * Get and add  STRIPE_PUBLIC_KEY and STRIPE_SECRET_KEY as heroku config var.
+
+    * In settings.py, make sure you have the same stripe element names:
+        ```python
+        STRIPE_PUBLIC_KEY = os.getenv('STRIPE_PUBLIC_KEY', '')
+        STRIPE_SECRET_KEY = os.getenv('STRIPE_SECRET_KEY', '')
+        ```
+
+</details>
+
+<br>
+
+## Local Deployment
+
+In order to make a local copy of this repository, you can type the following into your IDE terminal:
+* `git clone https://github.com/MerveKucukzoroglu/sverigeloppis.git`
+
+Alternatively, if using Gitpod, you can click below to create your own workspace using this repository.
+
+[![Open in Gitpod](https://gitpod.io/button/open-in-gitpod.svg)](https://gitpod.io/#https://github.com/MerveKucukzoroglu/sverigeloppis)
+
+
 
 # Credits
 During the process of project development, there have been various sources that gave me idea how to do a particular feature or fix a bug. The following are the sources that I got knowledge from:
@@ -670,7 +1044,7 @@ During the process of project development, there have been various sources that 
 * [Stack Overflow](https://stackoverflow.com/)
 * [Django Allauth](https://django-allauth.readthedocs.io/en/latest/#)
 * [Django Project Documentation](https://www.djangoproject.com/)
-* [Code Instiute](https://codeinstitute.net/se/full-stack-software-development-diploma/?utm_term=code%20institute&utm_campaign=CI+-+SWE+-+Search+-+Brand&utm_source=adwords&utm_medium=ppc&hsa_acc=8983321581&hsa_cam=14660337051&hsa_grp=134087657984&hsa_ad=581817633089&hsa_src=g&hsa_tgt=kwd-319867646331&hsa_kw=code%20institute&hsa_mt=e&hsa_net=adwords&hsa_ver=3&gclid=Cj0KCQjw0PWRBhDKARIsAPKHFGgmnuTJCpzeJBqKg9fy2p-7NlU8NY95XaXmoPzBpuDdIekQWqUKxocaAso5EALw_wcB) course materials and Django Boutique Ado Walkthrough Project.
+* [Code Instiute](https://codeinstitute.net/se/full-stack-software-development-diploma/?utm_term=code%20institute&utm_campaign=CI+-+SWE+-+Search+-+Brand&utm_source=adwords&utm_medium=ppc&hsa_acc=8983321581&hsa_cam=14660337051&hsa_grp=134087657984&hsa_ad=581817633089&hsa_src=g&hsa_tgt=kwd-319867646331&hsa_kw=code%20institute&hsa_mt=e&hsa_net=adwords&hsa_ver=3&gclid=Cj0KCQjw0PWRBhDKARIsAPKHFGgmnuTJCpzeJBqKg9fy2p-7NlU8NY95XaXmoPzBpuDdIekQWqUKxocaAso5EALw_wcB) course materials and Django Boutique Ado Walkthrough Project. Some of the screenshots in creating AWS account are also from Boutique Ado Walkthrough Project.
 * [Bootstrap Navbar](https://getbootstrap.com/docs/5.0/components/navbar/)
 * [Bootstrap Modal](https://getbootstrap.com/docs/5.1/components/modal/#tooltips-and-popovers)
 * [Crispy Forms](https://django-crispy-forms.readthedocs.io/en/latest/)
