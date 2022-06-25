@@ -14,38 +14,6 @@ Sverige Loppis is hoping to be a platform for all the second hand sellers and bu
 
 *The Live Site can be found [here](https://sverigeloppis.herokuapp.com/).*
 
-# Table of Contents:
-* [User Experience (UX)](#ux)
-    * [Strategy](#strategy)
-    * [Scope & User Stories](#scope--user-stories)
-    * [Structure](#structure)
-        * [Wireframes](#wireframes)
-        * [Databases](#databases)
-* [UI](#ui)
-    * [Color Palette](#color-palette)
-    * [Font](#fonts)
-* [Marketing](#marketing)
-    * [Plan](#plan)
-        * [Facebook](#facebook)
-        * [Newsletter](#newsletter)
-    * [SEO's](#seos)
-* [Features](#features)
-    * [Navbar](#navbar)
-    * [Footer](#footer)
-    * [Home Page](#home-page)
-    * [About Page](#about-page)
-    * [Loppis Page](#loppis-page)
-    * [Loppis Details Page](#lopppis-details-page)
-    * [Personalized Account Page](#personalised-account-page)
-    * [Wishlist Page](#loppis-wishlist-page)
-    * [Sell/Advertise Function](#selladvertise-function)
-    * [Asking a question to Loppis Owner Function](#asking-a-question-to-loppis-owner-function)
-* [Technologies Used](#technologies-used)
-* [Testing](#testing)
-* [Deployment](#deployment)
-* [Credits](#credits)
-* [Acknowledgements](#acknowledgements)
-
 # UX
 ## Strategy
 * The primary target audience for this E-commerce site is Swedish Flea Market: Loppis. Sweden has a culture for buying and selling second-hand items. 
@@ -661,8 +629,34 @@ Successfully subscribed users will receive a thank you email for subscribing to 
 * site users/buyers can send a request for more images or videos of loppis so that they can have a better view of the products they sell at loppis.
 * The sellers can upload multiple images and can remove/add more whenever they want.
 * Google translate API for multiple languages. 
+* I will further develop Sverige Loppis and publish it in Appstore and Playstore as a mobile application for Android and IOS.
 
 # Technologies Used
+There are multiple technologies used for this E-Commerce site. Technologies used includes Front-end, Back-end, APIs, payment system and Fullstack toolkit: 
+
+* HTML - Used for creating base templates.
+* CSS - Style of the site.
+* JavaScript - For dynamic functionalities and for connecting APIs.
+* Python - Core programming language of this project.
+* [Django](https://www.djangoproject.com/) - Django frameworks for templates tags, django models, django allauth.
+* [Bootstrap](https://getbootstrap.com/) - Used for responsive design, models and noticifation (toast) setup.
+* [Stripe](https://stripe.com/en-gb-se) - Core functionality for making payments possible.
+* [Heroku](https://dashboard.heroku.com/apps) - To deploy the site
+* [Github](https://github.com/) - Storing the repository, Kanban Github projects for project organising and management.
+* [Gitpod](https://www.gitpod.io/) - Used as coding workspace.
+* [Google Fonts](https://fonts.google.com/) - Font used in the site is Montserrat.
+* [Font Awesome](https://fontawesome.com/) - The icons used in the site.
+* [Lucidcharts](https://lucid.app/documents#/dashboard) - To create the chart of models.
+* [Coolors](https://coolors.co/) - To generate and create the color palette of the site.
+* [AmIResponsive](http://ami.responsivedesign.is/) - To generate the mockup image of the site with different devices.
+* Google Developer Tools - To fix issues and test the responsiveness of the site.
+* [PEP8](http://pep8online.com/) - To check pyhton code validity.
+* [W3C Markup Validation Service](https://validator.w3.org/) - For HTML Validator testing.
+* [W3C CSS Validation Service](https://jigsaw.w3.org/css-validator/#validate_by_input) - For CSS Validation testing.
+* [JSHint](https://jshint.com/) - Used for JavaScript validator testing.
+* [SQLite](https://www.sqlite.org/index.html) - To store local database while creating the project.
+* [PostgreSQL](https://www.postgresql.org/) - PostgreSQL from Heroku to store the deployed sites database.
+* [Amazon Web Services (AWS)](https://aws.amazon.com/) - To store media and static files
 
 # Testing
 *Unit Testing*, *Validator Testing*, and *Bugs* are documented [here](/TESTING.md).
