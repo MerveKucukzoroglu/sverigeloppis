@@ -8,7 +8,11 @@ Minor errors found, resolved the issues and all tests passed.
 
 * About Page: 
 
-    ![About Page](/documentation/html-home.png)
+    ![About Page](/documentation/html-about.png)
+
+* Loppises Page: 
+
+    ![Loppises Page](/documentation/html-loppises.png)
 
 
 ## Lighthouse
