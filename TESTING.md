@@ -42,6 +42,10 @@ Minor errors found, resolved the issues and all tests passed.
 
     ![Loppis Details Page](/documentation/html-loppis-details.png)
 
+## [W3C CSS Validation Service](https://jigsaw.w3.org/css-validator/)
+No errors or warnings found.
+
+![CSS Validator](/documentation/css-validator.png)
 
 ## Lighthouse
 * Testing results for desktop:
