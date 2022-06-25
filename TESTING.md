@@ -30,6 +30,19 @@ Minor errors found, resolved the issues and all tests passed.
 
     ![Login Page](/documentation/html-login.png)
 
+* Subscription Page: 
+
+    ![Subscription Page](/documentation/html-subscription.png)
+
+* Profile Page: 
+
+    ![Profile Page](/documentation/html-profile.png)
+
+* Loppis Details Page: 
+
+    ![Loppis Details Page](/documentation/html-loppis-details.png)
+
+
 ## Lighthouse
 * Testing results for desktop:
 
