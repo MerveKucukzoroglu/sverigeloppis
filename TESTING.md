@@ -79,6 +79,17 @@ views.py      | ![Advert app views file](/documentation/pep8-advert-views.png)
 
 </details>
 
+<details>
+<summary>Home App</summary>
+
+Python files  | PEP8 result
+------------- | -------------
+apps.py       | ![Home app apps.py file](/documentation/pep8-home-apps.png)
+urls.py       | ![Home app urls file](/documentation/pep8-home-urls.png)
+views.py      | ![Home app views file](/documentation/pep8-home-views.png)
+
+</details>
+
 ## Lighthouse
 * Testing results for desktop:
 
