@@ -171,3 +171,296 @@ views.py      | ![Wishlist app views file](/documentation/pep8-wishlist-views.pn
 * Testing results for mobile:
 
     ![Lihghthouse Desktop](/documentation/lighthouse-mobile.png)
+
+## User Story Testing
+### Member User:
+* As a member user I want to be able to login or logout so that I can access my personal account information.
+
+    <details>
+    <summary>View Images</summary>
+
+    ![Login](/documentation/login.png)
+
+    ![Login Success](/documentation/login-success.png)
+
+    ![Logout](/documentation/logout.png)
+
+    ![Logout Success](/documentation/logout-success.png)
+
+    </details>
+    <br>
+
+* As a user I want to be able to easily recover my password in case I forget it so that I can recover access to my account.
+
+    <details>
+    <summary>View Images</summary>
+
+    ![Password Reset](/documentation/password-reset.png)
+    ![Password Reset](/documentation/password-email-sent.png)
+    ![Password Reset](/documentation/password-reset-email.png)
+    ![Password Reset](/documentation/change-password.png)
+    ![Password Reset](/documentation/password-change-success.png)
+
+    </details>
+    <br>
+
+* As a user I want to be able to receive an email confirmation after registering so that I can verify that my account registration was successful.
+
+    <details>
+    <summary>View Images</summary>
+
+    ![Verify Email Registration](/documentation/email-verify.png)
+    ![Verify Email Registration](/documentation/email-verify-alert.png)
+    ![Verify Email Registration](/documentation/email-confirm-mail.png)
+    ![Verify Email Registration](/documentation/email-confirm-link.png)
+    ![Verify Email Registration](/documentation/email-verify-success-alert.png)
+
+    </details>
+    <br>
+
+* As a user I want to be able to have a personalised profile page so that I can manage my account, add/edit or delete loppises that I published.
+
+    <details>
+    <summary>View Images</summary>
+
+    ![Profile Page](/documentation/profile-page.png)
+    ![My loppises Page](/documentation/my-loppises.png)
+    </details>
+    <br>
+
+* As a member user I want to be able to ask question to the loppis owner if I want to have more information regarding their loppis.
+
+    <details>
+    <summary>View Images</summary>
+
+    ![Question](/documentation/question-1.png)
+    ![Question](/documentation/question-2.png)
+    </details>
+    <br>
+
+### Seller:
+* As a seller I want to be able to add my own loppis announcement so that I can get buyers to come to my loppis and purchase.
+
+    <details>
+    <summary>View Images</summary>
+
+    ![Add](/documentation/add-page.png)
+    </details>
+    <br>
+
+* As a seller I want to be able to make payment with card so that my ad is successfully published in loppis list.
+
+    <details>
+    <summary>View Images</summary>
+
+    ![Add](/documentation/payment.png)
+    </details>
+    <br>
+
+* As a seller I want to be able to view my loppis information I entered just before payment so that I can make sure all the information I have entered are correct.
+* As a seller I want to be able to adjust my loppis just before payment so that I can correct any mistakes before the payment.
+* As a seller I want to be able to easily enter my payment information so that I can checkout smoothly.
+
+    <details>
+    <summary>View Images</summary>
+
+    ![Add](/documentation/add-page.png)
+    </details>
+    <br>
+
+* As a seller I want to be able to see the amount of each announcement so that I can decide to proceed with payment or not.
+
+    <details>
+    <summary>View Images</summary>
+
+    ![Add](/documentation/add-intro.png)
+    ![Add](/documentation/payment.png)
+    </details>
+    <br>
+
+* As a seller I want to be able to feel my personal and payment information is safe and secure so that I can confidently provide the information to make the payment.
+
+    <details>
+    <summary>View Images</summary>
+
+    ![Add](/documentation/add-intro.png)
+    ![About](/documentation/about-3.png)
+    </details>
+    <br>
+
+* As a seller I want to be able to view a success page (payment and ad confirmation) so that I can verify that I haven't made any mistakes.
+
+    <details>
+    <summary>View Images</summary>
+
+    ![Success](/documentation/success-page.png)
+    </details>
+    <br>
+
+* As a seller I want to be able to receive an email confirmation after checkout so that I can keep the confirmation of my payment and to keep a record of it if I want.
+
+    <details>
+    <summary>View Images</summary>
+
+    ![Success Email](/documentation/confirmation-email.png)
+    </details>
+    <br>
+
+* As a seller I want to be able to edit any loppis announcement I have added so that I can update/add or change any important information.
+
+    <details>
+    <summary>View Images</summary>
+
+    ![Edit](/documentation/loppis-details-seller.png)
+    ![Edit](/documentation/edit-1.png)
+    ![Edit](/documentation/edit-2.png)
+    </details>
+    <br>
+
+* As a seller I want to be able to delete any loppis announcement I have added so that I can be in control of my items posted.
+
+    <details>
+    <summary>View Images</summary>
+
+    ![Delete](/documentation/loppis-details-seller.png)
+    ![Delete](/documentation/delete-modal.png)
+    </details>
+    <br>
+
+### General Site visitor:
+* As a site user I want to be able to view all loppis announcments so that I can save and consider going to loppis.
+
+    <details>
+    <summary>View Images</summary>
+
+    ![Loppis List](/documentation/loppis.png)
+    ![Loppis List](/documentation/loppis-details-visitor.png)
+    </details>
+    <br>
+
+* As a site user I want to be able to find the menu easily so that I can know what content is available on the site.
+* As a site user I want to be able to navigate through the site so that I can view the desired content.
+
+    <details>
+    <summary>View Images</summary>
+
+    ![Menu](/documentation/navbar.png)
+    ![Menu](/documentation/mobile-nav.png)
+    </details>
+    <br>
+
+* As a user I want to be able to easily register an account so that I can I can create and add my own loppis announcements.
+
+    <details>
+    <summary>View Images</summary>
+
+    ![Register](/documentation/register.png)
+    </details>
+    <br>
+
+* As a site user I want to be able to view the loppis details so that I can make an informed decision for my needs.
+
+    <details>
+    <summary>View Images</summary>
+
+    ![Loppis details](/documentation/loppis-details-visitor.png)
+    </details>
+    <br>
+
+* As a user I want to be able to filter loppis by County so that I can find the ones that are closer to me.
+    <details>
+    <summary>View Images</summary>
+
+    ![County](/documentation/counties.png)
+
+    ![County](/documentation/county-tag.png)
+
+    ![County](/documentation/county-tag-details.png)
+
+    ![County](/documentation/county-search.png)
+    </details>
+    <br>
+
+* As a user I want to be able to see the loppis date and time so that I can go to the flea markets(loppises) that are available during open hours.
+
+    <details>
+    <summary>View Images</summary>
+
+    ![Loppis details](/documentation/loppis-details-visitor.png)
+    </details>
+    <br>
+
+* As a user I want to be able to save the announcements so that I can view the details later.
+
+    <details>
+    <summary>View Images</summary>
+
+    ![Wishlist](/documentation/wishlist.png)
+    </details>
+    <br>
+
+* As a user I want to be able to see the availability status of loppis so that I can know if it is expired.
+
+    <details>
+    <summary>View Images</summary>
+
+    ![Availability Status](/documentation/available-details.png)
+
+    ![Availability Status](/documentation/available-loppis.png)
+
+    ![Availability Status](/documentation/ended-details.png)
+
+    ![Availability Status](/documentation/ended-loppis.png)
+
+    </details>
+    <br>
+
+* As a user I want to be able to search by title, description or county so that I can I can find easily to the one I want to go.
+
+    <details>
+    <summary>View Images</summary>
+
+    ![Search](/documentation/navbar.png)
+
+    ![Search](/documentation/mobile-nav.png)
+
+    ![Search](/documentation/search-0.png)
+
+    ![Search](/documentation/search.png)
+    </details>
+    <br>
+
+* As a user I want to be able to subscribe to newsletter so that I am informed about any loppises or announcements made.
+
+    <details>
+    <summary>View Images</summary>
+
+    ![Subscribe](/documentation/subscribe-footer.png)
+
+    ![Subscribe](/documentation/newsletter-subscription.png)
+
+    ![Subscribe](/documentation/subscribed-success-message.png)
+
+    ![Subscribe](/documentation/newsletter-subscription-confirmation-email.png)
+
+    </details>
+    <br>
+
+### Admin
+* As an admin I want to be able to have a support email so that I can I can be in control of any kind of support needed.
+
+    <details>
+    <summary>View Images</summary>
+
+    ![Admin contact mail](/documentation/footer.png)
+    </details>
+    <br>
+
+* As an admin I want to be able to in control of django admin panel so that I can I can take necessary actions for any misconduct or issue reported.
+
+    <details>
+    <summary>View Images</summary>
+
+    ![Admin contact mail](/documentation/admin-django.png)
+    </details>
+    <br>
