@@ -119,10 +119,24 @@ views.py      | ![Profiles app views file](/documentation/pep8-profiles-views.pn
 
 Python files  | PEP8 result
 ------------- | -------------
-admin.py       | ![Questions app admin.py file](/documentation/pep8-questions-admin.png)
+admin.py      | ![Questions app admin.py file](/documentation/pep8-questions-admin.png)
 apps.py       | ![Questions app apps.py file](/documentation/pep8-questions-apps.png)
-models.py     | ![Questions app urls file](/documentation/pep8-questions-models.png)
+models.py     | ![Questions app models file](/documentation/pep8-questions-models.png)
 forms.py      | ![Questions app forms file](/documentation/pep8-questions-forms.png)
+
+</details>
+
+<details>
+<summary>Newsletter Subscription App</summary>
+
+Python files  | PEP8 result
+------------- | -------------
+admin.py      | ![Subscription app admin.py file](/documentation/pep8-subscription-admin.png)
+apps.py       | ![Subscription app apps.py file](/documentation/pep8-subscription-apps.png)
+models.py     | ![Subscription app models file](/documentation/pep8-subscription-models.png)
+forms.py      | ![Subscription app forms file](/documentation/pep8-subscription-forms.png)
+views.py      | ![Subscription app views file](/documentation/pep8-subscription-views.png)
+urls.py       | ![Subscription app urls file](/documentation/pep8-subscription-urls.png)
 
 </details>
 
