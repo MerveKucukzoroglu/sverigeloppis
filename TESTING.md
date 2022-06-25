@@ -90,6 +90,19 @@ views.py      | ![Home app views file](/documentation/pep8-home-views.png)
 
 </details>
 
+<details>
+<summary>Loppises App</summary>
+
+Python files  | PEP8 result
+------------- | -------------
+apps.py       | ![Loppises app apps.py file](/documentation/pep8-loppises-apps.png)
+models.py     | ![Loppises app urls file](/documentation/pep8-loppises-models.png)
+urls.py       | ![Loppises app urls file](/documentation/pep8-loppises-urls.png)
+views.py      | ![Loppises app views file](/documentation/pep8-loppises-views.png)
+widgets.py    | ![Loppises app widgets file](/documentation/pep8-loppises-widgets.png)
+
+</details>
+
 ## Lighthouse
 * Testing results for desktop:
 
