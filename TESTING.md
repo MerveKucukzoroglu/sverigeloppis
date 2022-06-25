@@ -6,6 +6,9 @@ Minor errors found, resolved the issues and all tests passed.
 
     ![Home Page](/documentation/html-home.png)
 
+* About Page: 
+
+    ![About Page](/documentation/html-home.png)
 
 
 ## Lighthouse
