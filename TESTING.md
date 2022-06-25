@@ -140,6 +140,29 @@ urls.py       | ![Subscription app urls file](/documentation/pep8-subscription-u
 
 </details>
 
+<details>
+<summary>Sverige Loppis Main App</summary>
+
+Python files  | PEP8 result
+------------- | -------------
+wsgi.py       | ![Main app wsgi.py file](/documentation/pep8-main-wsgi.png)
+urls.py       | ![Main app urls file](/documentation/pep8-main-urls.png)
+views.py      | ![Main app views file](/documentation/pep8-main-views.png)
+
+</details>
+
+<details>
+<summary>Wishlist App</summary>
+
+Python files  | PEP8 result
+------------- | -------------
+apps.py       | ![Wishlist app apps.py file](/documentation/pep8-wishlist-apps.png)
+contexts.py   | ![Wishlist app contexts.py file](/documentation/pep8-wishlist-contexts.png)
+urls.py       | ![Wishlist app urls file](/documentation/pep8-wishlist-urls.png)
+views.py      | ![Wishlist app views file](/documentation/pep8-wishlist-views.png)
+
+</details>
+
 ## Lighthouse
 * Testing results for desktop:
 
