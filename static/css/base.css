@@ -114,9 +114,20 @@ a.text-light:hover {
     color:#2C2C2C;
 }
 
-.card-img-top{
-    height: 80%;
+.card-images{
+    object-fit:cover;
     width: auto;
+    height:200px;
+    display: block;
+    margin-top: 20px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.image-details {
+    object-fit:cover;
+    width:auto;
+    height:300px;
     display: block;
     margin-top: 20px;
     margin-left: auto;
@@ -345,8 +356,8 @@ a.text-light:hover {
         margin: 20px;
     }
 
-    .dropdown-tem {
-        margin-left: -25px;
+    .dropdown-item {
+        margin-left: -35px;
         padding: 0;
     }
 
@@ -375,7 +386,7 @@ a.text-light:hover {
     }
 
     .dropdown-item {
-        margin-left: -25px;
+        margin-left: -35px;
         padding: 0;
     }
 

@@ -23,11 +23,11 @@
                 <div class="image-container-de my-5">
                     {% if loppis.image %}
                         <a href="{{ loppis.image.url }}" target="_blank" rel="noopener">
-                            <img class="card-img-top img-fluid" src="{{ loppis.image.url }}" alt="{{ loppis.title }}">
+                            <img class="card-img-top image-details img-fluid" src="{{ loppis.image.url }}" alt="{{ loppis.title }}">
                         </a>
                     {% else %}
                         <a href="">
-                            <img class="card-img-top img-fluid" src="{{ MEDIA_URL }}default-image.jpg" alt="{{ loppis.title }}">
+                            <img class="card-img-top image-details img-fluid" src="{{ MEDIA_URL }}default-image.jpg" alt="{{ loppis.title }}">
                         </a>
                     {% endif %}
                 </div>
