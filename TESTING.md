@@ -172,10 +172,10 @@ views.py      | ![Wishlist app views file](/documentation/pep8-wishlist-views.pn
 
     ![Lihghthouse Desktop](/documentation/lighthouse-mobile.png)
 
-## User Story Testing
+# User Story Testing
 Please find all my defined user stories [here](https://github.com/MerveKucukzoroglu/sverigeloppis/issues?q=is%3Aclosed+label%3AUSER-STORY)
 
-### Member User:
+## Member User:
 * As a member user I want to be able to login or logout so that I can access my personal account information.
 
     <details>
@@ -240,7 +240,7 @@ Please find all my defined user stories [here](https://github.com/MerveKucukzoro
     </details>
     <br>
 
-### Seller:
+## Seller:
 * As a seller I want to be able to add my own loppis announcement so that I can get buyers to come to my loppis and purchase.
 
     <details>
@@ -329,7 +329,7 @@ Please find all my defined user stories [here](https://github.com/MerveKucukzoro
     </details>
     <br>
 
-### General Site visitor:
+## General Site visitor:
 * As a site user I want to be able to view all loppis announcments so that I can save and consider going to loppis.
 
     <details>
@@ -448,7 +448,7 @@ Please find all my defined user stories [here](https://github.com/MerveKucukzoro
     </details>
     <br>
 
-### Admin
+## Admin
 * As an admin I want to be able to have a support email so that I can I can be in control of any kind of support needed.
 
     <details>
@@ -467,7 +467,7 @@ Please find all my defined user stories [here](https://github.com/MerveKucukzoro
     </details>
     <br>
 
-## BUGS
+# BUGS
 * There is no unsolved bug in my site (as far as I know).
 * Throughout the development process, I faced minor issues but resolved them after several tries. 
 * I had one bug that I struggled with:
@@ -481,3 +481,27 @@ Please find all my defined user stories [here](https://github.com/MerveKucukzoro
     * With Code Institute's Tutor Gemma and Mentor Tim suggestions I have created a separate function within advert/views, and called this inside advert_success function.
     * By removing the webhooks and adding a email function within the views solved the bug.
     * Now the user successfully recieves confirmation emails for their payment and loppis advertisement.
+
+# Browser Compatability
+* Checked and verified that the site works on different browsers.
+    * Safari:
+
+        ![Safari](/documentation/safari.png)
+    
+    * Chrome:
+
+        ![Chrome](/documentation/chrome.png)
+
+# Responsiveness Testing
+
+* Desktop - Large Screen sizes:
+
+    ![Large screen size](/documentation/loppis.png)
+
+* Ipad - Medium Screen sizes:
+
+    ![Medium Screen size](/documentation/medium-screen.png)
+
+* Mobile - Small Screen Sizes:
+
+    ![Mobile Screen Size](/documentation/mobile-screen.png)
