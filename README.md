@@ -691,7 +691,9 @@ This project was deployed to Heroku. "Heroku is a cloud platform that lets compa
 
 1. Go to [Stripe](https://stripe.com/en-gb-se) and click 'start now'.
 2. Fill in your information
+
     ![Stripe](/documentation/stripe-account-steps.png)
+    
 3. Click 'Create your Stripe Account'
 4. You will receive a confirmation email. Go to your email, click the link for confirming your email address, type your password again if asked, and signin
 
@@ -939,13 +941,14 @@ I have followed Code Institute's <a href="https://github.com/Code-Institute-Solu
         add storages in apps list | `'storages',`
 
     * Add AWS in settings  
-        `
-        if 'USE_AWS' in os.environ: AWS_STORAGE_BUCKET_NAME = 'your-bucket-name'
-        AWS_S3_REGION_NAME = 'your-region-name'
-        AWS_ACCESS_KEY_ID = os.environ.get('AWS_ACCESS_KEY_ID')
-        AWS_SECRET_ACCESS_KEY = os.environ.get('AWS_SECRET_ACCESS_KEY')
-        AWS_S3_CUSTOM_DOMAIN = f'{AWS_STORAGE_BUCKET_NAME}.s3.amazonaws.com'
-        `
+        ```python
+        if 'USE_AWS' in os.environ:
+            AWS_STORAGE_BUCKET_NAME = 'your-bucket-name'
+            AWS_S3_REGION_NAME = 'your-region-name'
+            AWS_ACCESS_KEY_ID = os.environ.get('AWS_ACCESS_KEY_ID')
+            AWS_SECRET_ACCESS_KEY = os.environ.get('AWS_SECRET_ACCESS_KEY')
+            AWS_S3_CUSTOM_DOMAIN = f'{AWS_STORAGE_BUCKET_NAME}.s3.amazonaws.com'
+        ```
     
     * In Heroku go to settings and add config vars | Add the keys from the CSV file you downloaded
         
@@ -1036,7 +1039,65 @@ Alternatively, if using Gitpod, you can click below to create your own workspace
 
 [![Open in Gitpod](https://gitpod.io/button/open-in-gitpod.svg)](https://gitpod.io/#https://github.com/MerveKucukzoroglu/sverigeloppis)
 
+<details>
+<summary>Install Django and supporting libraries and crete required files to start the app immediately</summary>
 
+* In the terminal
+
+    No. | Steps  | Code
+    ----|------- | -------------
+    1 | Install supporting libraries: | pip3 install dj_database_url
+    2 | Install supporting libraries: | pip3 install psycopy2-binary
+    3 | Create requirements file | pip3 freeze > requirements.txt
+
+* In the setting.py
+
+    No. | Steps  | Code
+    ----|------- | -------------
+    4 | import  | dj_database_url
+
+* In the terminal
+
+    No. | Steps  | Code
+    ----|------- | -------------
+    5 | Migrate Changes| python3 manage.py migrate
+    6 | If you have fixtures, load the data to the connected database. Remember loaddata individually  | python3 manage.py loaddata *YOUR FIXTURE FILE NAME*
+    7 | Create a new superuser | python3 manage.py createsuperuser
+
+
+* In the terminal:
+
+    No. | Steps  | Code
+    ----|------- | -------------
+    8 | Install gunicorn | pip3 install gunicorn
+    9 | Freeze requirements | pip3 freeze --local > requirements.txt
+
+* In the project directory, create Procfile. Inside Procfile, type:
+    web: gunicorn *main_app_name*.wsgi:application
+
+
+* In the terminal:
+
+    No. | Steps  | Code
+    ----|------- | -------------
+    10 | add your changes | git add .
+    11 | commit | git commit -m "Deployment Commit"
+    12 | push your changes to github | git push
+
+* Create env.py file for storing your secret keys details. Make sure to add all the secret keys you have for the project. (Please cross check the required secret keys created for the project in the above [deployment](#deployment) section.
+    
+* In settings.py
+
+    No. | Steps  | Code
+    ----|------- | -------------
+    13 | Change your secret key by calling it form os.environ | SECRET_KEY = os.environ.get('SECRET_KEY', '')
+    14 | Set Debug to True only if local environment is in use | DEBUG = 'DEVELOPMENT' in os.environ
+    15 | add your changes | git add .
+    16 | commit | git commit -m "Remove secret key and set debug"
+    17 | push your changes to github | git push
+
+</details>
+<br>
 
 # Credits
 During the process of project development, there have been various sources that gave me idea how to do a particular feature or fix a bug. The following are the sources that I got knowledge from:
