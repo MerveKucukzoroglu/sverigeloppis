@@ -12,7 +12,6 @@ Sverige Loppis is hoping to be a platform for all the second hand sellers and bu
 * Easily identify the loppises that are available or ended.
 * To get immediately notified on any Loppis notification, subscribe to our newsletter.
 
-*The Live Site can be found [here](https://sverigeloppis.herokuapp.com/).*
 
 # UX
 ## Strategy
